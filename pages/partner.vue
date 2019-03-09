@@ -1,12 +1,12 @@
 <template>
-  <div>首页</div>
+  <div>合伙人</div>
 </template>
 
 <script>
 export default {
-  name: 'Index'
+  name: 'Partner'
 }
 </script>
 
-<style scoped>
+<style>
 </style>

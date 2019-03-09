@@ -1,12 +1,12 @@
 <template>
-  <div>首页</div>
+  <div>资源库</div>
 </template>
 
 <script>
 export default {
-  name: 'Index'
+  name: 'ResourceLibrary'
 }
 </script>
 
-<style scoped>
+<style>
 </style>

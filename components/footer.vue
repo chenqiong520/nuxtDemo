@@ -1,8 +1,15 @@
 <template>
-  <footer class="v-footer">
-    <div>首页</div>
-    <div>学院</div>
-    <div>资源库</div>
+  <footer class="footer">
+    <div
+      v-for="(tabbar,index) in tabbars"
+      :key="index"
+      @click="onTabbarClick(tabbar,index)"
+      class="tabbar"
+      :class="{active:activeTabbarIndex===index}"
+    >
+      <i class="iconfont" :class="tabbar.icon"></i>
+      <span class="title">{{tabbar.name}}</span>
+    </div>
   </footer>
 </template>
 
@@ -14,54 +21,69 @@ export default {
 
   data() {
     return {
-      changeShowBool1: false,
-      changeShowBool2: false,
-      changeShowBool3: false,
-      changeShowBool4: false
+      tabbars: [
+        {
+          link: '/',
+          name: '首页',
+          icon: 'iconhome'
+        },
+        {
+          link: '/course',
+          name: '学院',
+          icon: 'iconcollege-'
+        },
+        {
+          link: '/resource-library',
+          name: '资源库',
+          icon: 'iconhome1'
+        }
+      ],
+      activeTabbarIndex: 0
     }
   },
-  computed: {
-    ...mapState(['headProdNav', 'headNewsNav'])
-  },
+
   methods: {
-    changeShow1() {
-      this.changeShowBool1 = !this.changeShowBool1
-      this.changeShowBool2 = false
-      this.changeShowBool3 = false
-      this.changeShowBool4 = false
-    },
-    changeShow2() {
-      this.changeShowBool2 = !this.changeShowBool2
-      this.changeShowBool1 = false
-      this.changeShowBool3 = false
-      this.changeShowBool4 = false
-    },
-    changeShow3() {
-      this.changeShowBool3 = !this.changeShowBool3
-      this.changeShowBool2 = false
-      this.changeShowBool1 = false
-      this.changeShowBool4 = false
-    },
-    changeShow4() {
-      this.changeShowBool4 = !this.changeShowBool4
-      this.changeShowBool2 = false
-      this.changeShowBool3 = false
-      this.changeShowBool1 = false
+    onTabbarClick(tabbar, index) {
+      this.activeTabbarIndex = index
+      this.$router.push(tabbar.link)
     }
   }
 }
 </script>
 
 <style scoped>
-footer.v-footer {
+footer {
   box-sizing: border-box;
   width: 100%;
-  background-color: #3e3f43;
+  height: 98px;
   display: flex;
   flex-direction: row;
   justify-content: space-around;
   align-items: center;
-  background: #fff;
-  border-top: 1px solid gray;
+  background: rgba(255, 255, 255, 1);
+  border-top: 1px #e9e9e9 solid;
+}
+
+footer .tabbar {
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 500;
+  color: rgba(199, 199, 201, 1);
+}
+
+footer .tabbar .title {
+  font-size: 18px;
+}
+
+footer .tabbar .iconfont {
+  font-size: 40px;
+}
+
+footer .tabbar.active {
+  color: rgba(253, 85, 58, 1);
 }
 </style>

@@ -1,39 +1,25 @@
 <template>
-  <header class="v-header">
-    <div class="index-header-box">
-      <div class="i-h-nav">
-        <i @click="showMenu" class="iconfont iconmenu" style="font-size:30px"></i>
-      </div>
+  <header class="gp-header">
+    <div class="header-box">
       <div>
-        <nuxt-link to="/">咕泡学院</nuxt-link>
+        <nuxt-link to="/">
+          <img class="logo" src="@/assets/img/header/logo.png" alt="logo">
+        </nuxt-link>
       </div>
-      <div>
-        <i class="iconfont iconsearch"></i>
+      <div class="button-group">
+        <i @click="toSearch" class="iconfont iconsearch1" style="font-size:26px"></i>
+        <i @click="showMenu" class="iconfont iconbx-menu-alt-right" style="font-size:30px"></i>
       </div>
     </div>
 
     <div v-show="menuShow" @click="showMenu" class="menu">
-      <ul class="h-nav-list">
-        <li>
-          <nuxt-link to="/">首页</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/brand">学院</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/leader">资源库</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/experice">咕泡合伙人</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/products">Gper社区</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/news">关于咕泡</nuxt-link>
-        </li>
-        <li>
-          <nuxt-link to="/join">联系客服</nuxt-link>
+      <ul class="nav-list">
+        <li v-for="(navItem,index) in navList" :key="index">
+          <a
+            @click="navListClick(navItem,index)"
+            :target="navItem.target || ''"
+            :class="{active:activeNavIndex===index}"
+          >{{navItem.name}}</a>
         </li>
       </ul>
     </div>
@@ -41,28 +27,72 @@
 </template>
 
 <script>
-import { mapState } from 'vuex'
-
 export default {
   name: 'VHeader',
 
   data() {
     return {
-      menuShow: false
+      menuShow: false,
+      // 导航菜单
+      navList: [
+        {
+          link: '/',
+          name: '首页'
+        },
+        {
+          link: '/course',
+          name: '学院'
+        },
+        {
+          link: '/resource-library',
+          name: '资源库'
+        },
+        {
+          link: '/partner',
+          name: '咕泡合伙人'
+        },
+        {
+          link: 'https://m.gper.gupaoedu.com/index',
+          name: 'Gper社区',
+          target: '_blank'
+        },
+        {
+          link: '/about',
+          name: '关于咕泡'
+        },
+        {
+          link: '/',
+          name: '联系客服'
+        }
+      ],
+      activeNavIndex: 0 // 当前激活菜单下标
     }
   },
 
-  computed: {
-    ...mapState(['headProdNav', 'headNewsNav', 'headJobNav'])
-  },
-
-  mounted() {},
-
-  destroyed() {
-    window.removeEventListener('scroll', this.handleScroll)
-  },
-
   methods: {
+    /**
+     * 菜单项点击跳转
+     */
+    navListClick(navItem, index) {
+      if (navItem && navItem.target === '_blank') {
+        window.open(navItem.link)
+        return
+      }
+
+      this.activeNavIndex = index
+      this.$router.push(navItem.link)
+    },
+
+    /**
+     * 搜索跳转
+     */
+    toSearch() {
+      window.open('https://m.gper.gupaoedu.com/search?type=answer')
+    },
+
+    /**
+     * 展开/关闭 菜单栏
+     */
     showMenu() {
       this.menuShow = !this.menuShow
     }
@@ -71,120 +101,71 @@ export default {
 </script>
 
 <style scoped>
-.v-header {
+.gp-header {
   width: 100%;
-  height: 1.987rem;
+  height: 96px;
   background: #fff;
 }
 
-div#index-header {
-  position: fixed;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 1.987rem;
-  z-index: 10086;
-  background: #fff;
-}
-.index-header-box {
+.gp-header .header-box {
   display: flex;
-  height: 1.987rem;
-  padding: 0 0.413rem;
+  height: 96px;
+  padding: 0 30px;
   justify-content: space-between;
   align-items: center;
   box-sizing: border-box;
 }
 
-.i-h-nav {
-  width: 0.453rem;
-}
-
-.h-t-logo {
-  width: 1.053rem;
-  height: 1.08rem;
-}
-
-.h-t-logo a {
+.header-box img.logo {
   display: block;
-  width: 100%;
-  height: 100%;
+  width: 170px;
 }
 
-.h-t-logo a img {
-  width: 100%;
-  height: 100%;
+.header-box .button-group .iconfont {
+  color: #252525;
 }
 
-.h-t-my {
-  width: 0.573rem;
-  height: 0.733rem;
-}
-
-.h-t-my img {
-  width: 100%;
-}
-
-.phone-show-menu {
-  width: 100%;
-}
-
-.phone-open-menu {
-  overflow: hidden;
-  width: 100%;
-}
-
-.phone-open-menu p {
-  width: 0.453rem;
-  height: 0.04rem;
-  margin-top: 0.147rem;
-  background-color: #a2a1a2;
-}
-
-.phone-close-menu {
-  width: 0.333rem;
-  height: 0.333rem;
-}
-
-.phone-close-menu {
-  width: 0.333rem;
-  height: 0.333rem;
-}
-
-.menu {
+.gp-header .menu {
   position: fixed;
-  opacity: 0.8;
-  background: black;
+  background: rgba(0, 0, 0, .7);
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
-  padding: 0 1.133rem;
+  padding: 0 5px;
   box-sizing: border-box;
   z-index: 10080;
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: flex-start;
 }
 
-/* ul.h-nav-list {
-
-} */
-
-ul.h-nav-list li {
-  display: block;
-  width: 100%;
-  height: 1.2rem;
-  font-size: 16px;
-  margin-top: 10px;
+.menu .nav-list {
+  margin-top: 300px;
 }
 
-ul.h-nav-list li a {
-  display: block;
-  width: 100%;
-  height: 100%;
-  color: #fff;
-  font-size: 1rem;
-  line-height: 1.2rem;
-  text-align: left;
+.menu .nav-list li {
+  margin-top: 63px;
+}
+
+.menu .nav-list li a {
+  color: rgba(217, 217, 217, 1);
+  font-size: 36px;
+  font-weight: 400;
+}
+
+.menu .nav-list li a.active {
+  position: relative;
+  font-size: 36px;
+  font-weight: 500;
+  color: rgba(255, 255, 255, 1);
+}
+
+.menu .nav-list li a.active:before {
+  content: '\e645';
+  font-family: 'iconfont';
+  position: absolute;
+  left: -42px;
+  top: 8px;
 }
 </style>

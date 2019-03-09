@@ -30,7 +30,7 @@ module.exports = {
       },
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078532_mrls6qahxfg.css'
+        href: 'http://at.alicdn.com/t/font_1078836_4dandtlegzp.css'
       }
     ]
   },
@@ -73,17 +73,17 @@ module.exports = {
     /*
      ** You can extend webpack config here
      */
-    extend(config, ctx) {
-      // Run ESLint on save
-      if (ctx.isDev && ctx.isClient) {
-        config.module.rules.push({
-          enforce: 'pre',
-          test: /\.(js|vue)$/,
-          loader: 'eslint-loader',
-          exclude: /(node_modules)/
-        })
-      }
-    },
+    // extend(config, ctx) {
+    //   // Run ESLint on save
+    //   if (ctx.isDev && ctx.isClient) {
+    //     config.module.rules.push({
+    //       enforce: 'pre',
+    //       test: /\.(js|vue)$/,
+    //       loader: 'eslint-loader',
+    //       exclude: /(node_modules)/
+    //     })
+    //   }
+    // },
 
     postcss: {
       plugins: {
