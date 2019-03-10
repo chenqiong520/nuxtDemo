@@ -1,19 +1,20 @@
 <template>
   <div class="banner">
-    <swiper :options="swiperOption" ref="mySwiper" @someSwiperEvent="callback">
-      <!-- slides -->
-      <swiper-slide>
-        <div class="banner-item banner1"></div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="banner-item banner2"></div>
-      </swiper-slide>
-      <swiper-slide>
-        <div class="banner-item banner3"></div>
-      </swiper-slide>
-      <!-- Optional controls -->
-      <div class="swiper-pagination" slot="pagination"></div>
-    </swiper>
+    <div v-swiper:mySwiper="swiperOption">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="banner-item banner1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner-item banner1"></div>
+        </div>
+        <div class="swiper-slide">
+          <div class="banner-item banner1"></div>
+        </div>
+      </div>
+      
+      <div class="swiper-pagination swiper-pagination-bullets"></div>
+    </div>
   </div>
 </template>
 
@@ -24,7 +25,7 @@ export default {
   data() {
     return {
       swiperOption: {
-        autoplay:true,
+        autoplay: true,
         pagination: {
           el: '.swiper-pagination',
           renderBullet(index, className) {
@@ -45,9 +46,7 @@ export default {
     callback() {}
   },
 
-  mounted() {
-
-  }
+  mounted() {}
 }
 </script>
 
@@ -56,6 +55,7 @@ export default {
   width: 100%;
   height: 300px;
   border-radius: 12px;
+  overflow: hidden;
 }
 
 .banner1 {

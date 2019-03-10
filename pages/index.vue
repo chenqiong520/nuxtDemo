@@ -1,16 +1,23 @@
 <template>
   <div class="home">
-    <banner />    
+    <banner/>
+    <student/>
+    <teacher/>
   </div>
 </template>
 
 <script>
 import Banner from './home/banner'
+import Student from './home/student'
+import Teacher from './home/teacher'
+
 export default {
   name: 'Index',
 
-  components:{
-    Banner
+  components: {
+    Banner,
+    Student,
+    Teacher
   }
 }
 </script>

@@ -136,7 +136,7 @@ export default {
 
 .gp-header .menu {
   position: fixed;
-  background: rgba(0, 0, 0, 0.7);
+  background: rgba(0, 0, 0, 0.75);
   top: 0;
   left: 0;
   width: 100%;
