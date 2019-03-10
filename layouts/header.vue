@@ -6,6 +6,7 @@
           <img class="logo" src="@/assets/img/header/logo.png" alt="logo">
         </nuxt-link>
       </div>
+
       <div class="button-group">
         <i @click="toSearch" class="iconfont iconsearch1" style="font-size:26px"></i>
         <i @click="showMenu" class="iconfont iconbx-menu-alt-right" style="font-size:30px"></i>
@@ -18,7 +19,7 @@
           <a
             @click="navListClick(navItem,index)"
             :target="navItem.target || ''"
-            :class="{active:activeNavIndex===index}"
+            :class="{active:isActive(navItem.link)}"
           >{{navItem.name}}</a>
         </li>
       </ul>
@@ -61,11 +62,10 @@ export default {
           name: '关于咕泡'
         },
         {
-          link: '/',
+          link: '/kefu',
           name: '联系客服'
         }
-      ],
-      activeNavIndex: 0 // 当前激活菜单下标
+      ]
     }
   },
 
@@ -79,7 +79,6 @@ export default {
         return
       }
 
-      this.activeNavIndex = index
       this.$router.push(navItem.link)
     },
 
@@ -95,6 +94,16 @@ export default {
      */
     showMenu() {
       this.menuShow = !this.menuShow
+    },
+
+    /**
+     * 是否是当前激活页面
+     */
+    isActive(link = '/') {
+      if (link === '/') {
+        link = '/index'
+      }
+      return link === `/${this.$route.name}`
     }
   }
 }
@@ -127,7 +136,7 @@ export default {
 
 .gp-header .menu {
   position: fixed;
-  background: rgba(0, 0, 0, .7);
+  background: rgba(0, 0, 0, 0.7);
   top: 0;
   left: 0;
   width: 100%;

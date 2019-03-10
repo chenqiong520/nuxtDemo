@@ -1,23 +1,25 @@
 <template>
   <div class="layout">
-    <v-header class="header" />
+    <gp-header class="header"/>
 
     <main class="content">
-      <nuxt />
+      <nuxt/>
     </main>
 
-    <v-footer class="footer" />
+    <gp-footer class="footer"/>
   </div>
 </template>
 
 <script>
-import VHeader from '../components/header'
-import VFooter from '../components/footer'
+import GpHeader from './header'
+import GpFooter from './footer'
 
 export default {
+  name: 'Layout',
+
   components: {
-    VHeader,
-    VFooter
+    GpHeader,
+    GpFooter
   }
 }
 </script>

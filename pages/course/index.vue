@@ -74,32 +74,32 @@ export default {
 }
 
 .img-container.java {
-  background: url(../assets/img/course/java.png);
+  background: url(../../assets/img/course/java.png);
   background-size: cover;
 }
 
 .img-container.intelligence {
-  background: url(../assets/img/course/block.png);
+  background: url(../../assets/img/course/block.png);
   background-size: cover;
 }
 
 .img-container.block {
-  background: url(../assets/img/course/intelligence.png);
+  background: url(../../assets/img/course/intelligence.png);
   background-size: cover;
 }
 
 .img-container.web {
-  background: url(../assets/img/course/web.png);
+  background: url(../../assets/img/course/web.png);
   background-size: cover;
 }
 
 .img-container.test {
-  background: url(../assets/img/course/test.png);
+  background: url(../../assets/img/course/test.png);
   background-size: cover;
 }
 
 .img-container.bigdata {
-  background: url(../assets/img/course/bigdata.png);
+  background: url(../../assets/img/course/bigdata.png);
   background-size: cover;
 }
 

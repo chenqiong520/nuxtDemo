@@ -5,7 +5,7 @@
       :key="index"
       @click="onTabbarClick(tabbar,index)"
       class="tabbar"
-      :class="{active:activeTabbarIndex===index}"
+      :class="{active:isActive(tabbar.link)}"
     >
       <i class="iconfont" :class="tabbar.icon"></i>
       <span class="title">{{tabbar.name}}</span>
@@ -37,15 +37,23 @@ export default {
           name: '资源库',
           icon: 'iconhome1'
         }
-      ],
-      activeTabbarIndex: 0
+      ]
     }
   },
 
   methods: {
     onTabbarClick(tabbar, index) {
-      this.activeTabbarIndex = index
       this.$router.push(tabbar.link)
+    },
+
+    /**
+     * 是否是当前激活页面
+     */
+    isActive(link = '/') {
+      if (link === '/') {
+        link = '/index'
+      }
+      return link === `/${this.$route.name}`
     }
   }
 }
@@ -76,7 +84,7 @@ footer .tabbar {
 }
 
 footer .tabbar .title {
-  font-size: 18px;
+  font-size: 25px;
 }
 
 footer .tabbar .iconfont {

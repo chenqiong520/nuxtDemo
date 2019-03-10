@@ -8,8 +8,7 @@ module.exports = {
    */
   head: {
     title: '咕泡学院',
-    meta: [
-      {
+    meta: [{
         charset: 'utf-8'
       },
       {
@@ -22,8 +21,7 @@ module.exports = {
         content: pkg.description
       }
     ],
-    link: [
-      {
+    link: [{
         rel: 'icon',
         type: 'image/x-icon',
         href: '/favicon.ico'
@@ -50,7 +48,10 @@ module.exports = {
   /*
    ** 第三方插件
    */
-  plugins: [],
+  plugins: [{
+    src: '~/plugins/vue-awesome-swiper',
+    ssr: false
+  }],
 
   /*
    ** Nuxt.js modules
