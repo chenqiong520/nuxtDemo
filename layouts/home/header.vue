@@ -29,7 +29,7 @@
 
 <script>
 export default {
-  name: 'VHeader',
+  name: 'DefaultHeader',
 
   data() {
     return {
@@ -103,7 +103,9 @@ export default {
       if (link === '/') {
         link = '/index'
       }
-      return link === `/${this.$route.name}`
+      // /^\/index/
+      const reg = RegExp(`^${link}`, 'i')
+      return reg.test(`/${this.$route.name}`)
     }
   }
 }

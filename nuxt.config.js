@@ -31,7 +31,7 @@ module.exports = {
        */
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078836_4dandtlegzp.css'
+        href: 'http://at.alicdn.com/t/font_1078836_me73980qh9.css'
       }
     ]
   },
@@ -94,11 +94,9 @@ module.exports = {
    * 打包配置
    */
   build: {
-    /*
-     ** You can extend webpack config here
-     */
+
     // extend(config, ctx) {
-    //   // Run ESLint on save
+    //   // 编译时进行eslint检查
     //   if (ctx.isDev && ctx.isClient) {
     //     config.module.rules.push({
     //       enforce: 'pre',
@@ -108,6 +106,8 @@ module.exports = {
     //     })
     //   }
     // },
+    // cdn 文件设置
+    // publicPath: 'https://cdn.gupaoedu.com/official-web-mobile',
 
     postcss: {
       plugins: {
