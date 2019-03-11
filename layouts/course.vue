@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import GpHeader from './default/header'
+import GpHeader from './home/header'
 import CourseFooter from './course/footer'
 
 export default {
