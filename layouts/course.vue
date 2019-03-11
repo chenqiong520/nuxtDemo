@@ -2,29 +2,23 @@
   <div class="course-layout">
     <gp-header class="header"/>
 
-    <main class="content">
-      <nuxt/>
-    </main>
-
-    <course-footer/>
+    <nuxt/>
   </div>
 </template>
 
 <script>
 import GpHeader from './home/header'
-import CourseFooter from './course/footer'
 
 export default {
   name: 'CourseLayout',
 
   components: {
-    CourseFooter,
     GpHeader
   }
 }
 </script>
 
-<style>
+<style scoped>
 .course-layout {
   display: flex;
   flex-direction: column;
@@ -32,12 +26,7 @@ export default {
   height: 100vh;
 }
 
-.course-layout .content {
-  flex-grow: 1;
-  overflow-y: auto;
-}
-
-.course-layout .footer {
+.course-layout .header {
   height: 96px;
   overflow: hidden;
 }

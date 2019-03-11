@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
       },
       {
         hid: 'description',
@@ -106,13 +106,14 @@ module.exports = {
     //     })
     //   }
     // },
+
     // cdn 文件设置
     // publicPath: 'https://cdn.gupaoedu.com/official-web-mobile',
 
     postcss: {
       plugins: {
         'postcss-px2rem': {
-          remUnit: 37.5
+          remUnit: 32
         }
       }
     }
