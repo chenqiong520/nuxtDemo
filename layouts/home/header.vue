@@ -114,7 +114,7 @@ export default {
 <style scoped>
 .gp-header {
   width: 100%;
-  height: 96px;
+  height: 100%;
   background: #fff;
 }
 

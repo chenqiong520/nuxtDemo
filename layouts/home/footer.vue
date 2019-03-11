@@ -63,7 +63,7 @@ export default {
 footer {
   box-sizing: border-box;
   width: 100%;
-  height: 98px;
+  height: 100%;
   display: flex;
   flex-direction: row;
   justify-content: space-around;

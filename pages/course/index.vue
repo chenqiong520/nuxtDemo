@@ -44,13 +44,16 @@
 export default {
   name: 'Course',
 
-  layout: 'home'
+  layout(context) {
+    console.log(context)
+    return 'home'
+  }
 }
 </script>
 
 <style scoped>
 .course {
-  margin: 0 30px;
+  margin: 0 33px;
 }
 
 .course > div {
@@ -58,7 +61,7 @@ export default {
 }
 
 .course .img-container {
-  height: 250px;
+  height: 198px;
   border-radius: 12px;
   overflow: hidden;
 }
