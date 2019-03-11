@@ -2,7 +2,9 @@
   <div class="course-layout">
     <gp-header class="header"/>
 
-    <nuxt/>
+    <main class="content">
+      <nuxt/>
+    </main>
   </div>
 </template>
 
@@ -29,5 +31,10 @@ export default {
 .course-layout .header {
   height: 96px;
   overflow: hidden;
+}
+
+.course-layout .content {
+  flex: 1;
+  overflow-y: auto;
 }
 </style>

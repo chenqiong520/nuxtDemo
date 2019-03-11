@@ -57,7 +57,6 @@ export default {
   name: 'CourseWeb',
 
   layout(context) {
-    console.log(context)
     return 'course'
   },
 
