@@ -1,48 +1,50 @@
 <template>
   <div class="course">
     <div class="one-column">
-      <div class="img-container java">
+      <nuxt-link class="img-container java" to="course/java">
         <h1 class="title">JAVA架构师学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
     </div>
 
     <div class="one-column">
-      <div class="img-container intelligence">
+      <nuxt-link class="img-container intelligence" to="course/intelligence">
         <h1 class="title">人工智能学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
     </div>
 
     <div class="two-column">
-      <div class="img-container block">
+      <nuxt-link class="img-container block" to="course/block">
         <h1 class="title">区块链学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
       <div class="gutter"></div>
-      <div class="img-container web">
+      <nuxt-link class="img-container web" to="course/web">
         <h1 class="title">Web前端学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
     </div>
 
     <div class="two-column">
-      <div class="img-container test">
+      <nuxt-link class="img-container test" to="course/test">
         <h1 class="title">软件测试学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
       <div class="gutter"></div>
-      <div class="img-container bigdata">
+      <nuxt-link class="img-container bigdata" to="course/bigdata">
         <h1 class="title">大数据学院</h1>
         <h3 class="count">97541人已学</h3>
-      </div>
+      </nuxt-link>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Course'
+  name: 'Course',
+
+  layout: 'home'
 }
 </script>
 

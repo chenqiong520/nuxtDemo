@@ -4,7 +4,9 @@
 
 <script>
 export default {
-  name: 'ResourceLibrary'
+  name: 'ResourceLibrary',
+
+  layout: 'home'
 }
 </script>
 

@@ -14,6 +14,8 @@ import Teacher from './home/teacher'
 export default {
   name: 'Index',
 
+  layout:'home',
+
   components: {
     Banner,
     Student,
