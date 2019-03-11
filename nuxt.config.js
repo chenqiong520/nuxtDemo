@@ -31,7 +31,7 @@ module.exports = {
        */
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078836_4dandtlegzp.css'
+        href: 'http://at.alicdn.com/t/font_1078836_zy4bcfejqta.css'
       }
     ]
   },
@@ -112,7 +112,7 @@ module.exports = {
     postcss: {
       plugins: {
         'postcss-px2rem': {
-          remUnit: 37.5
+          remUnit: 32
         }
       }
     }

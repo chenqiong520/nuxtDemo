@@ -34,7 +34,6 @@ export default {
 
 .header {
   height: 96px;
-  overflow: hidden;
 }
 
 .content {
