@@ -1,3 +1,5 @@
+const env = process.env.NODE_ENV
+
 module.exports = {
   mode: 'universal',
 
@@ -31,7 +33,7 @@ module.exports = {
        */
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078836_k9ya6yrxnwd.css'
+        href: 'http://at.alicdn.com/t/font_1078836_ybeam8zodrs.css'
       }
     ],
 
@@ -44,7 +46,7 @@ module.exports = {
    ** Customize the progress-bar color
    */
   loading: {
-    color: '#fff'
+    color: 'rgba(253, 85, 58, 1)'
   },
 
   /*
@@ -52,7 +54,8 @@ module.exports = {
    */
   css: [
     '@/assets/css/reset.css',
-    'swiper/dist/css/swiper.css'
+    'swiper/dist/css/swiper.css',
+    // '@/assets/css/font/iconfont.css',
   ],
 
   /*
@@ -66,6 +69,9 @@ module.exports = {
     ssr: false
   }, {
     src: '~/plugins/cipboard.js',
+    ssr: false
+  }, {
+    src: "@/assets/css/font/iconfont.js",
     ssr: false
   }],
 

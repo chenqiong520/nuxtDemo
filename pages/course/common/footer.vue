@@ -20,7 +20,7 @@
     <!-- 群交流 -->
     <div v-show="isGroupPopperShow" @click="showGroupPopper" class="popper">
       <div class="body group">
-        <p class="title">添加qq群加入JAVA架构师交流群</p>
+        <p class="title">添加QQ群加入JAVA架构师交流群</p>
         <p class="tips">打开QQ - 加好友/群 - 粘贴QQ群号</p>
         <div
           @click.stop
@@ -129,12 +129,16 @@ footer.course-footer {
     align-items: center;
 
     .button {
-      font-weight: 500;
+      width: 299px;
+      height: 80px;
+      margin-right: 32px;
       text-align: center;
+      line-height: 80px;
       background: rgba(253, 85, 58, 1);
-      color: #fff;
-      padding: 15px;
-      border-radius: 5px;
+      border-radius: 6px;
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 1);
     }
   }
 }
@@ -188,63 +192,76 @@ footer.course-footer .tabbar.active {
   /* 群交流 */
   .group {
     .title {
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 500;
+      color: rgba(37, 37, 37, 1);
     }
 
     .tips {
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.7);
+      margin-top: 21px;
+      font-size: 28px;
+      font-weight: 500;
+      color: rgba(102, 102, 102, 1);
     }
 
     .button {
-      margin-top: 15px;
-      width: 300px;
-      font-weight: 500;
+      margin-top: 39px;
+      width: 540px;
+      height: 80px;
       text-align: center;
+      line-height: 80px;
       background: rgba(253, 85, 58, 1);
-      color: #fff;
-      padding: 15px;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 1);
     }
 
     .qq-number {
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.7);
+      margin-top: 23px;
+      font-size: 24px;
+      font-weight: 500;
+      color: rgba(102, 102, 102, 1);
     }
   }
 
   /* 微信公众号 */
   .wechat {
     .qrcode {
-      margin-top: 15px;
+      width: 470px;
       color: rgba(0, 0, 0, 0.7);
     }
 
     .title {
-      margin-top: 15px;
-      font-size: 28px;
+      font-size: 32px;
       font-weight: 500;
+      color: rgba(37, 37, 37, 1);
     }
 
     .tips {
-      margin-top: 15px;
-      color: rgba(0, 0, 0, 0.7);
+      font-size: 28px;
+      font-weight: 500;
+      color: rgba(102, 102, 102, 1);
+      line-height: 64px;
     }
 
     .button {
-      margin-top: 15px;
-      width: 300px;
-      font-weight: 500;
+      margin-top: 35px;
+      width: 540px;
+      height: 80px;
       text-align: center;
+      line-height: 80px;
       background: rgba(253, 85, 58, 1);
-      color: #fff;
-      padding: 15px;
-      border-radius: 5px;
+      border-radius: 8px;
+      font-size: 32px;
+      font-weight: 500;
+      color: rgba(255, 255, 255, 1);
     }
   }
 
   .operate-tips {
+    font-size: 24px;
+    font-weight: 500;
     color: red;
   }
 }
