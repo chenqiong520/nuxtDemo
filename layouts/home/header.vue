@@ -8,8 +8,8 @@
       </div>
 
       <div class="button-group">
-        <i @click="toSearch" class="iconfont iconsearch1"></i>
-        <i @click="showMenu" class="iconfont iconbx-menu-alt-right"></i>
+        <i @click="toSearch" class="iconfont iconsearch1 search"></i>
+        <i @click="showMenu" class="iconfont iconmenu"></i>
       </div>
     </div>
 
@@ -135,6 +135,9 @@ export default {
 .header-box .button-group .iconfont {
   font-size: 36px;
   color: #252525;
+}
+.header-box .button-group .iconfont.search {
+  margin-right: 40px;
 }
 
 .gp-header .menu {
