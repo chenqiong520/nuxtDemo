@@ -12,7 +12,7 @@
       </div>
     </div>
     <div class="course-cont-wrapper clear">
-      <div class="item" v-for="item in hotCourse.courseList">
+      <div class="item" v-for="(item, index) in hotCourse.courseList" :key="index">
         <div class="course-img">
           <img :src="item.coverImg">
           <div class="num status-desc">

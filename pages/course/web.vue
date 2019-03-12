@@ -51,7 +51,7 @@
           <img src="../../assets/img/course/java.png" alt="课程详情介绍">
           <img src="../../assets/img/course/java.png" alt="课程详情介绍">
         </template>
-        <div class="load-all">查看全部图文</div>
+        <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
       </section>
 
       <section class="course-compendium">
@@ -64,7 +64,7 @@
 </template>
 
 <script>
-import CourseFooter from './footer'
+import CourseFooter from './common/footer'
 
 export default {
   name: 'CourseWeb',
@@ -98,6 +98,13 @@ export default {
       if (response && response.status === 200) {
         this.teachers = response.data.data.slice(0, 5)
       }
+    },
+
+    /**
+     * 加载全部图文
+     */
+    loadAll() {
+      this.isLoadAll = true
     }
   },
 
@@ -246,11 +253,13 @@ export default {
 
   .load-all {
     margin-top: 15px;
-    height: 50px;
-    line-height: 50px;
+    height: 60px;
+    line-height: 60px;
     text-align: center;
     background: rgba(0, 0, 0, 0.1);
     border-radius: 5px;
+    color: rgba(0, 0, 0, 0.7);
+    font-weight: 500;
   }
 }
 

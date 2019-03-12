@@ -45,7 +45,6 @@ export default {
   name: 'Course',
 
   layout(context) {
-    console.log(context)
     return 'home'
   }
 }
