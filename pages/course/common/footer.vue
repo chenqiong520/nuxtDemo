@@ -22,18 +22,25 @@
       <div class="body group">
         <p class="title">添加qq群加入JAVA架构师交流群</p>
         <p class="tips">打开QQ - 加好友/群 - 粘贴QQ群号</p>
-        <div class="button" @click="copyNumber">复制QQ群号</div>
-        <p class="qq-number">QQ群号：96106784</p>
+        <div
+          @click.stop
+          class="button"
+          v-clipboard:copy="QQGroupNumber"
+          v-clipboard:success="onCopy"
+        >复制QQ群号</div>
+        <p class="qq-number">QQ群号：{{QQGroupNumber}}</p>
+        <p class="operate-tips" v-show="showTips">{{tips}}</p>
       </div>
     </div>
 
     <!-- 公众号 -->
     <div v-show="isWechatPopperShow" @click="showWechatPopper" class="popper">
       <div class="body wechat">
-        <img class="qrcode" src="@/assets/img/qrcode/public-number.png">
-        <p class="title">添加qq群加入JAVA架构师交流群</p>
+        <img class="qrcode" :src="qrcodeSrc">
+        <p class="title">{{qrcodeTitle}}</p>
         <p class="tips">打开微信 - 扫一扫</p>
-        <div class="button" @click="saveImg">保存图片</div>
+        <div class="button" @click.stop="saveImg">保存图片</div>
+        <p class="operate-tips" v-show="showTips">{{tips}}</p>
       </div>
     </div>
   </footer>
@@ -46,7 +53,18 @@ export default {
   data() {
     return {
       isGroupPopperShow: false,
-      isWechatPopperShow: false
+      isWechatPopperShow: false,
+
+      showTips: false,
+      tips: '',
+
+      QQGroupTitle: '添加qq群加入JAVA架构师交流群', //QQ群提示
+      QQGroupNumber: 96106784, // QQ群号
+
+      qrcodeTitle: '扫一扫加入JAVA架构师交流群', // 微信二维码提示
+      qrcodeSrc: require('@/assets/img/qrcode/public-number.png'), //关注二维码
+
+      toTencentUrl: '跳转至腾讯课堂地址' //跳转至腾讯课堂地址
     }
   },
 
@@ -59,12 +77,18 @@ export default {
     /**
      * 复制qq号
      */
-    copyNumber() {},
+    onCopy() {
+      this.tips = '复制成功!'
+      this.showTips = true
+    },
 
     /**
      * 保存图片
      */
-    saveImg() {},
+    saveImg() {
+      this.tips = '保存成功!'
+      this.showTips = true
+    },
 
     /**
      * 微信公众号弹框
@@ -78,6 +102,7 @@ export default {
      */
     showGroupPopper() {
       this.isGroupPopperShow = !this.isGroupPopperShow
+      this.showTips = false
     }
   }
 }
@@ -217,6 +242,10 @@ footer.course-footer .tabbar.active {
       padding: 15px;
       border-radius: 5px;
     }
+  }
+
+  .operate-tips {
+    color: red;
   }
 }
 </style>

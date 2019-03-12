@@ -53,7 +53,7 @@ export default {
 <style>
 .banner .banner-item {
   width: 100%;
-  height: 300px;
+  height: 289px;
   border-radius: 12px;
   overflow: hidden;
 }
