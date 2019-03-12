@@ -65,6 +65,9 @@ module.exports = {
     src: '~/plugins/swiper.js',
     ssr: false
   }, {
+    src: '~/plugins/filters.js',
+    ssr: false
+  }, {
     src: '~/plugins/cipboard.js',
     ssr: false
   }, {

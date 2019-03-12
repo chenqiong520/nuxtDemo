@@ -1,28 +1,37 @@
 <template>
-  <div>
-    
+  <div :style="{'margin-top': marginTop}">
     <!-- 列表标题 -->
     <div class="course-list-title" v-if="showTitle">
       <div class="list-title-name">{{listName}}</div>
       <div class="list-title-all" v-if="showAll" @click="checkAll">
-        <span>全部{{allCourse}}个</span>
+        <span>全部{{courseList.length}}个</span>
         <i class="iconfont iconarrow-right-copy-copy-copy"></i>
       </div>
     </div>
 
     <!-- 列表 -->
     <div class="course-list">
-      <div class="list-item" v-for="(item, index) in courseList" :key="index" @click="toDetail">
+      <div class="list-item" v-for="(item, index) in courseList" :key="index" @click="toDetail(item.id)">
         <div class="image-container">
-          <img :src="item.imageUrl" alt="">
-          <div class="list-watched">
-            <i class="iconfont iconwatched"></i>
-            <span>{{item.watchedTimes}}</span>
+          <img :src="item.cover" alt>
+          <div class="list-shadow">
+            <div class="list-watched">
+              <i class="iconfont iconwatched"></i>
+              <span>{{item.playcount}}</span>
+            </div>
+            <div class="list-watched">
+              <i class="iconfont iconcomment"></i>
+              <span>{{item.comment}}</span>
+            </div>
           </div>
         </div>
         <div class="list-description">
-          <div class="list-title">{{item.courseName | addEllipsis(20)}}</div>
-          <div class="list-text">{{item.courseTeacher}}</div>
+          <div class="list-title">{{item.title | addEllipsis(20)}}</div>
+          <div class="list-text" v-if="showTeacherName">{{item.courseTeacher}}</div>
+          <div class="list-price" v-else>
+            ￥{{item.currentPrice}}
+            <span v-if="showOriginalPrice">￥{{item.originalPrice}}</span>
+          </div>
         </div>
       </div>
     </div>
@@ -54,15 +63,30 @@ export default {
     // 课程列表
     courseList: {
       type: Array
-    }
-  },
-
-  filters: {
-    // 文字超出长度显示省略号
-    addEllipsis(value, max) {
-      if (!value) return ''
-      if (value.length <= max) return value
-      return value.slice(0, max) + '...'
+    },
+    // 是否显示老师名字
+    showTeacherName: {
+      type: Boolean,
+      default: true
+    },
+    // 是否显示原价
+    showOriginalPrice: {
+      type: Boolean,
+      default: false
+    },
+    // 上边距
+    marginTop: {
+      type: String,
+      default: '0px'
+    },
+    // 课程类型
+    courseType: {
+      type: String,
+      default: 'java'
+    },
+    // 视频类型 0-精选视频 1-vip独家视频
+    videoType: {
+      type: Number
     }
   },
 
@@ -73,8 +97,11 @@ export default {
     },
 
     // 跳转详情
-    toDetail() {
-      this.$router.push({ path: '/play', query: { isShort: 0, vid: '0320180808003', dataName: 'java' } })
+    toDetail(id) {
+      this.$router.push({
+        path: '/play',
+        query: { id, courseType: this.$props.courseType, videoType: this.$props.videoType }
+      })
     }
   }
 }
@@ -91,6 +118,7 @@ export default {
 .course-list-title .list-title-name {
   font-size: 32px;
   font-weight: bold;
+  color: #252525;
 }
 .course-list-title .list-title-all {
   font-size: 28px;
@@ -120,18 +148,23 @@ export default {
   left: 0;
   top: 0;
 }
-.course-list .image-container .list-watched {
+.course-list .image-container .list-shadow {
   width: 100%;
   height: 48px;
-  background: rgba(31, 31, 31, .14);
+  background: rgba(31, 31, 31, 0.14);
   position: absolute;
   left: 0;
   bottom: 0;
   display: flex;
   align-items: center;
-  padding-left: 20px;
+  padding-left: 10px;
   box-sizing: border-box;
   font-size: 24px;
+}
+.course-list .image-container .list-watched {
+  display: flex;
+  align-items: center;
+  margin-right: 20px;
 }
 .course-list .image-container .list-watched span {
   color: white;
@@ -141,16 +174,35 @@ export default {
   font-size: 10px;
   margin-right: 7px;
 }
-.course-list .list-description{
-  width: 414px;
+.iconcomment {
+  position: relative;
+  top: 2px;
 }
-.course-list .list-description .list-title{
+.course-list .list-description {
+  min-width: 0;
+  flex: 1;
+  color: #252525;
+}
+.course-list .list-description .list-title {
   font-size: 32px;
   font-weight: bold;
+  color: #252525;
 }
-.course-list .list-description .list-text{
+.course-list .list-description .list-text {
   font-size: 24px;
   color: #999;
   margin-top: 14px;
+}
+.course-list .list-description .list-price {
+  font-size: 32px;
+  color: #fd553a;
+  margin-top: 10px;
+  font-weight: bold;
+}
+.course-list .list-description .list-price span {
+  font-size: 30px;
+  padding-left: 8px;
+  color: #999;
+  font-weight: normal;
 }
 </style>
