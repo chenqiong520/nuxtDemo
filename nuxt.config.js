@@ -11,7 +11,7 @@ module.exports = {
       },
       {
         name: 'viewport',
-        content: 'width=device-width, initial-scale=1'
+        content: 'width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no'
       },
       {
         hid: 'description',
@@ -31,7 +31,7 @@ module.exports = {
        */
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078836_jvq5o96bgy.css'
+        href: 'http://at.alicdn.com/t/font_1078836_zy4bcfejqta.css'
       }
     ]
   },
@@ -106,6 +106,7 @@ module.exports = {
     //     })
     //   }
     // },
+
     // cdn 文件设置
     // publicPath: 'https://cdn.gupaoedu.com/official-web-mobile',
 
