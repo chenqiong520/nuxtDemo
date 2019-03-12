@@ -33,7 +33,7 @@ export default {
 }
 
 .course-layout .content {
-  flex-grow: 1;
+  flex: 1;
   overflow-y: auto;
 }
 

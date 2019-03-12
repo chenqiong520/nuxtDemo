@@ -38,7 +38,7 @@ export default {
 }
 
 .home-layout .content {
-  flex-grow: 1;
+  flex: 1;
   overflow-y: auto;
 }
 
