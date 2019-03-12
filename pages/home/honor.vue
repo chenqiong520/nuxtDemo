@@ -1,29 +1,19 @@
 <template>
-  <div class="teacher">
+  <div class="honor">
     <div class="category-title">
-      <div><span class="left-line" /> 咕泡讲师<span class="right-line" /></div>
-      <p class="text">
-        做教育，我们是认真的
-      </p>
+      <div><span class="left-line" /> 咕泡荣誉<span class="right-line" /></div>
     </div>
     <!-- 滚动选择 -->
     <div v-swiper:mySwiper="swiperOption" class="swiper">
       <div class="swiper-wrapper">
         <div
-          v-for="(item,index) in teachers"
+          v-for="(item,index) in honorList"
           :key="index"
           @click="selectTeacher(item)"
-          class="swiper-slide teacher-item"
+          class="swiper-slide honor-item"
         >
-          <div class="teacher-img">
-            <img :src="item.teacherImage">
-          </div>
-          <div class="teacher-name">
-            {{ item.teacherName }}
-          </div>
-          <div class="teacher-tag">
-            {{ item.teacherTag }}
-          </div>
+          <img :src="item.img">
+          <div>{{ item.desc }}</div>
         </div>
       </div>
     </div>
@@ -36,27 +26,38 @@ export default {
 
   data() {
     return {
-      teachers: [],
+      honorList: [
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          desc: '2018年腾讯课堂‘卓越贡献奖’'
+        },
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/12.png',
+          desc: '荣获腾讯2018年度影响力在线教育品牌'
+        },
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/13.png',
+          desc: '成为腾讯课堂认证机构'
+        },
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/14.png',
+          desc: '荣获腾讯2017年度知名在线教育品牌'
+        },
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/15.png',
+          desc: '荣获腾讯课堂“金课堂·最具潜力奖”'
+        },
+        {
+          img: '//cdn.gupaoedu.com/newIndex/images/16.png',
+          desc: '荣获腾讯课堂“创造101火箭机构奖”'
+        }
+      ],
       // 轮播图选项
       swiperOption: {
         slidesPerView: 'auto',
         freeMode: true
       }
     }
-  },
-
-  mounted() {
-    this.getTeachers()
-  },
-
-  methods: {
-    async getTeachers() {
-      // 通过服务器接口获取数据
-      const response = await this.$axios.get(`wwwapi/findTeacherTeam`)
-      this.teachers = response.data.data
-    },
-    // 选择老师
-    selectTeacher(item) {}
   }
 }
 </script>
@@ -92,7 +93,7 @@ export default {
   line-height: 24px;
   margin-top: 18px;
 }
-.teacher {
+.honor {
   margin-top: 48px;
   .swiper {
     margin-top: 35px;
