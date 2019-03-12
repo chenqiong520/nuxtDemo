@@ -31,7 +31,7 @@ module.exports = {
        */
       {
         rel: 'stylesheet',
-        href: 'http://at.alicdn.com/t/font_1078836_zy4bcfejqta.css'
+        href: 'http://at.alicdn.com/t/font_1078836_k9ya6yrxnwd.css'
       }
     ]
   },
@@ -56,6 +56,9 @@ module.exports = {
    */
   plugins: [{
     src: '~/plugins/swiper.js',
+    ssr: false
+  }, {
+    src: '~/plugins/filters.js',
     ssr: false
   }],
 

@@ -7,7 +7,7 @@
           :class="['swiper-slide', {'selected': currentSelectedSubject == index}]"
           v-for="(item,index) in rollerList"
           :key="index"
-          @click="selectSubject(index)"
+          @click="selectSubject(index, item.fileName)"
         >
           <div class="swiper-slide-number">{{item.number}}</div>
           <div class="swiper-slide-name">{{item.name}}</div>
@@ -16,15 +16,27 @@
     </div>
 
     <!-- 精选视频 -->
-    <course-list show-title list-name="精选视频" :course-list="courseList" @check-all="navToAll"></course-list>
+    <course-list
+      show-title
+      list-name="精选视频"
+      :course-list="goodCourseList"
+      margin-top="0"
+      :show-all="false"
+      :course-type="courseType"
+      :video-type="0"
+      v-if="goodCourseList.length"
+    ></course-list>
 
     <!-- VIP独家视频 -->
     <course-list
       show-title
       list-name="VIP独家视频"
-      :course-list="courseList"
-      @check-all="navToAll"
-      style="margin-top:50px;"
+      :course-list="vipCourseList"
+      margin-top="50px"
+      :show-all="false"
+      :course-type="courseType"
+      :video-type="1"
+      v-if="vipCourseList.length"
     ></course-list>
   </div>
 </template>
@@ -45,13 +57,11 @@ export default {
     return {
       // 滚动区域选项列表
       rollerList: [
-        { id: 0, number: 10, name: 'JAVA架构' },
-        { id: 1, number: 20, name: '人工智能' },
-        { id: 2, number: 30, name: '大数据' },
-        { id: 3, number: 30, name: '大数据' },
-        { id: 4, number: 30, name: '大数据' },
-        { id: 5, number: 30, name: '大数据' },
-        { id: 6, number: 30, name: '大数据' }
+        { id: 0, number: 12, name: 'JAVA架构', fileName: 'java' },
+        { id: 1, number: 3, name: '人工智能', fileName: 'ai' },
+        { id: 2, number: 12, name: '大数据', fileName: 'bigdata' },
+        { id: 3, number: 21, name: '测试', fileName: 'test' },
+        { id: 4, number: 5, name: '前端', fileName: 'web' }
       ],
       // 当前选中学科
       currentSelectedSubject: 0,
@@ -60,51 +70,39 @@ export default {
         slidesPerView: 'auto',
         freeMode: true
       },
-      // 课程列表数据
-      courseList: [
-        {
-          id: 0,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 1222,
-          courseName:
-            '咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 1,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 2222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 2,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 3222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 3,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 4222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        }
-      ]
+      // 精选课程列表
+      goodCourseList: [],
+      // VIP独家视频
+      vipCourseList: [],
+      // 当前页的课程类型
+      courseType: 'java'
     }
   },
 
   methods: {
     // 选择学科
-    selectSubject(index) {
+    selectSubject(index, fileName) {
       this.currentSelectedSubject = index
+      this.getCourseList(fileName)
+      this.courseType = fileName
     },
 
-    // 查看全部
-    navToAll() {
-      console.log('查看全部')
+    /**
+     *  获取课程详情
+     *  @param { String } courseName 课程对应json文件名
+     */
+    async getCourseList(courseName) {
+      const res = await this.$axios.get(
+        `${window.location.origin}/datas/resourse/${courseName}.json`
+      )
+      const resData = res.data.data
+      this.goodCourseList = resData.featuredVideos.data
+      this.vipCourseList = resData.vipVideos ? resData.vipVideos.data : []
     }
+  },
+
+  mounted() {
+    this.getCourseList('java')
   }
 }
 </script>

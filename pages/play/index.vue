@@ -1,21 +1,21 @@
 <template>
   <div class="play">
-    <video :src="videoUrl" class="video" controls autoplay></video>
+    <video :src="courseDetail.url" class="video" controls autoplay></video>
 
     <div class="play-wrap">
       <!-- 课程信息 -->
       <div class="play-info">
-        <div class="play-title">有没有信心和勇气接手一个烂尾项目</div>
+        <div class="play-title">{{courseDetail.title}}</div>
         <div class="play-watched">
           <i class="iconfont iconwatched"></i>
-          <span>2345播放量</span>
+          <span>{{courseDetail.playcount}}播放量</span>
         </div>
       </div>
 
       <!-- 学员评价 -->
       <div class="evaluation">
         <div class="evaluation-title">学员评论</div>
-        <div class="evaluation-item" v-for="(item, index) in evaluationList" :key="index">
+        <div class="evaluation-item" v-for="(item, index) in showeDevaluationList" :key="index">
           <div class="user">
             <div class="user-info">
               <img :src="item.photoURL" alt>
@@ -31,40 +31,109 @@
             <div>{{item.evaluateTime}}</div>
           </div>
         </div>
+        <div class="show-more" v-if="isShowMore" @click="showMore">展开更多评价</div>
       </div>
     </div>
+    
+    <!-- 相关视频 -->
+    <course-list
+      show-title
+      list-name="相关视频"
+      :course-list="relativeVideo"
+      :show-all="false"
+      margin-top="60px">
+    </course-list>
   </div>
 </template>
 
 <script>
+import CourseList from '~/components/CourseList.vue'
 export default {
   layout(context) {
     return 'course'
   },
 
+  components: {
+    CourseList
+  },
+
   data() {
     return {
-      // 视频url
-      videoUrl:
-        'http://wxsnsdy.tc.qq.com/105/20210/snsdyvideodownload?filekey=30280201010421301f0201690402534804102ca905ce620b1241b726bc41dcff44e00204012882540400&bizid=1023&hy=SH&fileparam=302c020101042530230204136ffd93020457e3c4ff02024ef202031e8d7f02030f42400204045a320a0201000400',
-      // 评价列表
-      evaluationList: []
+      // 所有评价列表
+      evaluationList: [],
+      // 开始展示的评价列表
+      showeDevaluationList: [],
+      // 是否展开更多
+      isShowMore: true,
+      // 相关视频
+      relativeVideo: [
+        {
+          id: 0,
+          imageUrl: '../../assets/img/course/bigdata.png',
+          watchedTimes: 1222,
+          courseName:'咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会',
+          courseTeacher: '咕泡学院-Tom'
+        },
+        {
+          id: 1,
+          imageUrl: '../../assets/img/course/bigdata.png',
+          watchedTimes: 2222,
+          courseName: '咕泡学院人工智能发布会',
+          courseTeacher: '咕泡学院-Tom'
+        },
+        {
+          id: 2,
+          imageUrl: '../../assets/img/course/bigdata.png',
+          watchedTimes: 3222,
+          courseName: '咕泡学院人工智能发布会',
+          courseTeacher: '咕泡学院-Tom'
+        },
+        {
+          id: 3,
+          imageUrl: '../../assets/img/course/bigdata.png',
+          watchedTimes: 4222,
+          courseName: '咕泡学院人工智能发布会',
+          courseTeacher: '咕泡学院-Tom'
+        }
+      ],
+      // 视频详情
+      courseDetail: {}
     }
   },
 
   methods: {
+    // 获取本地的学生评价文件数据
     async getEvaluation() {
-      // 获取本地的json文件数据
       const response = await this.$axios.get(
         `${window.location.origin}/datas/play/evaluation.json`
       )
-      console.log(response)
       this.evaluationList = response.data.datas
+      this.showeDevaluationList = response.data.datas.slice(0, 5)
+    },
+
+    // 查看更多
+    showMore() {
+      this.showeDevaluationList = this.evaluationList
+      this.isShowMore = false
+    },
+
+    // 获取课程详情
+    async getVideoDetail() {
+      const query = this.$route.query
+      const res = await this.$axios.get(
+        `${window.location.origin}/datas/resourse/${query.courseType}.json`
+      )
+      const resData = res.data.data
+      let courseList = query.videoType == 0 ? resData.featuredVideos.data : resData.vipVideos.data
+      let filterResult = courseList.filter(ele => ele.id == query.id)
+      this.courseDetail = filterResult[0]
+      console.log(this.courseDetail)
     }
   },
 
   mounted() {
     this.getEvaluation()
+    this.getVideoDetail()
   }
 }
 </script>
@@ -150,5 +219,14 @@ export default {
   color: #999;
   display: flex;
   justify-content: space-between;
+}
+.play .show-more {
+  width: 100%;
+  height: 72px;
+  background: #F5F5F5;
+  color: #666;
+  font-size: 26px;
+  text-align: center;
+  line-height: 72px;
 }
 </style>
