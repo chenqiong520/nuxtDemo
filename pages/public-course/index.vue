@@ -1,17 +1,17 @@
 <template>
   <div class="public-course">
     <!-- 标题 -->
-    <div class="course-title">JAVA开发架构课</div>
+    <div class="course-title">{{courseTitle}}</div>
 
-    <!-- 滚动选择 -->
-    <div class="swiper" v-swiper:mySwiper="swiperOption">
+    <!-- 轮播图 -->
+    <div class="swiper" v-swiper:mySwiper="swiperOption" ref="mySwiper">
       <div class="swiper-wrapper">
         <div
           class="swiper-slide"
-          v-for="(item,index) in rollerList"
+          v-for="(item,index) in publicCourseList"
           :key="index">
-          <img :src="item.imgUrl" alt="">
-          <div class="status">{{item.status}}</div>
+          <img :src="item.promotion_img" alt="">
+          <div class="status">{{statusText(item.start_time, item.end_time)}}</div>
         </div>
       </div>
       <div class="swiper-pagination swiper-pagination-bullets"></div>
@@ -45,15 +45,61 @@ export default {
           renderBullet(index, className) {
             return `<span class="${className} swiper-pagination-bullet-custom"></span>`
           }
+        },
+        on: {
+          transitionEnd:() => {
+            let activeIndex = this.$refs.mySwiper.swiper.activeIndex
+            let filterRes = this.publicCourseList.filter((ele, index) => index == activeIndex)
+            this.courseTitle = filterRes[0].course_name
+          }
         }
       },
-      // 轮播图列表
-      rollerList: [
-        { imgUrl: '//cdn.gupaoedu.com/index/images/students/adv_icon_07.jpg', status: '直播中' },
-        { imgUrl: '//cdn.gupaoedu.com/index/images/students/adv_icon_07.jpg', status: '直播中' },
-        { imgUrl: '//cdn.gupaoedu.com/index/images/students/adv_icon_07.jpg', status: '直播中' }
-      ]
+      // 公开课列表
+      publicCourseList: [],
+      // 课程标题
+      courseTitle: ''
     }
+  },
+
+  methods: {
+    // 获取今日公开课
+    async getTodayPublicCourse() {
+      const res = await this.$axios.get('arrangement/getToDayPublicCourse?token=gupao-wechat-applet')
+      const data = res.data.data
+      this.publicCourseList = data
+      this.courseTitle = data[0].course_name
+    },
+
+    // 获取当前时间戳
+    getCurrentTimestamp() {
+      return new Date().getTime()
+    },
+
+    // 时间戳转时间
+    toTime(times) {
+      let date = new Date(times),
+          d = date.getDate()
+      return date.toTimeString().substr(0, 5)
+    },
+
+    // 直播状态文字
+    statusText(start, end) {
+      let timeNow = this.getCurrentTimestamp()
+      let text = ''
+      if (start < timeNow && end > timeNow) {
+        text = '直播中'
+      } else if (end < timeNow) {
+        text = '直播已结束'
+      } else {
+        text = `${this.toTime(start)}开播`
+      }
+      return text
+    }
+  },
+
+  mounted() {
+    this.getTodayPublicCourse()
+    this.statusText()
   }
 }
 </script>
@@ -68,11 +114,11 @@ export default {
     font-weight: bold;
   }
   .swiper {
-    height: 928px;
+    height: 950px;
     margin-top: 20px;
     .swiper-slide {
       width: 600px;
-      height: 927px;
+      height: 950px;
       border-radius: 24px;
       background: cyan;
       position: relative;

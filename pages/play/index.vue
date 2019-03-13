@@ -1,6 +1,16 @@
 <template>
   <div class="play">
-    <video :src="courseDetail.url" class="video" controls autoplay></video>
+    <!-- 视频 -->
+    <iframe
+      :src="courseDetail.url"
+      marginwidth="0"
+      marginheight="0"
+      frameborder="0"
+      width="100%"
+      scrolling="no"
+      height="188"
+      allowtransparency>
+    </iframe>
 
     <div class="play-wrap">
       <!-- 课程信息 -->
@@ -41,7 +51,9 @@
       list-name="相关视频"
       :course-list="relativeVideo"
       :show-all="false"
-      margin-top="60px">
+      margin-top="60px"
+      :course-type="$route.query.courseType"
+      :video-type="0">
     </course-list>
   </div>
 </template>
@@ -66,36 +78,7 @@ export default {
       // 是否展开更多
       isShowMore: true,
       // 相关视频
-      relativeVideo: [
-        {
-          id: 0,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 1222,
-          courseName:'咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 1,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 2222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 2,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 3222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        },
-        {
-          id: 3,
-          imageUrl: '../../assets/img/course/bigdata.png',
-          watchedTimes: 4222,
-          courseName: '咕泡学院人工智能发布会',
-          courseTeacher: '咕泡学院-Tom'
-        }
-      ],
+      relativeVideo: [],
       // 视频详情
       courseDetail: {}
     }
@@ -124,10 +107,16 @@ export default {
         `${window.location.origin}/datas/resourse/${query.courseType}.json`
       )
       const resData = res.data.data
+      this.relativeVideo = resData.featuredVideos.data
       let courseList = query.videoType == 0 ? resData.featuredVideos.data : resData.vipVideos.data
       let filterResult = courseList.filter(ele => ele.id == query.id)
       this.courseDetail = filterResult[0]
-      console.log(this.courseDetail)
+    }
+  },
+
+  watch: {
+    '$route'() {
+      this.$router.go(0)
     }
   },
 

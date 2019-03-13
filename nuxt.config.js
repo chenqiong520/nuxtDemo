@@ -97,6 +97,16 @@ module.exports = {
           '^/wwwapi': '/manageapi/wwwapi' //将 /wwwapi 代替为 /manageapi/wwwapi
         }
       }
+    ],
+    [
+      '/arrangement',
+      {
+        target: 'http://192.168.8.122', // 测试服务器
+        changeOrigin: true, // 是否跨域
+        pathRewrite: { // 重写path
+          '^/arrangement': '/manageapi/arrangement'
+        }
+      }
     ]
   ],
 
