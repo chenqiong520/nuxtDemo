@@ -2,29 +2,31 @@
   <div class="student">
     <!-- 学员简介 -->
     <div class="student-name">
-      <img src="../../assets/img/course/intelligence.png" alt>
+      <img :src="student.photoUrl" alt>
       <div>
-        <div class="student-number">GP10326</div>
-        <div>阿里高级开发工程师（薪资38K/月)</div>
+        <div class="student-number">
+          {{student.no}}
+        </div>
+        <div> {{student.work}}</div>
       </div>
     </div>
 
     <!-- 学员故事 -->
     <div class="student-story">
       <div class="title">
-        <i class="iconfont iconstory"></i>
+        <i class="iconfont iconstory" />
         <span>学员故事</span>
       </div>
-      <div>在技术学习得道路上感到迷茫得时候，一个偶然得机会让我遇到了咕泡学院</div>
+      <div>{{student.desc}}</div>
     </div>
 
     <!-- 学员评价 -->
     <div class="student-story">
       <div class="title">
-        <i class="iconfont iconstory"></i>
+        <i class="iconfont iconstory" />
         <span>学员评价</span>
       </div>
-      <div>在咕泡的一年多时间里面，不仅仅学到了技术交到了朋友建立了圈子，更是收获了信心和能量，让我现在在阿里工作游刃有余，感谢咕泡感谢默默付出得导师们</div>
+      <div>{{student.comment}}</div>
     </div>
   </div>
 </template>
@@ -36,7 +38,25 @@ export default {
   },
 
   data() {
-    return {}
+    return {
+      no: this.$route.query.no,
+      student: {}
+    }
+  },
+  mounted() {
+    this.getStudent()
+  },
+  methods: {
+    async getStudent() {
+      // 获取本地的json文件数据
+      const response = await this.$axios.get(`./datas/home/student.json`)
+      const studentList = response.data.datas
+      for (let i = 0; i < studentList.length; i++) {
+        if (studentList[i].no === this.no) {
+          this.student = studentList[i]
+        }
+      }
+    }
   }
 }
 </script>

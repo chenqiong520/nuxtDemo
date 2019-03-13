@@ -1,60 +1,27 @@
 {
   "status":0,
   "message":"获取成功",
-  "datas":[
+  "datas": [
     {
-      "id":"1",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_01.jpg",
-      "nickName":"有****",
-      "content":"课程紧跟当前技术潮流，深入讲解技术原理，教学生动形象，力求让学员知其所以然"
+      "photoUrl": "//cdn.gupaoedu.com/newIndex/images/user1.png",
+      "no": "GP10167",
+      "work": "Mark 系统架构师(薪资60K/月)",
+      "desc": "十余年的工作经验，但是没有一个系统的学习过程，导致很多知识都会一些，并没有形成体系。",
+      "comment": "参加了咕泡的课程，巩固了我的知识，并且让我的经验发挥了效果。成功拿到了架构师职位的offer，目前在一家互联网企业担任系统架构师。"
     },
     {
-      "id":"2",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_02.jpg",
-      "nickName":"M****",
-      "content":"老师很幽默 学习起来很轻松 开心"
+      "photoUrl": "//cdn.gupaoedu.com/newIndex/images/user2.png",
+      "no": "GP10326",
+      "work": "阿里高级开发工程师(薪资38K/月)",
+      "desc": "在技术学习的道路上感到迷茫的时候，一个偶然的机会让我遇到咕泡",
+      "comment": "在咕泡的一年多时间里面，不仅仅学到了技术交到了朋友建立了圈子，更是收获了信心和能量，让我现在阿里工作游刃有余，感谢咕泡感谢默默付出的导师们。"
     },
     {
-      "id":"3",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_03.jpg",
-      "nickName":"J****",
-      "content":"我觉得老师超级无敌牛逼  至少让我目瞪口呆"
-    },
-    {
-      "id":"4",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_04.jpg",
-      "nickName":"M****",
-      "content":"课程体系全面，授课动手操作展示到位，老师们讲解知识点由浅入深，答疑也简单明了。非常棒的课程，我是由php & python转入学习Java的，感觉比自己学习轻松多了"
-    },
-    {
-      "id":"5",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_05.jpg",
-      "nickName":"M****",
-      "content":"讲的都是现在最流行的技术，很实用，老师也都讲的很好"
-    },
-    {
-      "id":"6",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_06.jpg",
-      "nickName":"M****",
-      "content":"老师很热情，上课互动好。"
-    },
-    {
-      "id":"7",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_07.jpg",
-      "nickName":"M****",
-      "content":"基础差，linux命令不会，所以上课有点懵，但总体的知识点可以理解。听james校长讲课很有激情"
-    },
-    {
-      "id":"8",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_08.jpg",
-      "nickName":"M****",
-      "content":"课程内容很全面,老师讲解的比较透彻,基本都是干货,对于能力提升和开阔思维非常有帮助"
-    },
-    {
-      "id":"8",
-      "photoURL":"//cdn.gupaoedu.com/index/images/students/adv_icon_09.jpg",
-      "nickName":"M****",
-      "content":"课程内容很全面,老师讲解的比较透彻,基本都是干货,对于能力提升和开阔思维非常有帮助"
+      "photoUrl": "//cdn.gupaoedu.com/newIndex/images/user3.jpg",
+      "no": "GP10022",
+      "work": "Java资深开发工程师(薪资30K/月)",
+      "desc": "从最早的时候参加免费的公开课试听，然后报名VIP付费课程。我很感恩遇到一个这么好的平台和负责的老师。",
+      "comment": "短短的几个月时间，是我职业生涯中最高效的学习时间段，虽然很辛苦，与收获相比，我觉得非常值得。"
     }
   ]
 }
