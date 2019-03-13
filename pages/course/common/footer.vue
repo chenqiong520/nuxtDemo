@@ -19,7 +19,7 @@
 
     <!-- 群交流 -->
     <div v-show="isGroupPopperShow" @click="showGroupPopper" class="popper">
-      <div class="body group">
+      <div class="body group" @click.stop>
         <p class="title">添加QQ群加入JAVA架构师交流群</p>
         <p class="tips">打开QQ - 加好友/群 - 粘贴QQ群号</p>
         <div
@@ -35,7 +35,7 @@
 
     <!-- 公众号 -->
     <div v-show="isWechatPopperShow" @click="showWechatPopper" class="popper">
-      <div class="body wechat">
+      <div class="body wechat" @click.stop>
         <img class="qrcode" :src="qrcodeSrc">
         <p class="title">{{qrcodeTitle}}</p>
         <p class="tips">打开微信 - 扫一扫</p>
@@ -132,8 +132,9 @@ footer.course-footer {
       width: 299px;
       height: 80px;
       margin-right: 32px;
-      text-align: center;
-      line-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: rgba(253, 85, 58, 1);
       border-radius: 6px;
       font-size: 32px;
@@ -208,8 +209,9 @@ footer.course-footer .tabbar.active {
       margin-top: 39px;
       width: 540px;
       height: 80px;
-      text-align: center;
-      line-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: rgba(253, 85, 58, 1);
       border-radius: 8px;
       font-size: 32px;
@@ -249,8 +251,9 @@ footer.course-footer .tabbar.active {
       margin-top: 35px;
       width: 540px;
       height: 80px;
-      text-align: center;
-      line-height: 80px;
+      display: flex;
+      align-items: center;
+      justify-content: center;
       background: rgba(253, 85, 58, 1);
       border-radius: 8px;
       font-size: 32px;

@@ -26,6 +26,7 @@ export default {
     return {
       swiperOption: {
         autoplay: true,
+        spaceBetween: 10,
         pagination: {
           el: '.swiper-pagination',
           renderBullet(index, className) {

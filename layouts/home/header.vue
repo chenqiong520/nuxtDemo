@@ -152,11 +152,7 @@ export default {
   z-index: 10080;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.menu .nav-list {
-  margin-top: 300px;
+  align-items: center;
 }
 
 .menu .nav-list li {
@@ -181,6 +177,6 @@ export default {
   font-family: 'iconfont';
   position: absolute;
   left: -42px;
-  top: 8px;
+  top: 6px;
 }
 </style>
