@@ -1,20 +1,20 @@
 <template>
-  <div class="honor">
+  <div class="school">
     <div class="category-title">
-      <div><span class="left-line" /> 咕泡荣誉<span class="right-line" /></div>
+      <div><span class="left-line" /> 学院风采<span class="right-line" /></div>
     </div>
     <!-- 滚动选择 -->
     <div v-swiper:mySwiper="swiperOption" class="swiper">
       <div class="swiper-wrapper">
         <div
+          :class="item.secondList.length ===1 ? 'big-div': 'small-div'"
           v-for="(item,index) in honorList"
           :key="index"
           @click="selectTeacher(item)"
-          class="swiper-slide honor-item"
+          class="swiper-slide school-item"
         >
-          <img :src="item.img">
-          <div class="img-desc">
-            {{ item.desc }}
+          <div v-if="item.secondList" v-for="(second,i) in item.secondList" :key="i">
+            <img :class="item.secondList.length ===1 ? 'big-img': 'small-img'" :src="second.img"/>
           </div>
         </div>
       </div>
@@ -30,28 +30,38 @@ export default {
     return {
       honorList: [
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
-          desc: '2018年腾讯课堂‘卓越贡献奖’'
+          secondList: [
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            }
+          ]
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/12.png',
-          desc: '荣获腾讯2018年度影响力在线教育品牌'
+          secondList: [
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            },
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            }
+          ]
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/13.png',
-          desc: '成为腾讯课堂认证机构'
+          secondList: [
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            }
+          ]
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/14.png',
-          desc: '荣获腾讯2017年度知名在线教育品牌'
-        },
-        {
-          img: '//cdn.gupaoedu.com/newIndex/images/15.png',
-          desc: '荣获腾讯课堂“金课堂·最具潜力奖”'
-        },
-        {
-          img: '//cdn.gupaoedu.com/newIndex/images/16.png',
-          desc: '荣获腾讯课堂“创造101火箭机构奖”'
+          secondList: [
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            },
+            {
+              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+            }
+          ]
         }
       ],
       // 轮播图选项
@@ -95,29 +105,34 @@ export default {
   line-height: 24px;
   margin-top: 18px;
 }
-.honor {
+.school {
+  margin-top: 96px;
   .swiper {
     margin-top: 35px;
   }
-  .honor-item {
-    width: 300px;
+  .school-item {
     margin-right: 16px;
     text-align: center;
     position: relative;
-    img {
-      width: 300px;
-      height: 300px;
+    .big-img {
+      width: 382px;
+      height: 310px;
       border-radius: 8px;
     }
-    .img-desc {
-      font-size: 24px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 1);
-      line-height: 40px;
-      padding: 16px;
-      position: absolute;
-      bottom: 0;
-      background: rgba(31, 31, 31, 0.14);
+    &.big-div {
+      width: 382px;
+    }
+    &.small-div {
+      width: 218px;
+      font-size: 0;
+      .small-img {
+        width: 218px;
+        height: 147px;
+        border-radius: 8px;
+        &:first-child {
+          margin-bottom: 16px;
+        }
+      }
     }
   }
 }

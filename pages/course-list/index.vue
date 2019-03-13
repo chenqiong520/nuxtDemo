@@ -5,19 +5,24 @@
         :class="['tabs-item', {'on': index == currentTab}]"
         v-for="(item, index) in tabs"
         :key="index"
-        @click="switchTab(index)">
-        {{item.name}}
+        @click="switchTab(index)"
+      >
+        {{ item.name }}
       </div>
     </div>
+    <HotCourse :hotCourse="currentCourse" class="div-padding"></HotCourse>
   </div>
 </template>
 
 <script>
+import HotCourse from '@/components/HotCourse'
 export default {
   layout(context) {
     return 'course'
   },
-
+  components: {
+    HotCourse
+  },
   data() {
     return {
       // tabs
@@ -27,7 +32,43 @@ export default {
         { id: 3, name: '猜你喜欢' }
       ],
       // 当前选中tab下标
-      currentTab: 0
+      currentTab: 0,
+      currentCourse: {
+        courseList: [
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/Git.jpg',
+            url: '',
+            readNum: 14363,
+            CommentNum: 460,
+            courseName: ' Git入门教程',
+            price: '¥29.99'
+          },
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/xmkjpkc.jpg',
+            url: '',
+            readNum: 6112,
+            CommentNum: 20,
+            courseName: ' 小马哥的精品课程详解',
+            price: ' ¥6.66'
+          },
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/Git.jpg',
+            url: '',
+            readNum: 14363,
+            CommentNum: 460,
+            courseName: ' Git入门教程',
+            price: '¥29.99'
+          },
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/xmkjpkc.jpg',
+            url: '',
+            readNum: 6112,
+            CommentNum: 20,
+            courseName: ' 小马哥的精品课程',
+            price: ' ¥6.66'
+          }
+        ]
+      }
     }
   },
 
@@ -35,6 +76,7 @@ export default {
     // 切换tab
     switchTab(index) {
       this.currentTab = index
+      this.currentCourse = this.currentCourse
     }
   }
 }
@@ -58,13 +100,13 @@ export default {
       position: relative;
     }
     .on {
-      color: #FD553A;
+      color: #fd553a;
       &::after {
         content: '';
         width: 126px;
         height: 6px;
         border-radius: 3px;
-        background: #FD553A;
+        background: #fd553a;
         position: absolute;
         left: 0;
         right: 0;
@@ -72,6 +114,9 @@ export default {
         margin: auto;
       }
     }
+  }
+  .div-padding {
+    padding: 0 30px;
   }
 }
 </style>
