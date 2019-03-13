@@ -21,3 +21,4 @@ if (env === 'production') {
 }
 
 module.exports = mergedConfig
+
