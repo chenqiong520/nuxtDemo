@@ -1,7 +1,7 @@
 <template>
-  <div class="honor">
+  <div class="partner">
     <div class="category-title">
-      <div><span class="left-line" /> 咕泡荣誉<span class="right-line" /></div>
+      <div><span class="left-line" /> 咕泡合伙人<span class="right-line" /></div>
     </div>
     <!-- 滚动选择 -->
     <div v-swiper:mySwiper="swiperOption" class="swiper">
@@ -10,12 +10,9 @@
           v-for="(item,index) in honorList"
           :key="index"
           @click="selectTeacher(item)"
-          class="swiper-slide honor-item"
+          class="swiper-slide partner-item"
         >
           <img :src="item.img">
-          <div class="img-desc">
-            {{ item.desc }}
-          </div>
         </div>
       </div>
     </div>
@@ -30,28 +27,16 @@ export default {
     return {
       honorList: [
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
-          desc: '2018年腾讯课堂‘卓越贡献奖’'
+          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/12.png',
-          desc: '荣获腾讯2018年度影响力在线教育品牌'
+          img: '//cdn.gupaoedu.com/newIndex/images/12.png'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/13.png',
-          desc: '成为腾讯课堂认证机构'
+          img: '//cdn.gupaoedu.com/newIndex/images/13.png'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/14.png',
-          desc: '荣获腾讯2017年度知名在线教育品牌'
-        },
-        {
-          img: '//cdn.gupaoedu.com/newIndex/images/15.png',
-          desc: '荣获腾讯课堂“金课堂·最具潜力奖”'
-        },
-        {
-          img: '//cdn.gupaoedu.com/newIndex/images/16.png',
-          desc: '荣获腾讯课堂“创造101火箭机构奖”'
+          img: '//cdn.gupaoedu.com/newIndex/images/14.png'
         }
       ],
       // 轮播图选项
@@ -95,11 +80,12 @@ export default {
   line-height: 24px;
   margin-top: 18px;
 }
-.honor {
+.partner {
+  margin-top: 95px;
   .swiper {
     margin-top: 35px;
   }
-  .honor-item {
+  .partner-item {
     width: 300px;
     margin-right: 16px;
     text-align: center;
@@ -108,16 +94,6 @@ export default {
       width: 300px;
       height: 300px;
       border-radius: 8px;
-    }
-    .img-desc {
-      font-size: 24px;
-      font-weight: 500;
-      color: rgba(255, 255, 255, 1);
-      line-height: 40px;
-      padding: 16px;
-      position: absolute;
-      bottom: 0;
-      background: rgba(31, 31, 31, 0.14);
     }
   }
 }

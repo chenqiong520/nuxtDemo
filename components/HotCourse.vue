@@ -1,6 +1,6 @@
 <template>
   <div class="hot-course">
-    <div class="course-title-box clear">
+    <div v-if="hotCourse.titleName" class="course-title-box clear">
       <div class="left">
         <div><img :src="hotCourse.titleIcon"><span class="course-title">{{ hotCourse.titleName }}</span></div>
         <div class="title-desc">
@@ -11,20 +11,20 @@
         <i class="iconfont iconarrow-right-copy-copy-copy" style="font-size:32px; color:#444" />
       </div>
     </div>
-    <div class="course-cont-wrapper clear">
-      <div class="item" v-for="(item, index) in hotCourse.courseList" :key="index">
+    <div class="course-cont-wrapper ">
+      <div v-for="(item, index) in hotCourse.courseList" :key="index" class="item">
         <div class="course-img">
           <img :src="item.coverImg">
           <div class="num status-desc">
-            <span class="span1"><i class="iconfont iconread" />{{item.readNum}}</span>
-            <span><i class="iconfont iconcomment" />{{item.CommentNum}}</span>
+            <span class="span1"><i class="iconfont iconread" />{{ item.readNum }}</span>
+            <span><i class="iconfont iconcomment" />{{ item.CommentNum }}</span>
           </div>
         </div>
         <div class="course-name">
-          {{item.courseName}}
+          {{ item.courseName | addEllipsis(9) }}
         </div>
         <div class="price">
-         {{item.price}}
+          {{ item.price }}
         </div>
       </div>
     </div>
@@ -78,11 +78,13 @@ export default {
 
 .hot-course .course-cont-wrapper {
   margin-top: 32px;
-  width: 705px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
 }
 .hot-course .course-cont-wrapper .item {
-  float: left;
-  margin-right: 18px;
+  margin-bottom: 40px;
+  width: 334px;
 }
 .hot-course .course-cont-wrapper .course-img {
   position: relative;

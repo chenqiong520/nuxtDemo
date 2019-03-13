@@ -1,9 +1,10 @@
 <template>
   <div class="home">
-    <banner />
+    <banner class="div-padding" />
     <!--今日公开课-->
-    <div class="public-course">
-      <div class="course-title-box clear">
+    <div class="public-course div-padding">
+      <nuxt-link to="/public-course">
+      <div class="course-title-box clear" >
         <div class="left">
           <div><img src="@/assets/img/home/public-icon.png"><span class="course-title">今日公开课</span></div>
           <div class="title-desc">
@@ -14,8 +15,9 @@
           <i class="iconfont iconarrow-right-copy-copy-copy" style="font-size:32px; color:#444" />
         </div>
       </div>
-      <div class="course-cont-wrapper clear">
-        <div class="left-item">
+      </nuxt-link>
+      <div class="course-cont-wrapper">
+        <div class="item">
           <div class="course-img">
             <img src="//cdn.gupaoedu.com/newIndex/images/stk/Java1.jpg">
             <div class="status-desc">
@@ -29,7 +31,7 @@
             咕泡学院-jack老师
           </div>
         </div>
-        <div class="right-item">
+        <div class="item">
           <div class="course-img">
             <img src="//cdn.gupaoedu.com/newIndex/images/stk/ai.jpg">
             <div class="status-desc">
@@ -45,8 +47,6 @@
         </div>
       </div>
     </div>
-    <!--热门课程-->
-    <hot-course :hotCourse="hotCourse" />
     <!--8s服务体系-->
     <div class="service-system">
       <div class="category-title">
@@ -124,9 +124,9 @@
         </div>
       </div>
     </div>
-    <teacher />
+    <teacher class="div-padding" />
     <!--学员反馈-->
-    <div class="feedback">
+    <div class="feedback div-padding">
       <div class="category-title">
         <div><span class="left-line" />学员反馈<span class="right-line" /></div>
         <p class="text">
@@ -162,42 +162,46 @@
           </div>
         </div>
       </div>
+      <student></student>
+    </div>
 
-      <div>
-        <div class="student-item" v-for="(item, index) in studentList" :key="index">
-          <div class="student-flex">
-            <div class="student-photo">
-              <img :src="item.photoUrl">
-            </div>
-            <div class="student-info">
-              <div class="student-no">
-                {{item.no}}
-              </div>
-              <div class="student-work">
-                {{item.work}}
-              </div>
-            </div>
-            <div>
-              <i class="iconfont iconarrow-right-copy-copy-copy" style="font-size:24px; color:#252525" />
-            </div>
-          </div>
+    <div class="div-padding bg-wrapper">
+      <honor />
+      <school />
+      <team />
+    </div>
+    <partner class="div-padding" />
 
-          <div class="student-desc">
-            {{item.desc}}
-          </div>
-        </div>
-        <div class="open-all">
-          展开全部学员
-        </div>
+    <div class="cooperation div-padding">
+      <div class="category-title">
+        <div><span class="left-line" />合作伙伴<span class="right-line" /></div>
+      </div>
+      <div class="cooperation-wrapper">
+        <div class="cooperation-item"><a rel="nofollow" href="//i.youku.com/u/UNDQ3NTQzNjUxNg==" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/youku_logo.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="//www.aliyun.com" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/aliyun_logo.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="//gupao.ke.qq.com" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/ke_qq_logo.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="//www.toutiao.com/c/user/55444555310/#mid=1559378569827330" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/toutiao_logo.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="http://www.processon.com" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/processon_logo.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="//cloud.tencent.com/developer/edu?utm_source=menubar&utm_medium=edu" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/tengx.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="https://study.163.com/provider/1024234570/index.htm" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/wyykt.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="https://www.csdn.net/" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/csdn.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="http://space.bilibili.com/346136575" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/bili.jpg" alt="合作伙伴"></a></div>
+        <div class="cooperation-item"><a rel="nofollow" href="https://www.oschina.net/" target="_blank"><img src="//cdn.gupaoedu.com/index/images/coop/oschina.jpg" alt="合作伙伴"></a></div>
       </div>
     </div>
+    <index-footer></index-footer>
   </div>
 </template>
 
 <script>
 import Banner from './home/banner'
-import HotCourse from '@/components/HotCourse'
 import Teacher from './home/teacher'
+import Honor from './home/honor'
+import School from './home/school'
+import Student from './home/student'
+import Team from './home/team'
+import Partner from './home/partner'
+import IndexFooter from './home/indexFooter'
 
 export default {
   name: 'Index',
@@ -205,8 +209,13 @@ export default {
 
   components: {
     Banner,
-    HotCourse,
-    Teacher
+    Teacher,
+    Honor,
+    School,
+    Student,
+    Team,
+    Partner,
+    IndexFooter
   },
   data() {
     return {
@@ -230,32 +239,25 @@ export default {
             CommentNum: 20,
             courseName: ' 小马哥的精品课程',
             price: ' ¥6.66'
+          },
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/Git.jpg',
+            url: '',
+            readNum: 14363,
+            CommentNum: 460,
+            courseName: ' Git入门教程',
+            price: '¥29.99'
+          },
+          {
+            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/xmkjpkc.jpg',
+            url: '',
+            readNum: 6112,
+            CommentNum: 20,
+            courseName: ' 小马哥的精品课程',
+            price: ' ¥6.66'
           }
         ]
-      },
-      studentList: [
-        {
-          photoUrl: '//cdn.gupaoedu.com/newIndex/images/user1.png',
-          no: 'GP10167',
-          work: 'Mark 系统架构师(薪资60K/月)',
-          desc:
-            '参加了咕泡的课程，巩固了我的知识，并且让我的经验发挥了效果。成功拿到了架构师职位的offer，目前在一家互联网企业担任系统架构师。'
-        },
-        {
-          photoUrl: '//cdn.gupaoedu.com/newIndex/images/user2.png',
-          no: 'GP10326',
-          work: '阿里高级开发工程师(薪资38K/月)',
-          desc:
-            '在咕泡的一年多时间里面，不仅仅学到了技术交到了朋友建立了圈子，更是收获了信心和能量，让我现在阿里工作游刃有余，感谢咕泡感谢默默付出的导师们。'
-        },
-        {
-          photoUrl: '//cdn.gupaoedu.com/newIndex/images/user3.jpg',
-          no: 'GP10022',
-          work: 'Java资深开发工程师(薪资30K/月)',
-          desc:
-            '短短的几个月时间，是我职业生涯中最高效的学习时间段，虽然很辛苦，与收获相比，我觉得非常值得。'
-        }
-      ]
+      }
     }
   }
 }
@@ -263,7 +265,14 @@ export default {
 
 <style  lang="scss" scoped>
 .home {
-  padding: 0 30px;
+  .div-padding {
+    padding: 0 30px;
+    &.bg-wrapper {
+      background-color: #f8f8f8;
+      padding: 48px 30px;
+      margin-top: 48px;
+    }
+  }
 }
 .clear:after {
   content: ' ';
@@ -303,6 +312,9 @@ export default {
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
+  .item {
+    width: 334px;
+  }
 }
 .course-cont-wrapper .course-img {
   position: relative;
@@ -344,7 +356,8 @@ export default {
 }
 .service-system {
   background: rgba(248, 248, 248, 1);
-  padding-top: 48px;
+  padding: 48px 30px 12px 30px;
+  margin-top: 47px;
 }
 .category-title {
   font-size: 36px;
@@ -458,50 +471,6 @@ export default {
       );
     }
   }
-  .student-item {
-    border-top: 1px solid #eaeaea;
-    .student-flex {
-      display: flex;
-      align-items: center;
-      margin-top: 40px;
-      .student-photo {
-        width: 72px;
-        height: 72px;
-        margin-right: 27px;
-        img {
-          width: 100%;
-          height: 100%;
-          border-radius: 50%;
-        }
-      }
-      .student-info {
-        flex: 1;
-        .student-no {
-          font-size: 30px;
-          line-height: 30px;
-          font-weight: 500;
-          color: rgba(37, 37, 37, 1);
-          margin-bottom: 8px;
-        }
-        .student-work {
-          display: inline-block;
-          background: rgba(254, 233, 229, 1);
-          border-radius: 4px;
-          font-size: 24px;
-          padding: 6px 8px;
-          font-weight: 500;
-          color: rgba(253, 85, 58, 1);
-        }
-      }
-    }
-    .student-desc {
-      font-size: 28px;
-      margin-top: 30px;
-      margin-bottom: 39px;
-      font-weight: 400;
-      color: rgba(102, 102, 102, 1);
-    }
-  }
   .open-all {
     height: 72px;
     line-height: 72px;
@@ -511,6 +480,22 @@ export default {
     font-weight: 500;
     color: rgba(102, 102, 102, 1);
     text-align: center;
+  }
+}
+.cooperation {
+  margin-top: 96px;
+  .cooperation-wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin-top: 29px;
+    .cooperation-item {
+      width: 25%;
+      margin-bottom: 20px;
+      img {
+        width: 172px;
+      }
+    }
   }
 }
 </style>

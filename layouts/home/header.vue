@@ -8,8 +8,8 @@
       </div>
 
       <div class="button-group">
-        <i @click="toSearch" class="iconfont iconsearch1"></i>
-        <i @click="showMenu" class="iconfont iconbx-menu-alt-right"></i>
+        <i @click="toSearch" class="iconfont iconsearch1 search"></i>
+        <i @click="showMenu" class="iconfont iconmenu"></i>
       </div>
     </div>
 
@@ -136,6 +136,9 @@ export default {
   font-size: 36px;
   color: #252525;
 }
+.header-box .button-group .iconfont.search {
+  margin-right: 40px;
+}
 
 .gp-header .menu {
   position: fixed;
@@ -149,11 +152,7 @@ export default {
   z-index: 10080;
   display: flex;
   justify-content: center;
-  align-items: flex-start;
-}
-
-.menu .nav-list {
-  margin-top: 300px;
+  align-items: center;
 }
 
 .menu .nav-list li {
@@ -178,6 +177,6 @@ export default {
   font-family: 'iconfont';
   position: absolute;
   left: -42px;
-  top: 8px;
+  top: 6px;
 }
 </style>

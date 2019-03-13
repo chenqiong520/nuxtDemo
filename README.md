@@ -19,4 +19,28 @@ $ yarn start
 $ yarn run generate
 ```
 
-For detailed explanation on how things work, checkout [Nuxt.js docs](https://nuxtjs.org).
+## 手动部署
+
+```bash
+# 部署到测试服务器
+# 1. 执行编译命令
+$ NODE_ENV=pre-production npm run generate
+
+# 2. 将dist下的文件拷贝到测试服务器地址
+
+
+# 部署到生产服务器
+# 1. 执行编译命令
+$ NODE_ENV=production npm run generate
+
+# 2. 将dist下的文件拷贝到生产服务器地址
+
+# 3. 将.nuxt/dist/client下的文件拷贝到CDN服务器的officail-web-moblie目录下
+
+```
+
+## jenkins自动部署
+
+```bash
+
+```
