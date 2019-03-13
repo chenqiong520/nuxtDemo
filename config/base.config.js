@@ -74,17 +74,23 @@ module.exports = {
    * 打包配置
    */
   build: {
-    // extend(config, ctx) {
-    //   // 编译时进行eslint检查
-    //   if (ctx.isDev && ctx.isClient) {
-    //     config.module.rules.push({
-    //       enforce: 'pre',
-    //       test: /\.(js|vue)$/,
-    //       loader: 'eslint-loader',
-    //       exclude: /(node_modules)/
-    //     })
-    //   }
-    // },
+    extend(config, ctx) {
+      // 编译时进行eslint检查
+      // if (ctx.isDev && ctx.isClient) {
+      //   config.module.rules.push({
+      //     enforce: 'pre',
+      //     test: /\.(js|vue)$/,
+      //     loader: 'eslint-loader',
+      //     exclude: /(node_modules)/
+      //   })
+      // }
+      
+      // 图片压缩
+      config.module.rules.push({
+        test: /\.(gif|png|jpe?g|svg)$/i,
+        use: ['image-webpack-loader']
+      })
+    },
 
     postcss: {
       plugins: {
