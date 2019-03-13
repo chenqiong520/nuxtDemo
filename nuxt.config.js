@@ -10,8 +10,8 @@ console.log(env)
 // 默认为开发环境
 let mergedConfig = merge(baseConfig, devConfig)
 
-// 测试环境
-if (env === 'test') {
+// 测试环境(预生产环境)
+if (env === 'pre-production') {
   mergedConfig = merge(baseConfig, testConfig)
 }
 
