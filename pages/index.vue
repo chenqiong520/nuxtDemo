@@ -190,6 +190,11 @@
       </div>
     </div>
     <index-footer></index-footer>
+
+    <!--客服链接-->
+    <div class="kf-link">
+      <img src="@/assets/img/home/kefu.png"/>
+    </div>
   </div>
 </template>
 
@@ -267,10 +272,20 @@ export default {
 .home {
   .div-padding {
     padding: 0 30px;
+    position: relative;
     &.bg-wrapper {
       background-color: #f8f8f8;
       padding: 48px 30px;
       margin-top: 48px;
+    }
+  }
+  .kf-link {
+    position: fixed;
+    bottom: 120px;
+    right: 50px;
+    z-index: 100;
+    img {
+      width: 118px;
     }
   }
 }

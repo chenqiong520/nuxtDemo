@@ -23,13 +23,13 @@
       </div>
     </div>
     <teacher class="div-padding" />
-
+    <div class="open-all ">查看全部讲师</div>
     <div class="news-wrapper">
       <div class="category-title">
         <div><span class="left-line" />咕泡新闻<span class="right-line" /></div>
       </div>
       <div class="new-list">
-        <div v-for="(item, index) in newList" :key="index" class="list-item">
+        <div v-for="(item, index) in currentNewList" :key="index" class="list-item" @click="toNewsDetail(item)">
           <div class="image-container">
             <img :src="item.cover" />
           </div>
@@ -40,6 +40,7 @@
           </div>
         </div>
       </div>
+      <div class="open-all" style="display: none" @click="openAllNews">展开全部新闻</div>
     </div>
     <div class="div-padding bg-wrapper">
       <honor />
@@ -72,6 +73,7 @@ export default {
   },
   data() {
     return {
+      currentNewList: [],
       newList: [
         {
           cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
@@ -89,8 +91,34 @@ export default {
           cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
           title: '咕泡荣获“2018麓创大赛总决赛优胜奖',
           url: 'https://gper.gupaoedu.com/articleContent?id=483'
+        },
+        {
+          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          title: '咕泡学院亮相开源中国千人面基大会',
+          url: 'https://gper.gupaoedu.com/articleContent?id=507'
+        },
+        {
+          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          title: '咕泡出席腾讯课堂101计划教育机构沙龙',
+          url: 'https://gper.gupaoedu.com/articleContent?id=485'
+        },
+        {
+          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          title: ' 咕泡学院全力孵化 长沙互联网IT精英圈 - GPer生态圈',
+          url: 'https://gper.gupaoedu.com/articleContent?id=594'
         }
       ]
+    }
+  },
+  mounted() {
+    this.currentNewList = this.newList.slice(0, 3)
+  },
+  methods: {
+    toNewsDetail(item) {
+      window.open(item.url)
+    },
+    openAllNews() {
+      this.currentNewList = this.newList
     }
   }
 }
@@ -113,6 +141,17 @@ export default {
       line-height: 56px;
       margin-top: 38px;
     }
+  }
+  .open-all {
+    margin: 40px 30px 0 30px;
+    height: 72px;
+    line-height: 72px;
+    background: rgba(245, 245, 245, 1);
+    border-radius: 6px;
+    font-size: 26px;
+    font-weight: 500;
+    color: rgba(102, 102, 102, 1);
+    text-align: center;
   }
 }
 .about .div-padding {
