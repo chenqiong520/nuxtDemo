@@ -19,12 +19,29 @@
       <div class="text-wrap">
         <div class="synopsis">{{displayContent.synopsis}}</div>
         <div class="desc">
-          <!-- <div class="desc-title">{{displayContent.descriptionOne.title}}</div> -->
-          <!-- <ul class="desc-item">
-            <li v-for="(item, index) in displayContent[descriptionOne.sub]" :key="index">{{item}}</li>
-          </ul> -->
+          <div class="desc-title">你能得到什么？</div>
+          <ul class="desc-item">
+            <li>人脉拓展：丰富的人脉资源,咕泡独有线上线下交流会拓展人脉资源</li>
+            <li>高额课酬：拥有高额的课酬费和营销提成,助你爱情面包双丰收</li>
+            <li>个人品牌：十几万学员粉丝资源,全方位为讲师推广快速打响知名度</li>
+          </ul>
+        </div>
+        <div class="desc">
+          <div class="desc-title">我们的优势</div>
+          <ul class="desc-item">
+            <li>人脉拓展：每天数千人在线听课人数，咕泡学院IT互联网教育领导品牌</li>
+            <li>丰富经验：拥有丰富线上教育经验和完善的课程体系</li>
+            <li>讲师培训：传授独家线上授课模式，提高个人综合能力与竞争力</li>
+            <li>专业制作：专业视频人员，提供剪辑、壳件包装等一流服务</li>
+          </ul>
         </div>
       </div>
+    </div>
+
+    <!-- 底部按钮 -->
+    <div class="bottom-bar">
+      <div>职位详情</div>
+      <div>申请加入</div>
     </div>
   </div>
 </template>
@@ -111,6 +128,7 @@ export default {
   }
 }
 .content {
+  padding-bottom: 120px;
   .img-wrap {
     width: 100%;
     margin-top: 56px;
@@ -126,13 +144,56 @@ export default {
     padding: 0 32px;
     .synopsis {
       font-size: 28px;
-      color: #999;
+      color: #666;
       margin-top: 30px;
     }
     .desc {
       .desc-title {
         font-size: 36px;
         color: #252525;
+        margin-top: 60px;
+      }
+      .desc-item {
+        font-size: 28px;
+        li {
+          color: #666;
+          margin-top: 20px;
+          list-style-type: circle;
+          list-style-position: inside;
+        }
+      }
+    }
+  }
+}
+.bottom-bar {
+  width: 100%;
+  height: 98px;
+  position: fixed;
+  bottom: 0;
+  left: 0;
+  background: white;
+  z-index: 999;
+  display: flex;
+  div {
+    width: 50%;
+    height: 100%;
+    text-align: center;
+    line-height: 98px;
+    font-size: 32px;
+    color: #252525;
+    &:last-child {
+      color: #FD553A;
+      position: relative;
+      &::after {
+        content: '';
+        width: 1px;
+        height: 64px;
+        position: absolute;
+        left: 0;
+        top: 0;
+        bottom: 0;
+        margin: auto;
+        background: #E9E9E9;
       }
     }
   }
