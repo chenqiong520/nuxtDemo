@@ -36,7 +36,7 @@ export default {
       currentCourse: {
         courseList: [
           {
-            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/Git.jpg',
+            coverImg: require('@/assets/img/home/banner/b1.png'),
             url: '',
             readNum: 14363,
             CommentNum: 460,
@@ -44,7 +44,7 @@ export default {
             price: '¥29.99'
           },
           {
-            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/xmkjpkc.jpg',
+            coverImg: require('@/assets/img/home/banner/b1.png'),
             url: '',
             readNum: 6112,
             CommentNum: 20,
@@ -52,7 +52,7 @@ export default {
             price: ' ¥6.66'
           },
           {
-            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/Git.jpg',
+            coverImg: require('@/assets/img/home/banner/b1.png'),
             url: '',
             readNum: 14363,
             CommentNum: 460,
@@ -60,7 +60,7 @@ export default {
             price: '¥29.99'
           },
           {
-            coverImg: '//cdn.gupaoedu.com/newIndex/images/kc/xmkjpkc.jpg',
+            coverImg: require('@/assets/img/home/banner/b1.png'),
             url: '',
             readNum: 6112,
             CommentNum: 20,
