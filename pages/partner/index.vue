@@ -15,7 +15,7 @@
     <!-- content -->
     <div class="content">
       <div class="img-wrap">
-        <img src="../../assets/img/partner/partner-teacher.png" alt="">
+        <img :src="imgUrl" alt="">
       </div>
       <div class="text-wrap">
         <div class="synopsis">
@@ -23,23 +23,18 @@
         </div>
         <div class="desc">
           <div class="desc-title">
-            你能得到什么？
+            {{displayContent.descriptionOne.title}}
           </div>
           <ul class="desc-item">
-            <li>人脉拓展：丰富的人脉资源,咕泡独有线上线下交流会拓展人脉资源</li>
-            <li>高额课酬：拥有高额的课酬费和营销提成,助你爱情面包双丰收</li>
-            <li>个人品牌：十几万学员粉丝资源,全方位为讲师推广快速打响知名度</li>
+            <li v-for="(item, index) in displayContent.descriptionOne.sub" :key="index">{{item}}</li>
           </ul>
         </div>
         <div class="desc">
           <div class="desc-title">
-            我们的优势
+            {{displayContent.descriptionTwo.title}}
           </div>
           <ul class="desc-item">
-            <li>人脉拓展：每天数千人在线听课人数，咕泡学院IT互联网教育领导品牌</li>
-            <li>丰富经验：拥有丰富线上教育经验和完善的课程体系</li>
-            <li>讲师培训：传授独家线上授课模式，提高个人综合能力与竞争力</li>
-            <li>专业制作：专业视频人员，提供剪辑、壳件包装等一流服务</li>
+            <li v-for="(item, index) in displayContent.descriptionTwo.sub" :key="index">{{item}}</li>
           </ul>
         </div>
       </div>
@@ -75,9 +70,22 @@ export default {
       // 当前选中tab下标
       currentTab: 0,
       // 内容
-      content: {},
+      context: [],
       // 当前展示内容
-      displayContent: {}
+      displayContent: {
+        imgUrl: '',
+        synopsis: '',
+        descriptionOne: {},
+        descriptionTwo: {}
+      },
+      // 当前显示图片
+      imgUrl: require('@/assets/img/partner/partner-teacher.png'),
+      imgList: [
+        require("@/assets/img/partner/partner-teacher.png"),
+        require("@/assets/img/partner/partner-flow.png"),
+        require("@/assets/img/partner/partner-city.png"),
+        require("@/assets/img/partner/partner-employee.png")
+      ]
     }
   },
 
@@ -89,6 +97,9 @@ export default {
     // 切换tab
     switchTab(index) {
       this.currentTab = index
+      this.displayContent = this.context[index]
+      this.imgUrl = this.imgList[index]
+      // console.log(this.content)
     },
 
     // 获取合伙人数据
@@ -100,9 +111,13 @@ export default {
       this.context = data
       this.displayContent = data[0]
     },
+
+    // 跳转职位描述详情
     toDetail() {
       this.$router.push('/partner-job-descript')
     },
+
+    // 跳转表单页面
     toJoin() {
       this.$router.push('/partner-apply-join')
     }
@@ -176,6 +191,7 @@ export default {
           margin-top: 20px;
           list-style-type: circle;
           list-style-position: inside;
+          text-align: justify;
         }
       }
     }
