@@ -1,6 +1,6 @@
 <template>
   <div class="hot-course">
-    <div v-if="hotCourse.titleName" class="course-title-box clear">
+    <div v-if="hotCourse && hotCourse.titleName" class="course-title-box clear">
       <div class="left">
         <div>
           <img :src="hotCourse.titleIcon">
@@ -16,7 +16,7 @@
         />
       </div>
     </div>
-    <div class="course-cont-wrapper">
+    <div class="course-cont-wrapper" v-if="hotCourse">
       <div v-for="(item, index) in hotCourse.courseList" :key="index" class="item">
         <div class="course-img">
           <img :src="item.coverImg">

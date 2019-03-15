@@ -1,161 +1,98 @@
 <template>
   <div class="public-course">
-    <!-- 标题 -->
-    <div class="course-title">{{courseTitle}}</div>
-
-    <!-- 轮播图 -->
-    <div class="swiper" v-swiper:mySwiper="swiperOption" ref="mySwiper">
-      <div class="swiper-wrapper">
-        <div
-          class="swiper-slide"
-          v-for="(item,index) in publicCourseList"
-          :key="index">
-          <img :src="item.promotion_img" alt="">
-          <div class="status">{{statusText(item.start_time, item.end_time)}}</div>
+    <div class="course-title-box">
+      <div class="left">
+        <div><img src="@/assets/img/home/public-icon.png"><span class="course-title">今日公开课</span></div>
+        <div class="title-desc">
+          提前了解技术大牛精心研发课程
         </div>
       </div>
-      <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
+    <public-course :publicCourseList="publicCourseList"></public-course>
   </div>
 </template>
 
 <script>
+import PublicCourse from '@/components/PublicCourse'
 export default {
-  layout(context) {
-    return 'course'
+  name: 'Index',
+  layout: 'course',
+  components: {
+    PublicCourse
   },
-
   data() {
     return {
-      // 轮播图选项
-      swiperOption: {
-        effect: 'coverflow',
-        slidesPerView: 'auto',
-        spaceBetween: 20,
-        centeredSlides: true,
-        coverflowEffect: {
-          rotate: 0,
-          stretch: 0,
-          depth: 60,
-          modifier: 0.5,
-          slideShadows : false
+      publicCourseList: [
+        {
+          coverImg: require('@/assets/img/home/public/java.png'),
+          url: 'https://m.ke.qq.com/course/185189?_bid=167&_wv=1',
+          courseName: ' JAVA开发架构课',
+          courseTeacher: '咕泡学院-jack老师',
+          courseStatus: ''
         },
-        pagination: {
-          el: '.swiper-pagination',
-          renderBullet(index, className) {
-            return `<span class="${className} swiper-pagination-bullet-custom"></span>`
-          }
+        {
+          coverImg: require('@/assets/img/home/public/bigdata.png'),
+          url: 'https://m.ke.qq.com/course/280820?_bid=167&_wv=1',
+          courseName: ' 大数据&机器学习',
+          courseTeacher: '咕泡学院-Vingo老师',
+          courseStatus: ''
         },
-        on: {
-          transitionEnd:() => {
-            let activeIndex = this.$refs.mySwiper.swiper.activeIndex
-            let filterRes = this.publicCourseList.filter((ele, index) => index == activeIndex)
-            this.courseTitle = filterRes[0].course_name
-          }
+        {
+          coverImg: require('@/assets/img/home/public/ai.png'),
+          url: 'https://m.ke.qq.com/course/364348?_bid=167&_wv=1',
+          courseName: ' 人工智能',
+          courseTeacher: '咕泡学院-秦老师',
+          courseStatus: ''
+        },
+        {
+          coverImg: require('@/assets/img/home/public/test.png'),
+          url: 'https://m.ke.qq.com/course/249690?flowToken=1002165&_bid=167&_wv=1',
+          courseName: ' 软件测试',
+          courseTeacher: '咕泡学院-carvin老师',
+          courseStatus: ''
+        },
+        {
+          coverImg: require('@/assets/img/home/public/web.png'),
+          url: 'https://m.ke.qq.com/course/255390?tuin=9f7c6eb0&_bid=167&_wv=1',
+          courseName: ' Web前端',
+          courseTeacher: '咕泡学院-song老师',
+          courseStatus: ''
         }
-      },
-      // 公开课列表
-      publicCourseList: [],
-      // 课程标题
-      courseTitle: ''
+      ]
     }
-  },
-
-  methods: {
-    // 获取今日公开课
-    async getTodayPublicCourse() {
-      const res = await this.$axios.get('arrangement/getToDayPublicCourse?token=gupao-wechat-applet')
-      const data = res.data.data
-      this.publicCourseList = data
-      this.courseTitle = data[0].course_name
-    },
-
-    // 获取当前时间戳
-    getCurrentTimestamp() {
-      return new Date().getTime()
-    },
-
-    // 时间戳转时间
-    toTime(times) {
-      let date = new Date(times),
-          d = date.getDate()
-      return date.toTimeString().substr(0, 5)
-    },
-
-    // 直播状态文字
-    statusText(start, end) {
-      let timeNow = this.getCurrentTimestamp()
-      let text = ''
-      if (start < timeNow && end > timeNow) {
-        text = '直播中'
-      } else if (end < timeNow) {
-        text = '直播已结束'
-      } else {
-        text = `${this.toTime(start)}开播`
-      }
-      return text
-    }
-  },
-
-  mounted() {
-    this.getTodayPublicCourse()
-    this.statusText()
   }
 }
 </script>
 
 <style lang="scss" scoped>
 .public-course {
-  .course-title {
-    color: #252525;
-    font-size: 32px;
-    margin-top: 20px;
-    padding: 0 34px;
-    font-weight: bold;
+  padding: 0 30px;
+  .course-title-box {
+    margin-top: 55px;
+    display: flex;
+    align-items: center;
   }
-  .swiper {
-    height: 950px;
-    margin-top: 20px;
-    .swiper-slide {
-      width: 600px;
-      height: 950px;
-      border-radius: 24px;
-      background: cyan;
-      position: relative;
-      img {
-        width: 100%;
-        height: 100%;
-        border-radius: 24px;
-      }
-      .status {
-        width: 190px;
-        height: 68px;
-        background: #FD553A;
-        font-size: 28px;
-        color: white;
-        text-align:center;
-        line-height: 68px;
-        position: absolute;
-        top: 0;
-        right: 0;
-        border-radius: 0 24px 0 24px;
-        box-shadow:-7px 7px 18px 0px rgba(59,59,59,0.15);
-      }
-      .swiper-pagination-bullet-custom {
-        width: 12px;
-        height: 12px;
-        border-radius: 50%;
-        background: rgba(0, 0, 0, 0.5);
-        opacity: 1;
-        &.swiper-pagination-bullet-active {
-          width: 40px;
-          height: 12px;
-          background: rgba(255, 255, 255, 1);
-          border-radius: 5px;
-          margin-right: 5px;
-        }
-      }
-    }
+  .course-title-box .left img {
+    width: 34px;
+    margin-right: 16px;
+  }
+  .course-title-box .left .course-title {
+    font-size: 36px;
+    line-height: 36px;
+    font-weight: bold;
+    color: rgba(37, 37, 37, 1);
+  }
+  .course-title-box .left .title-desc {
+    margin-top: 16px;
+    font-size: 24px;
+    line-height: 24px;
+    font-weight: 400;
+    color: rgba(153, 153, 153, 1);
+  }
+
+  .course-title-box .right {
+    flex: 1;
+    text-align: right;
   }
 }
 </style>

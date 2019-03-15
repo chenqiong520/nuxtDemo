@@ -30,27 +30,27 @@ export default {
       honorList: [
         {
           img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
-          desc: '2018年腾讯课堂‘卓越贡献奖’'
+          desc: '腾讯课堂·卓越贡献奖'
         },
         {
           img: '//cdn.gupaoedu.com/newIndex/images/12.png',
-          desc: '荣获腾讯2018年度影响力在线教育品牌'
+          desc: '年度影响力在线教育品牌'
         },
         {
           img: '//cdn.gupaoedu.com/newIndex/images/13.png',
-          desc: '成为腾讯课堂认证机构'
+          desc: '腾讯课堂认证机构'
         },
         {
           img: '//cdn.gupaoedu.com/newIndex/images/14.png',
-          desc: '荣获腾讯2017年度知名在线教育品牌'
+          desc: '年度知名在线教育品牌'
         },
         {
           img: '//cdn.gupaoedu.com/newIndex/images/15.png',
-          desc: '荣获腾讯课堂“金课堂·最具潜力奖”'
+          desc: '腾讯课堂·金课堂奖'
         },
         {
           img: '//cdn.gupaoedu.com/newIndex/images/16.png',
-          desc: '荣获腾讯课堂“创造101火箭机构奖”'
+          desc: '创造101火箭机构奖'
         }
       ],
       // 轮播图选项
@@ -111,6 +111,8 @@ export default {
     .img-desc {
       font-size: 24px;
       font-weight: 500;
+      width: 100%;
+      box-sizing: border-box;
       color: rgba(255, 255, 255, 1);
       line-height: 40px;
       padding: 16px;
