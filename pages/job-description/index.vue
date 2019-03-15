@@ -10,7 +10,7 @@
         </ul>
       </div>
 
-      <a target="#blank" class="apply-join">申请加入</a>
+      <a target="#blank" class="apply-join" @click="toJoin">申请加入</a>
     </div>
   </div>
 </template>
@@ -40,6 +40,9 @@ export default {
           }
         })
       })
+    },
+    toJoin() {
+      this.$router.push('/partner-apply-join')
     }
   }
 }
