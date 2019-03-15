@@ -49,7 +49,7 @@ export default {
   methods: {
     async getStudent() {
       // 获取本地的json文件数据
-      const response = await this.$axios.get(`./datas/home/student.json`)
+      const response = await this.$axios.get(`${window.location.origin}/datas/home/student.json`)
       const studentList = response.data.datas
       for (let i = 0; i < studentList.length; i++) {
         if (studentList[i].no === this.no) {
