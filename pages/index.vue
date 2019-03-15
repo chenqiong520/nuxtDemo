@@ -20,7 +20,7 @@
           <div class="course-img">
             <img src="@/assets/img/home/public/java.png">
             <div class="status-desc">
-              直播中
+              直播中 <img src="@/assets/img/home/public/icon1.png"/>
             </div>
           </div>
           <div class="course-name">
@@ -36,7 +36,7 @@
           <div class="course-img">
             <img src="@/assets/img/home/public/bigdata.png">
             <div class="status-desc">
-              直播中
+              直播中 <img src="@/assets/img/home/public/icon1.png"/>
             </div>
           </div>
           <div class="course-name">
@@ -330,7 +330,6 @@ export default {
   margin-top: 32px;
   display: flex;
   justify-content: space-between;
-  flex-wrap: wrap;
   .item {
     width: 334px;
   }
@@ -358,7 +357,12 @@ export default {
   font-size: 24px;
   padding-left: 24px;
   box-sizing: border-box;
+  img {
+    width: 18px;
+    margin-left: 8px;
+  }
 }
+
 .course-cont-wrapper .course-name {
   line-height: 30px;
   font-size: 32px;

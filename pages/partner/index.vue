@@ -6,8 +6,9 @@
         :class="['tabs-item', {'on': index == currentTab}]"
         v-for="(item, index) in tabs"
         :key="index"
-        @click="switchTab(index)">
-        {{item.name}}
+        @click="switchTab(index)"
+      >
+        {{ item.name }}
       </div>
     </div>
 
@@ -17,9 +18,13 @@
         <img src="../../assets/img/partner/partner-teacher.png" alt="">
       </div>
       <div class="text-wrap">
-        <div class="synopsis">{{displayContent.synopsis}}</div>
+        <div class="synopsis">
+          {{ displayContent.synopsis }}
+        </div>
         <div class="desc">
-          <div class="desc-title">你能得到什么？</div>
+          <div class="desc-title">
+            你能得到什么？
+          </div>
           <ul class="desc-item">
             <li>人脉拓展：丰富的人脉资源,咕泡独有线上线下交流会拓展人脉资源</li>
             <li>高额课酬：拥有高额的课酬费和营销提成,助你爱情面包双丰收</li>
@@ -27,7 +32,9 @@
           </ul>
         </div>
         <div class="desc">
-          <div class="desc-title">我们的优势</div>
+          <div class="desc-title">
+            我们的优势
+          </div>
           <ul class="desc-item">
             <li>人脉拓展：每天数千人在线听课人数，咕泡学院IT互联网教育领导品牌</li>
             <li>丰富经验：拥有丰富线上教育经验和完善的课程体系</li>
@@ -40,8 +47,12 @@
 
     <!-- 底部按钮 -->
     <div class="bottom-bar">
-      <div @click="toDetail">职位详情</div>
-      <div>申请加入</div>
+      <div @click="toDetail">
+        职位详情
+      </div>
+      <div @click="toJoin">
+        申请加入
+      </div>
     </div>
   </div>
 </template>
@@ -70,6 +81,10 @@ export default {
     }
   },
 
+  mounted() {
+    this.getPartnerDetail()
+  },
+
   methods: {
     // 切换tab
     switchTab(index) {
@@ -84,15 +99,13 @@ export default {
       const data = res.data.data
       this.context = data
       this.displayContent = data[0]
-      console.log(this.displayContent)
     },
     toDetail() {
       this.$router.push('/partner-job-descript')
+    },
+    toJoin() {
+      this.$router.push('/partner-apply-join')
     }
-  },
-
-  mounted() {
-    this.getPartnerDetail()
   }
 }
 </script>
@@ -115,13 +128,13 @@ export default {
     position: relative;
   }
   .on {
-    color: #FD553A;
+    color: #fd553a;
     &::after {
       content: '';
       width: 126px;
       height: 6px;
       border-radius: 3px;
-      background: #FD553A;
+      background: #fd553a;
       position: absolute;
       left: 0;
       right: 0;
@@ -185,7 +198,7 @@ export default {
     font-size: 32px;
     color: #252525;
     &:last-child {
-      color: #FD553A;
+      color: #fd553a;
       position: relative;
       &::after {
         content: '';
@@ -196,7 +209,7 @@ export default {
         top: 0;
         bottom: 0;
         margin: auto;
-        background: #E9E9E9;
+        background: #e9e9e9;
       }
     }
   }
