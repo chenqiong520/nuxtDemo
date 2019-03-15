@@ -12,6 +12,9 @@
           class="swiper-slide team-item"
         >
           <img :src="item.img">
+          <div class="img-desc">
+            {{ item.desc }}
+          </div>
         </div>
       </div>
     </div>
@@ -26,16 +29,20 @@ export default {
     return {
       honorList: [
         {
-          img: require('@/assets/img/home/team/team_icon_01.jpg')
+          img: require('@/assets/img/home/team/team_icon_01.jpg'),
+          desc: '橘子洲踏青团建活动'
         },
         {
-          img: require('@/assets/img/home/team/team_icon_02.jpg')
+          img: require('@/assets/img/home/team/team_icon_02.jpg'),
+          desc: '泰国豪华6日游'
         },
         {
-          img: require('@/assets/img/home/team/team_icon_03.jpg')
+          img: require('@/assets/img/home/team/team_icon_03.jpg'),
+          desc: '17年咕泡学院年会'
         },
         {
-          img: require('@/assets/img/home/team/team_icon_04.jpg')
+          img: require('@/assets/img/home/team/team_icon_04.jpg'),
+          desc: '17年方特之旅团建活动'
         }
       ],
       // 轮播图选项
@@ -93,6 +100,18 @@ export default {
       width: 300px;
       height: 218px;
       border-radius: 8px;
+    }
+    .img-desc {
+      font-size: 24px;
+      font-weight: 500;
+      width: 100%;
+      box-sizing: border-box;
+      color: rgba(255, 255, 255, 1);
+      line-height: 40px;
+      padding: 16px;
+      position: absolute;
+      bottom: 0;
+      background: rgba(31, 31, 31, 0.38);
     }
   }
 }
