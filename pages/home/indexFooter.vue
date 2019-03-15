@@ -14,15 +14,15 @@
     </div>
     <div class="app-wrapper">
       <div class="app-item">
-        <img src="//cdn.gupaoedu.com/newIndex/images/txzyj.jpg" />
+        <img src="@/assets/img/home/indexFooter/gzh.jpg" />
         <div class="desc">咕泡公众号</div>
       </div>
       <div class="app-item">
-        <img src="//cdn.gupaoedu.com/newIndex/images/txzyj.jpg" />
+        <img src="@/assets/img/home/indexFooter/xcx.jpg" />
         <div  class="desc">咕泡小程序</div>
       </div>
       <div class="app-item">
-        <img src="//cdn.gupaoedu.com/newIndex/images/txzyj.jpg" />
+        <img src="@/assets/img/home/indexFooter/xlwb.png" />
         <div  class="desc">官方微博</div>
       </div>
     </div>

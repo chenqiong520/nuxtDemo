@@ -9,7 +9,6 @@
         <div
           v-for="(item,index) in honorList"
           :key="index"
-          @click="selectTeacher(item)"
           class="swiper-slide team-item"
         >
           <img :src="item.img">
@@ -27,16 +26,16 @@ export default {
     return {
       honorList: [
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+          img: require('@/assets/img/home/team/team_icon_01.jpg')
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/12.png'
+          img: require('@/assets/img/home/team/team_icon_02.jpg')
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/13.png'
+          img: require('@/assets/img/home/team/team_icon_03.jpg')
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/14.png'
+          img: require('@/assets/img/home/team/team_icon_04.jpg')
         }
       ],
       // 轮播图选项

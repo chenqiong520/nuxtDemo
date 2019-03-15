@@ -9,7 +9,7 @@
         <div
           v-for="(item,index) in honorList"
           :key="index"
-          @click="selectTeacher(item)"
+          @click="toPartner(item)"
           class="swiper-slide partner-item"
         >
           <img :src="item.img">
@@ -27,16 +27,24 @@ export default {
     return {
       honorList: [
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+          img: require('@/assets/img/home/partner/partner-01.png'),
+          id: '',
+          name: '咕泡讲师'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/12.png'
+          img: require('@/assets/img/home/partner/partner-02.png'),
+          id: '',
+          name: '流量主'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/13.png'
+          img: require('@/assets/img/home/partner/partner-03.png'),
+          id: '',
+          name: '地方运营商'
         },
         {
-          img: '//cdn.gupaoedu.com/newIndex/images/14.png'
+          img: require('@/assets/img/home/partner/partner-04.png'),
+          id: '',
+          name: '员工招募'
         }
       ],
       // 轮播图选项
@@ -44,6 +52,11 @@ export default {
         slidesPerView: 'auto',
         freeMode: true
       }
+    }
+  },
+  methods: {
+    toPartner(item) {
+      this.$router.push('/partner')
     }
   }
 }

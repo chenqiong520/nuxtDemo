@@ -9,7 +9,6 @@
         <div
           v-for="(item,index) in honorList"
           :key="index"
-          @click="selectTeacher(item)"
           class="swiper-slide honor-item"
         >
           <img :src="item.img">

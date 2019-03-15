@@ -1,0 +1,717 @@
+{
+  "data":[
+    {
+      "outlineTitle": "基础",
+      "titleDesc": "掌握Linux必备知识，熟悉Python的使用与爬虫程序的编写，搭建Hadoop（CDH）集群，为大数据技术学习打好基础。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "Linux必备知识",
+          "secondLevel": [
+            {
+              "secondLevelName": "Linux常用版本介绍"
+            },
+            {
+              "secondLevelName": "系统安装"
+            },
+            {
+              "secondLevelName": "文件和目录管理"
+            },
+            {
+              "secondLevelName": "用户与权限"
+            },
+            {
+              "secondLevelName": "网络相关"
+            },
+            {
+              "secondLevelName": "常用命令等"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Docker安装与使用",
+          "secondLevel": [
+            {
+              "secondLevelName": "IDocker初步"
+            },
+            {
+              "secondLevelName": "基本原理"
+            },
+            {
+              "secondLevelName": "安装与使用"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Python基础及爬虫介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "Python环境安装及初步"
+            },
+            {
+              "secondLevelName": "爬虫原理及常用技术讲解"
+            },
+            {
+              "secondLevelName": "爬虫实例讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Hadoop集群搭建",
+          "secondLevel": [
+            {
+              "secondLevelName": "Hadoop 分布式集群搭建（2.6和3.1版本）"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "CDH集群搭建",
+          "secondLevel": [
+            {
+              "secondLevelName": "CDH 大数据集群虚拟机设置"
+            },
+            {
+              "secondLevelName": "CDH集群搭建（5.8.5和6.0.1版本）"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式服务框架：Zookeeper",
+          "secondLevel": [
+            {
+              "secondLevelName": "Zookeeper原理"
+            },
+            {
+              "secondLevelName": "安装与使用"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据集群资源管理：YARN",
+          "secondLevel": [
+            {
+              "secondLevelName": "YARN基本架构解析"
+            },
+            {
+              "secondLevelName": "资源调度过程及调度算法精讲"
+            },
+            {
+              "secondLevelName": "YARN上的计算框架"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "大数据离线计算专题",
+      "titleDesc": "此专题通过实战项目熟悉用户行为分析业务背景知识，掌握离线数据处理的流程、架构及相关技术的运用。掌握大数据核心基础组件：HDFS，MapReduce及YARN。掌握MapReduce编程思想及通用大数据计算平台：Spark。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "项目介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "项目需求"
+            },
+            {
+              "secondLevelName": "架构和技术点讲解"
+            },
+            {
+              "secondLevelName": "项目阶段目标"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据存储基石：HDFS",
+          "secondLevel": [
+            {
+              "secondLevelName": "HDFS设计目标"
+            },
+            {
+              "secondLevelName": "构成及工作原理解析"
+            },
+            {
+              "secondLevelName": "数据块"
+            },
+            {
+              "secondLevelName": "NameNode"
+            },
+            {
+              "secondLevelName": "DataNode"
+            },
+            {
+              "secondLevelName": "数据写入与读取过程、数据复制、HA方案、文件类型、HDFS常用设置"
+            },
+            {
+              "secondLevelName": "DJava API代码演示"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "业务数据采集：Flume",
+          "secondLevel": [
+            {
+              "secondLevelName": "Flume作用与角色"
+            },
+            {
+              "secondLevelName": "核心组件讲解"
+            },
+            {
+              "secondLevelName": "Flume实例：日志收集、适宜场景、常见问题"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据处理基石：MapReduce",
+          "secondLevel": [
+            {
+              "secondLevelName": "MapReduce原理"
+            },
+            {
+              "secondLevelName": "编程模型"
+            },
+            {
+              "secondLevelName": "Java API 演示"
+            },
+            {
+              "secondLevelName": "编程案例讲解"
+            },
+            {
+              "secondLevelName": "MapReduce调优"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "数据清洗与加工：Spark",
+          "secondLevel": [
+            {
+              "secondLevelName": "Scala语言讲解"
+            },
+            {
+              "secondLevelName": "Spark原理与编程"
+            },
+            {
+              "secondLevelName": "计算模型RDD"
+            },
+            {
+              "secondLevelName": "算子Transformation和Actions的使用"
+            },
+            {
+              "secondLevelName": "使用Spark制作倒排索引"
+            },
+            {
+              "secondLevelName": "Spark SQL和DataFrame"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "项目代码讲解及项目总结",
+          "secondLevel": [
+            {
+              "secondLevelName": "项目完整代码讲解（含flask和echarts讲解）"
+            },
+            {
+              "secondLevelName": "项目总结"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "HDFS 进阶",
+          "secondLevel": [
+            {
+              "secondLevelName": "namenode"
+            },
+            {
+              "secondLevelName": "块分配、数据平衡、HA深入"
+            },
+            {
+              "secondLevelName": "线上常见问题处理"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Spark 进阶",
+          "secondLevel": [
+            {
+              "secondLevelName": "spark shuffle、spark sql、spark 内存管理与任务调度深入"
+            },
+            {
+              "secondLevelName": "线上常见问题示例处理"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "专题总结与面试指导",
+          "secondLevel": [
+            {
+              "secondLevelName": "专题总结"
+            },
+            {
+              "secondLevelName": "离线批处理方向职业规划"
+            },
+            {
+              "secondLevelName": "简历与面试指导"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "大数据实时计算专题",
+      "titleDesc": "此专题通过实战项目熟悉实时处理的应用场景，掌握实时数据处理的流程、架构及相关技术的运用。掌握实时处理主流技术组件：Kafka，Spark Streaming，Flink，Storm，HBase等。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "项目介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "项目需求"
+            },
+            {
+              "secondLevelName": "架构和技术点讲解"
+            },
+            {
+              "secondLevelName": "项目阶段目标"
+            },
+            {
+              "secondLevelName": "Alibaba Canal讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "交易数据实时采集：Kafka",
+          "secondLevel": [
+            {
+              "secondLevelName": "Kafka角色及作用"
+            },
+            {
+              "secondLevelName": "构成及工作原理解析"
+            },
+            {
+              "secondLevelName": " 4组核心API"
+            },
+            {
+              "secondLevelName": "生态圈"
+            },
+            {
+              "secondLevelName": "代码演示：生产并消费行为日志"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "监控指标实时计算：Spark Streaming",
+          "secondLevel": [
+            {
+              "secondLevelName": "Spark Streaming角色与定位"
+            },
+            {
+              "secondLevelName": "工作原理解剖"
+            },
+            {
+              "secondLevelName": "编写Streaming程序的一般过程"
+            },
+            {
+              "secondLevelName": "性能调优"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "监控指标实时计算：Storm",
+          "secondLevel": [
+            {
+              "secondLevelName": "熟悉Storm"
+            },
+            {
+              "secondLevelName": "Storm应用开发"
+            },
+            {
+              "secondLevelName": "Storm内部剖析"
+            },
+            {
+              "secondLevelName": "Storm集群部署和配置"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "监控指标实时计算：Flink",
+          "secondLevel": [
+            {
+              "secondLevelName": "初探Flink"
+            },
+            {
+              "secondLevelName": "Flink核心编程"
+            },
+            {
+              "secondLevelName": "Flink应用开发"
+            },
+            {
+              "secondLevelName": "Flink高级特性"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "监控指标实时存取：HBase",
+          "secondLevel": [
+            {
+              "secondLevelName": "HBase架构及基本组件"
+            },
+            {
+              "secondLevelName": "HBase Table设计  HBase基本操作"
+            },
+            {
+              "secondLevelName": "访问HBase的几种方式"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "项目代码讲解及项目总结",
+          "secondLevel": [
+            {
+              "secondLevelName": "完整项目代码讲解（含node.js、socket.io和echarts使用讲解）及项目总结"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Storm 技术深入",
+          "secondLevel": [
+            {
+              "secondLevelName": "Storm高级特性"
+            },
+            {
+              "secondLevelName": "Storm应用案例实践"
+            },
+            {
+              "secondLevelName": "Storm使用经验和性能优化"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Flink 技术深入",
+          "secondLevel": [
+            {
+              "secondLevelName": "深入Flink解决方案"
+            },
+            {
+              "secondLevelName": "Flink应用案例实践"
+            },
+            {
+              "secondLevelName": "基于Flink实时数据同步系统"
+            },
+            {
+              "secondLevelName": "深入Flink性能优化"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Kafka 技术深入",
+          "secondLevel": [
+            {
+              "secondLevelName": "解剖元数据管理和物理文件存储"
+            },
+            {
+              "secondLevelName": "介绍索引在Kafka中的使用"
+            },
+            {
+              "secondLevelName": "总结broker/topic等配置优化"
+            },
+            {
+              "secondLevelName": "介绍常见生产问题的解决思路"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Hbase 技术深入",
+          "secondLevel": [
+            {
+              "secondLevelName": "解析hfile文件结构"
+            },
+            {
+              "secondLevelName": "揭露列式存储的真相"
+            },
+            {
+              "secondLevelName": "总结flush/compact/merge/split等关键任务的触发时机及对整个系统的影响"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "专题总结与面试指导",
+          "secondLevel": [
+            {
+              "secondLevelName": "专题总结"
+            },
+            {
+              "secondLevelName": "实时计算方向职业规划"
+            },
+            {
+              "secondLevelName": "简历与面试指导"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "数据仓库与ETL专题",
+      "titleDesc": "此专题讲解数据仓库背景知识，常用数仓模型，大数据ETL数据处理框架Hive，ETL主流工具Sqoop，Kettle，Oozie和Azkaban。通过实战项目掌握数据仓库搭建过程及具体技术的运用。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "数据仓库搭建理论",
+          "secondLevel": [
+            {
+              "secondLevelName": "数据仓库搭建背景知识"
+            },
+            {
+              "secondLevelName": "数据建模理论"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "离线批处理必备工具：Hive",
+          "secondLevel": [
+            {
+              "secondLevelName": "Hive定位、总体架构"
+            },
+            {
+              "secondLevelName": "使用场景之Access Log分析"
+            },
+            {
+              "secondLevelName": "Hive DDL&DML"
+            },
+            {
+              "secondLevelName": "视图、函数（内置，窗口，自定义函数）、表的分区、分桶和抽样"
+            },
+            {
+              "secondLevelName": "HIve查询优化"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据ETL工具：Sqoop，Kettle（录播）",
+          "secondLevel": [
+            {
+              "secondLevelName": "数据同步ETL讲解"
+            },
+            {
+              "secondLevelName": "Kettle常用组件讲解"
+            },
+            {
+              "secondLevelName": "Kettle抽取Mysql数据到Hive实战"
+            },
+            {
+              "secondLevelName": "Sqoop讲解"
+            },
+            {
+              "secondLevelName": "Sqoop抽取Hive数据到Mysql实战"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据任务调度工具：Oozie，Azkaban（录播）",
+          "secondLevel": [
+            {
+              "secondLevelName": "ETL与计算任务的统一管理和调度"
+            },
+            {
+              "secondLevelName": "三种方案讲解"
+            },
+            {
+              "secondLevelName": "：Crontab调度，自研调度系统"
+            },
+            {
+              "secondLevelName": "开源系统Oozie和Azkaban"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "数据仓库搭建实战",
+          "secondLevel": [
+            {
+              "secondLevelName": "数据仓库搭建实战"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "【用户画像项目】背景、技术架构及技术点介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "O2O场景用户画像系统业务背景讲解"
+            },
+            {
+              "secondLevelName": "用户画像系统技术架构"
+            },
+            {
+              "secondLevelName": "技术点"
+            },
+            {
+              "secondLevelName": "开源系统Oozie和Azkaban"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "【用户画像项目】项目代码讲解及项目总结",
+          "secondLevel": [
+            {
+              "secondLevelName": "完整项目代码讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "专题总结与面试指导",
+          "secondLevel": [
+            {
+              "secondLevelName": "专题总结"
+            },
+            {
+              "secondLevelName": "数仓/ETL方向职业规划"
+            },
+            {
+              "secondLevelName": "简历与面试指导"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "搜索与推荐专",
+      "titleDesc": "搜索与推荐是大部分互联网公司必有的两大大数据应用系统。此专题通过实战项目讲解搜索和推荐系统的通用架构，常用算法和相关技术。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "项目背景、技术架构及技术点介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "实时日志搜索项目业务背景及解决方案"
+            },
+            {
+              "secondLevelName": "项目架构和技术点讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据全文检索引擎：ElasticSearch（Kibana）",
+          "secondLevel": [
+            {
+              "secondLevelName": "全文检索基础知识"
+            },
+            {
+              "secondLevelName": "ES安装及运行"
+            },
+            {
+              "secondLevelName": "ES深入解析"
+            },
+            {
+              "secondLevelName": "ES使用最佳实践"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "大数据全文检索引擎：ElasticSearch（Kibana）",
+          "secondLevel": [
+            {
+              "secondLevelName": "ES搜索深入"
+            },
+            {
+              "secondLevelName": "ES监控"
+            },
+            {
+              "secondLevelName": "Kibana使用讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "项目代码讲解及项目总结",
+          "secondLevel": [
+            {
+              "secondLevelName": "完整项目代码讲解"
+            },
+            {
+              "secondLevelName": "其他方案对比"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "推荐系统理论",
+          "secondLevel": [
+            {
+              "secondLevelName": "推荐系统业务背景讲解"
+            },
+            {
+              "secondLevelName": "推荐系统评测指标、常用算法"
+            },
+            {
+              "secondLevelName": "推荐系统通用架构"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "推荐系统实战",
+          "secondLevel": [
+            {
+              "secondLevelName": "完整的电影推荐项目实战"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "机器学习算法专题",
+      "titleDesc": "此专题讲解常用机器学习算法思想、过程和在实际问题中的应用。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "分类问题",
+          "secondLevel": [
+            {
+              "secondLevelName": "什么是分类问题"
+            },
+            {
+              "secondLevelName": "分类问题常用算法"
+            },
+            {
+              "secondLevelName": "随机森林"
+            },
+            {
+              "secondLevelName": "神经网络等算法讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "预测问题",
+          "secondLevel": [
+            {
+              "secondLevelName": "什么是预测问题"
+            },
+            {
+              "secondLevelName": "预测问题常用算法"
+            },
+            {
+              "secondLevelName": "逻辑回归等算法讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "金融信贷需求预测项目：背景、技术架构及技术点介绍",
+          "secondLevel": [
+            {
+              "secondLevelName": "金融信贷需求预测系统业务背景介绍"
+            },
+            {
+              "secondLevelName": "数据集分析"
+            },
+            {
+              "secondLevelName": "特征工程处理"
+            },
+            {
+              "secondLevelName": "预测算法讲解"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "金融信贷需求预测项目：项目代码讲解及项目总结",
+          "secondLevel": [
+            {
+              "secondLevelName": "系统完整代码讲解"
+            },
+            {
+              "secondLevelName": "其他应用场景解决方案分享"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

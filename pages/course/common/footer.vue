@@ -50,21 +50,40 @@
 export default {
   name: 'CourseFooter',
 
+  props: {
+    //QQ群提示
+    QQGroupTitle: {
+      default: String,
+      required: true
+    },
+    // QQ号码
+    QQGroupNumber: {
+      default: String,
+      required: true
+    },
+    // 微信二维码提示
+    qrcodeTitle: {
+      default: String,
+      required: true
+    },
+    //关注二维码
+    qrcodeSrc: {
+      required: true
+    },
+    //跳转至腾讯课堂地址
+    toTencentUrl: {
+      default: String,
+      required: true
+    }
+  },
+
   data() {
     return {
       isGroupPopperShow: false,
       isWechatPopperShow: false,
 
       showTips: false,
-      tips: '',
-
-      QQGroupTitle: '添加qq群加入JAVA架构师交流群', //QQ群提示
-      QQGroupNumber: 96106784, // QQ群号
-
-      qrcodeTitle: '扫一扫加入JAVA架构师交流群', // 微信二维码提示
-      qrcodeSrc: require('@/assets/img/qrcode/public-number.png'), //关注二维码
-
-      toTencentUrl: '跳转至腾讯课堂地址' //跳转至腾讯课堂地址
+      tips: ''
     }
   },
 
@@ -72,7 +91,9 @@ export default {
     /**
      * 跳转到腾讯课堂
      */
-    toTencent() {},
+    toTencent() {
+      window.open(this.toTencentUrl || '')
+    },
 
     /**
      * 复制qq号

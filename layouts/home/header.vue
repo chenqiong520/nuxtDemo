@@ -133,7 +133,8 @@ export default {
 }
 
 .header-box .button-group .iconfont {
-  font-size: 36px;
+  font-weight: 400;
+  font-size: 40px;
   color: #252525;
 }
 .header-box .button-group .iconfont.search {

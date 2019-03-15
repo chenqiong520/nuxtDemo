@@ -2,12 +2,16 @@
   <div class="course-web">
     <main class="content">
       <nav class="banner">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/web/web-banner-bg.png" alt="课程详情介绍">
+        <div class="title">
+          <h1>Web全栈高级提升课程</h1>
+          <span>资深Web前端架构师一对一</span>
+        </div>
       </nav>
 
       <section class="course-title">
         <h1 class="title">学院课程</h1>
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/web/web-fm.jpg" alt="课程详情介绍">
       </section>
 
       <section class="course-summary">
@@ -43,45 +47,33 @@
 
       <section class="course-detail">
         <h2>图文介绍</h2>
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        <template v-if="isLoadAll">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        </template>
+        <img src="../../assets/img/course/web/web-bg-js1.png" alt="课程详情介绍">
+        <!-- <template v-if="isLoadAll">
+        </template>-->
         <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
       </section>
 
       <section class="course-compendium">
         <h2>课程大纲</h2>
 
-        <div class="course-compendium-item">
+        <div
+          v-for="(compendiumItem,index) in compendium"
+          :key="index"
+          class="course-compendium-item"
+        >
           <div class="item-title">
-            <strong>01</strong>需要更多往期视频加曼妮老师qq1213512135
+            <strong>{{index+1}}</strong>
+            {{compendiumItem.outlineTitle}}
           </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
-        </div>
-        <div class="course-compendium-item">
-          <div class="item-title">
-            <strong>02</strong>需要更多往期视频加曼妮老师qq1213512135
+          <div v-for="(firstLevelItem,index1) in compendiumItem.firstLevel" :key="index1">
+            <div class="video-name">{{firstLevelItem.fisrtLevelName}}</div>
+            <div class="time">{{videoTime()}}分钟</div>
           </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
-        </div>
-        <div class="course-compendium-item">
-          <div class="item-title">
-            <strong>03</strong>需要更多往期视频加曼妮老师qq1213512135
-          </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
         </div>
       </section>
     </main>
 
-    <course-footer class="footer"></course-footer>
+    <course-footer v-bind="footerProps" class="footer"></course-footer>
   </div>
 </template>
 
@@ -109,7 +101,18 @@ export default {
       },
       isLoadAll: false,
 
-      teachers: []
+      // 课程老师
+      teachers: [],
+      // 纲要
+      compendium: {},
+
+      footerProps: {
+        QQGroupTitle: '添加qq群加入前端交流群', //QQ群提示
+        QQGroupNumber: '96106784', // QQ群号
+        qrcodeTitle: '扫一扫加入前端交流群', // 微信二维码提示
+        qrcodeSrc: require('@/assets/img/course/web/web-gzh.jpg'), //关注二维码
+        toTencentUrl: 'https://ke.qq.com/course/330847' //跳转至腾讯课堂地址
+      }
     }
   },
 
@@ -122,6 +125,20 @@ export default {
       }
     },
 
+    async getCompendium() {
+      const response = await this.$axios.get(
+        `${window.location.origin}/datas/course/web-compendium.json`
+      )
+
+      if (response && response.status === 200) {
+        this.compendium = response.data.data
+      }
+    },
+
+    videoTime(end = 100, start = 10) {
+      return parseInt(Math.random() * (end - start + 1) + start, 10)
+    },
+
     /**
      * 加载全部图文
      */
@@ -132,6 +149,7 @@ export default {
 
   mounted() {
     this.getTeachers()
+    this.getCompendium()
   }
 }
 </script>
@@ -195,10 +213,35 @@ export default {
 
 /* banner */
 .course-web main.content nav.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    position: absolute;
+    text-align: center;
+
+    h1 {
+      font-size: 56px;
+      font-weight: 600;
+      color: rgba(247, 216, 28, 1);
+      text-align: center;
+    }
+
+    span {
+      height: 25px;
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(235, 233, 247, 1);
+      line-height: 90px;
+      text-align: center;
+    }
+  }
+
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
   }
 }
 
