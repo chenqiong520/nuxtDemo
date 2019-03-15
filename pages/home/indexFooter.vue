@@ -9,7 +9,7 @@
       <div class="text-item"> <nuxt-link to="/partner" class="label">商务合作</nuxt-link></div>
       <div class="text-item"> <a href="/https://q.url.cn/cdh5jl?_type=wpa&qidian=true" class="label">意见反馈</a></div>
     </div>
-    <div class="app-wrapper">
+    <!-- <div class="app-wrapper">
       <div class="app-item">
         <img src="@/assets/img/home/indexFooter/gzh.jpg" />
         <div class="desc">咕泡公众号</div>
@@ -24,7 +24,7 @@
           <div  class="desc">官方微博</div>
         </a>
       </div>
-    </div>
+    </div> -->
     <div class="footer-copy">
       <div class="footer-copy-text1">Copyright©2017-2020 gupaoedu.com All Rights Reserved.</div>
       <div class="footer-copy-text2">版权所有 沪ICP备16036932号-2</div>

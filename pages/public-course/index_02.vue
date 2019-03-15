@@ -6,11 +6,8 @@
     <!-- 轮播图 -->
     <div class="swiper" v-swiper:mySwiper="swiperOption" ref="mySwiper">
       <div class="swiper-wrapper">
-        <div
-          class="swiper-slide"
-          v-for="(item,index) in publicCourseList"
-          :key="index">
-          <img :src="item.promotion_img" alt="">
+        <div class="swiper-slide" v-for="(item,index) in publicCourseList" :key="index">
+          <img :src="item.promotion_img" alt>
           <div class="status">{{statusText(item.start_time, item.end_time)}}</div>
         </div>
       </div>
@@ -38,7 +35,7 @@ export default {
           stretch: 0,
           depth: 60,
           modifier: 0.5,
-          slideShadows : false
+          slideShadows: false
         },
         pagination: {
           el: '.swiper-pagination',
@@ -47,9 +44,11 @@ export default {
           }
         },
         on: {
-          transitionEnd:() => {
+          transitionEnd: () => {
             let activeIndex = this.$refs.mySwiper.swiper.activeIndex
-            let filterRes = this.publicCourseList.filter((ele, index) => index == activeIndex)
+            let filterRes = this.publicCourseList.filter(
+              (ele, index) => index == activeIndex
+            )
             this.courseTitle = filterRes[0].course_name
           }
         }
@@ -64,7 +63,9 @@ export default {
   methods: {
     // 获取今日公开课
     async getTodayPublicCourse() {
-      const res = await this.$axios.get('arrangement/getToDayPublicCourse?token=gupao-wechat-applet')
+      const res = await this.$axios.get(
+        'http://192.168.8.122/manageapi/arrangement/getToDayPublicCourse?token=gupao-wechat-applet'
+      )
       const data = res.data.data
       this.publicCourseList = data
       this.courseTitle = data[0].course_name
@@ -78,7 +79,7 @@ export default {
     // 时间戳转时间
     toTime(times) {
       let date = new Date(times),
-          d = date.getDate()
+        d = date.getDate()
       return date.toTimeString().substr(0, 5)
     },
 
@@ -130,16 +131,16 @@ export default {
       .status {
         width: 190px;
         height: 68px;
-        background: #FD553A;
+        background: #fd553a;
         font-size: 28px;
         color: white;
-        text-align:center;
+        text-align: center;
         line-height: 68px;
         position: absolute;
         top: 0;
         right: 0;
         border-radius: 0 24px 0 24px;
-        box-shadow:-7px 7px 18px 0px rgba(59,59,59,0.15);
+        box-shadow: -7px 7px 18px 0px rgba(59, 59, 59, 0.15);
       }
       .swiper-pagination-bullet-custom {
         width: 12px;

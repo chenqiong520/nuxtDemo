@@ -26,7 +26,7 @@ export default {
     return {
       swiperOption: {
         autoplay: true,
-        spaceBetween: 10,
+        spaceBetween: 0,
         pagination: {
           el: '.swiper-pagination',
           renderBullet(index, className) {
@@ -52,10 +52,13 @@ export default {
 </script>
 
 <style>
+.banner {
+  padding: 0 !important;
+}
+
 .banner .banner-item {
   width: 100%;
   height: 289px;
-  border-radius: 8px;
   overflow: hidden;
 }
 

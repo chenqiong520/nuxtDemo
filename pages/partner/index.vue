@@ -103,9 +103,7 @@ export default {
 
     // 获取合伙人数据
     async getPartnerDetail() {
-      const res = await this.$axios.get(
-        `${window.location.origin}/datas/partner/index.json`
-      )
+      const res = await this.$axios.get(`${window.location.origin}/datas/partner/index.json`)
       const data = res.data.data
       this.context = data
       if (this.$route.query.current) {

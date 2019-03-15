@@ -134,9 +134,7 @@ export default {
 
     // 获取本地省市json
     async getAreaInfo() {
-      const res = await this.$axios.get(
-        `${window.location.origin}/datas/partner/city.json`
-      )
+      const res = await this.$axios.get(`${window.location.origin}/datas/partner/city.json`)
       console.log(res.data.data)
       const data = res.data.data
       this.areaList = data
@@ -187,7 +185,7 @@ export default {
       for (let key in form) {
         formData.append(key, form[key])
       }
-      const res = await this.$axios.post('wwwapi/addTeacherApply', formData)
+      const res = await this.$axios.post('http://192.168.8.122/manageapi/wwwapi/addTeacherApply', formData)
       if (res.data.success) {
         this.isShowSubmitModal = true
         setTimeout(() => {

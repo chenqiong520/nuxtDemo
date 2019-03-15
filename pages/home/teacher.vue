@@ -50,9 +50,7 @@ export default {
   methods: {
     async getTeachers() {
       // 通过服务器接口获取数据
-      const response = await this.$axios.get(
-        `http://192.168.8.122/manageapi/wwwapi/findTeacherTeam`
-      )
+      const response = await this.$axios.get(`http://192.168.8.122/manageapi/wwwapi/findTeacherTeam`)
       this.teachers = response.data.data
     },
     // 选择老师
