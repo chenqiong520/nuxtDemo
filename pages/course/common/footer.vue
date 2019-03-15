@@ -1,6 +1,6 @@
 <template>
   <footer class="course-footer">
-    <div class="tabbar">
+    <div class="tabbar" @click="toKeFu">
       <i class="iconfont iconkefu"></i>
       <span class="title">客服</span>
     </div>
@@ -88,6 +88,13 @@ export default {
   },
 
   methods: {
+    /**
+     * 跳转到客服
+     */
+    toKeFu() {
+      window.open('https://q.url.cn/cdh5jl?_type=wpa&qidian=true')
+    },
+
     /**
      * 跳转到腾讯课堂
      */

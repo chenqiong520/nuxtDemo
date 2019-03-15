@@ -114,10 +114,10 @@ export default {
 
   methods: {
     async getTeachers() {
-      const response = await this.$axios.get('http://192.168.8.122/manageapi/wwwapi/findTeacherTeam')
+      const response = await this.$axios.get('http://192.168.8.122/manageapi/wwwapi/findTeacherTeamByType?teacherType=web')
 
       if (response && response.status === 200) {
-        this.teachers = response.data.data.slice(0, 5)
+        this.teachers = response.data.data
       }
     },
 
