@@ -54,7 +54,7 @@ export default {
         },
         {
           link: 'https://m.gper.gupaoedu.com/index',
-          name: 'Gper社区',
+          name: 'GPer',
           target: '_blank'
         },
         {
@@ -62,8 +62,9 @@ export default {
           name: '关于咕泡'
         },
         {
-          link: '/kefu',
-          name: '联系客服'
+          link: 'https://q.url.cn/cdh5jl?_type=wpa&qidian=true',
+          name: '联系客服',
+          target: '_blank'
         }
       ]
     }

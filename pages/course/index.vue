@@ -42,10 +42,9 @@
     <hot-course :hotCourse="hotCourse" @jump="jumpToPage"></hot-course>
 
     <!-- 折扣专区 -->
-    <hot-course :hotCourse="disCountCourse" @jump="jumpToPage"></hot-course>
-
+    <!-- <hot-course :hotCourse="disCountCourse" @jump="jumpToPage"></hot-course> -->
     <!-- 猜你喜欢 -->
-    <hot-course :hotCourse="likeCourse" @jump="jumpToPage"></hot-course>
+    <!-- <hot-course :hotCourse="likeCourse" @jump="jumpToPage"></hot-course> -->
   </div>
 </template>
 
@@ -74,123 +73,123 @@ export default {
         index: 0,
         courseList: [
           {
-            coverImg: require('../../assets/img/course/hot/Git.jpg'),
-            url: '',
-            readNum: 23331,
-            CommentNum: 145,
-            courseName: ' Python基础入门VIP精品课程',
-            price: '¥9.9'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/IntelliJ-IDEA.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' Jenkins学习之旅',
-            price: '¥39.99'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/Jenkins-xxzl.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' Git入门教程',
-            price: '¥29.99'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/Maven.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' 小马哥精品课',
-            price: '¥39.99'
-          }
-        ]
-      },
-      //折扣专区
-      disCountCourse: {
-        titleName: '折扣专区',
-        jumpPage: '/course-list',
-        titleIcon: require('@/assets/img/course/discount.png'),
-        titleDesc: '最新课程底折放送',
-        index: 1,
-        courseList: [
-          {
-            coverImg: require('../../assets/img/course/hot/Python-jcrm.jpg'),
-            url: '',
-            readNum: 23331,
-            CommentNum: 145,
-            courseName: ' Python基础入门VIP精品课程',
-            price: '¥9.9'
-          },
-          {
             coverImg: require('../../assets/img/course/hot/ai.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' Jenkins学习之旅',
-            price: '¥39.99'
+            url: 'https://ke.qq.com/course/369205?tuin=9f7c6eb0',
+            readNum: 1021,
+            CommentNum: 265,
+            courseName: ' 人工智能技术全景与实战',
+            price: '¥1'
           },
           {
-            coverImg: require('../../assets/img/course/hot/dsjjhs.jpg'),
-            url: '',
+            coverImg: require('../../assets/img/course/hot/Git.jpg'),
+            url: 'https://ke.qq.com/course/282167',
             readNum: 14363,
             CommentNum: 460,
             courseName: ' Git入门教程',
             price: '¥29.99'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/qhdfljgzn.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' 小马哥精品课',
-            price: '¥39.99'
-          }
-        ]
-      },
-      //猜你喜欢
-      likeCourse: {
-        titleName: '猜你喜欢',
-        jumpPage: '/course-list',
-        titleIcon: require('@/assets/img/course/like.png'),
-        titleDesc: '量身制定总有你喜欢',
-        index: 2,
-        courseList: [
-          {
-            coverImg: require('../../assets/img/course/hot/rjcs.jpg'),
-            url: '',
-            readNum: 23331,
-            CommentNum: 145,
-            courseName: ' Python基础入门VIP精品课程',
-            price: '¥9.9'
           },
           {
             coverImg: require('../../assets/img/course/hot/xmkjpkc.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' Jenkins学习之旅',
-            price: '¥39.99'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/Git.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
-            courseName: ' Git入门教程',
-            price: '¥29.99'
-          },
-          {
-            coverImg: require('../../assets/img/course/hot/Git.jpg'),
-            url: '',
-            readNum: 14363,
-            CommentNum: 460,
+            url: 'https://ke.qq.com/course/244483',
+            readNum: 6112,
+            CommentNum: 60,
             courseName: ' 小马哥精品课',
-            price: '¥39.99'
+            price: '¥6.6'
+          },
+          {
+            coverImg: require('../../assets/img/course/hot/Maven.jpg'),
+            url: 'https://ke.qq.com/course/276245',
+            readNum: 7163,
+            CommentNum: 712,
+            courseName: ' Maven入门教程',
+            price: '¥29.99'
           }
         ]
       }
+      // //折扣专区
+      // disCountCourse: {
+      //   titleName: '折扣专区',
+      //   jumpPage: '/course-list',
+      //   titleIcon: require('@/assets/img/course/discount.png'),
+      //   titleDesc: '最新课程底折放送',
+      //   index: 1,
+      //   courseList: [
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/Python-jcrm.jpg'),
+      //       url: '',
+      //       readNum: 23331,
+      //       CommentNum: 145,
+      //       courseName: ' Python基础入门VIP精品课程',
+      //       price: '¥9.9'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/ai.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' Jenkins学习之旅',
+      //       price: '¥39.99'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/dsjjhs.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' Git入门教程',
+      //       price: '¥29.99'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/qhdfljgzn.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' 小马哥精品课',
+      //       price: '¥39.99'
+      //     }
+      //   ]
+      // },
+      // //猜你喜欢
+      // likeCourse: {
+      //   titleName: '猜你喜欢',
+      //   jumpPage: '/course-list',
+      //   titleIcon: require('@/assets/img/course/like.png'),
+      //   titleDesc: '量身制定总有你喜欢',
+      //   index: 2,
+      //   courseList: [
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/rjcs.jpg'),
+      //       url: '',
+      //       readNum: 23331,
+      //       CommentNum: 145,
+      //       courseName: ' Python基础入门VIP精品课程',
+      //       price: '¥9.9'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/xmkjpkc.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' Jenkins学习之旅',
+      //       price: '¥39.99'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/Git.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' Git入门教程',
+      //       price: '¥29.99'
+      //     },
+      //     {
+      //       coverImg: require('../../assets/img/course/hot/Git.jpg'),
+      //       url: '',
+      //       readNum: 14363,
+      //       CommentNum: 460,
+      //       courseName: ' 小马哥精品课',
+      //       price: '¥39.99'
+      //     }
+      //   ]
+      // }
     }
   },
 

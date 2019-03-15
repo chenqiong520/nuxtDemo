@@ -1,10 +1,11 @@
 <template>
   <div class="teacher">
     <div class="category-title">
-      <div><span class="left-line" /> 咕泡讲师<span class="right-line" /></div>
-      <p class="text">
-        做教育，我们是认真的
-      </p>
+      <div>
+        <span class="left-line"/> 咕泡讲师
+        <span class="right-line"/>
+      </div>
+      <p class="text">做教育，我们是认真的</p>
     </div>
     <!-- 滚动选择 -->
     <div v-swiper:mySwiper="swiperOption" class="swiper">
@@ -18,12 +19,8 @@
           <div class="teacher-img">
             <img :src="item.teacherImage">
           </div>
-          <div class="teacher-name">
-            {{ item.teacherName }}
-          </div>
-          <div class="teacher-tag">
-            {{ item.teacherTag }}
-          </div>
+          <div class="teacher-name">{{ item.teacherName }}</div>
+          <div class="teacher-tag">{{ item.teacherTag }}</div>
         </div>
       </div>
     </div>
@@ -40,7 +37,8 @@ export default {
       // 轮播图选项
       swiperOption: {
         slidesPerView: 'auto',
-        freeMode: true
+        freeMode: true,
+        spaceBetween: 16
       }
     }
   },
@@ -52,7 +50,9 @@ export default {
   methods: {
     async getTeachers() {
       // 通过服务器接口获取数据
-      const response = await this.$axios.get(`wwwapi/findTeacherTeam`)
+      const response = await this.$axios.get(
+        `http://192.168.8.122/manageapi/wwwapi/findTeacherTeam`
+      )
       this.teachers = response.data.data
     },
     // 选择老师
