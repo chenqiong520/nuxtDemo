@@ -1,6 +1,6 @@
 <template>
   <div class="hot-course">
-    <div v-if="hotCourse.titleName" class="course-title-box clear">
+    <div v-if="hotCourse && hotCourse.titleName" class="course-title-box clear">
       <div class="left">
         <div>
           <img :src="hotCourse.titleIcon">

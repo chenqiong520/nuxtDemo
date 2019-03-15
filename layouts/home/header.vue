@@ -8,7 +8,7 @@
       </div>
 
       <div class="button-group">
-        <i @click="toSearch" class="iconfont iconsearch1 search"></i>
+        <i @click="toSearch" class="iconfont iconsearch1 search" style="display: none"></i>
         <i @click="showMenu" class="iconfont iconmenu"></i>
       </div>
     </div>
