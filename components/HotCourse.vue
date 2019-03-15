@@ -16,8 +16,13 @@
         />
       </div>
     </div>
-    <div class="course-cont-wrapper" v-if="hotCourse">
-      <div v-for="(item, index) in hotCourse.courseList" :key="index" class="item">
+    <div class="course-cont-wrapper">
+      <div
+        v-for="(item, index) in hotCourse.courseList"
+        :key="index"
+        class="item"
+        @click="onCourseClick(item)"
+      >
         <div class="course-img">
           <img :src="item.coverImg">
           <div class="num status-desc">
@@ -48,6 +53,12 @@ export default {
   },
 
   methods: {
+    onCourseClick(course) {
+      if (course && course.url) {
+        window.open(course.url)
+      }
+    },
+
     jump() {
       this.$emit('jump', this.hotCourse)
     }

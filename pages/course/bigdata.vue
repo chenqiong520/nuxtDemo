@@ -3,10 +3,6 @@
     <main class="content">
       <nav class="banner">
         <img src="../../assets/img/course/bigdata/bigdata-banner-bg.png" alt="课程详情介绍">
-        <div class="title">
-          <h1>大数据学院</h1>
-          <span>了解BAT大牛是如何轻松进阶的</span>
-        </div>
       </nav>
 
       <section class="course-title">
@@ -119,7 +115,7 @@ export default {
 
   methods: {
     async getTeachers() {
-      const response = await this.$axios.get('wwwapi/findTeacherTeam')
+      const response = await this.$axios.get('http://192.168.8.122/manageapi/wwwapi/findTeacherTeam')
 
       if (response && response.status === 200) {
         this.teachers = response.data.data.slice(0, 5)
@@ -218,28 +214,6 @@ export default {
   display: flex;
   justify-content: center;
   align-items: center;
-
-  .title {
-    position: absolute;
-    text-align: center;
-
-    h1 {
-      font-size: 56px;
-      font-weight: 600;
-      color: rgba(247, 216, 28, 1);
-      text-align: center;
-    }
-
-    span {
-      width: 389px;
-      height: 25px;
-      font-size: 26px;
-      font-weight: 500;
-      color: rgba(235, 233, 247, 1);
-      line-height: 90px;
-      text-align: center;
-    }
-  }
 
   img {
     height: 100%;

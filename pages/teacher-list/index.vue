@@ -70,7 +70,7 @@ export default {
 
     // 获取老师列表
     async getTeacherList() {
-      const res = await this.$axios.get('wwwapi/findTeacherTeam')
+      const res = await this.$axios.get('http://192.168.8.122/manageapi/wwwapi/findTeacherTeam')
       const data = res.data.data
       this.teacherList = data
       this.currentTeacherList = data.filter(ele => ele.teacherType == this.currentSelectedTeacher)
