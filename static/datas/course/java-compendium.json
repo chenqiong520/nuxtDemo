@@ -1,0 +1,352 @@
+{
+  "data":[
+    {
+      "outlineTitle": "架构师内功心法",
+      "titleDesc": "详细介绍源码中所用到的经典升级思想，看看大牛是如何写代码的，提升技术审美、提高核心竞争力。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "架构设计原则",
+          "secondLevel": [
+            {"secondLevelName": "开闭原则"},
+            {"secondLevelName": "依赖倒置原则"},
+            {"secondLevelName": "单一职责原则"},
+            {"secondLevelName": "接口隔离原则"},
+            {"secondLevelName": "迪米特法则"},
+            {"secondLevelName": "里氏替换原则"},
+            {"secondLevelName": "合成复用原则"}
+
+          ]
+        },
+        {
+          "fisrtLevelName": "设计模式",
+          "secondLevel": [
+            {"secondLevelName": "为什么要从设计模式开始及工厂模式详解"},
+            {"secondLevelName": "单例模式及原型模式"},
+            {"secondLevelName": "深度分析代理模式"},
+            {"secondLevelName": "委派模式及策略模式"},
+            {"secondLevelName": "模板模式及适配器模式"},
+            {"secondLevelName": "装饰者模式及观察者模式"},
+            {"secondLevelName": "各设计模式总结与对比"}
+
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "架构师审美观",
+      "titleDesc": "迎接高并发大数据的挑战，从深度到广度完善知识体系成为下一个互联网高薪人才。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "Spring源码",
+          "secondLevel": [
+            {"secondLevelName": "Spring框架的前世今生及系统概述"},
+            {"secondLevelName": "用300行代码手写提炼Spring的核心原理"},
+            {"secondLevelName": "Spring源码版本命名及源码下载构建技巧"},
+            {"secondLevelName": "一步一步手绘SpringIOC容器初始化时序图"},
+            {"secondLevelName": "用30个类高仿真提炼纯手写Spring框架V2.0"},
+            {"secondLevelName": "Spring事务传播原理及数据库事务操作原理"},
+            {"secondLevelName": "基于Spring JDBC手写定制自己的ORM框架"},
+            {"secondLevelName": "Spring5新特性简述及BATJ经典面试题分析"}
+
+          ]
+        },
+        {
+          "fisrtLevelName": "MyBatis源码",
+          "secondLevel": [
+            {"secondLevelName": "MyBatis应用分析与最佳实践"},
+            {"secondLevelName": "MyBatis体系结构与工作原理"},
+            {"secondLevelName": "MyBatis源码分析"},
+            {"secondLevelName": "手写MyBatis 1.0"},
+            {"secondLevelName": "手写MyBatis 2.0"}
+
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "架构师必备技术栈",
+      "titleDesc": "围绕微服务的通用模式，讲解Spring Cloud的常见用法及原理让微服务的开发更加方便、快捷，让微服务应用更加稳定、可用。",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "并发编程",
+          "secondLevel": [
+            {"secondLevelName": "初步认识多线程的发展及使用"},
+            {"secondLevelName": "多线程的原理分析"},
+            {"secondLevelName": "AQS的底层原理分析"},
+            {"secondLevelName": "ConcurrentHashMap的原理分析"},
+            {"secondLevelName": "阻塞队列、原子操作的原理分析"},
+            {"secondLevelName": "线程池、forkjoin的原理分析"}
+          ]
+        },
+        {
+          "fisrtLevelName": "漫谈分布式架构",
+          "secondLevel": [
+            {"secondLevelName": "分布式架构的发展及演进"},
+            {"secondLevelName": "分布式架构的设计"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式架构基础",
+          "secondLevel": [
+            {"secondLevelName": "分布式系统的基础之HTTP协议"},
+            {"secondLevelName": "分布式系统的基石之TCP协议"},
+            {"secondLevelName": "分布式系统的基石之序列化技术"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式通信框架",
+          "secondLevel": [
+            {"secondLevelName": "IO的发展史BIO-NIO-AIO"},
+            {"secondLevelName": "理解IO的基本概念、Seletor，ePoll模型"},
+            {"secondLevelName": "完成Netty案例，了解Netty核心基本组件"},
+            {"secondLevelName": "深入Netty NioEventLoop分析Reactor线程处理过程"},
+            {"secondLevelName": "掌握Pipeline，ByteBuf"},
+            {"secondLevelName": "Netty编解码"},
+            {"secondLevelName": "分析源码Netty设计模式应用"},
+            {"secondLevelName": "分布式通信框架RMI原理分析"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式协调服务",
+          "secondLevel": [
+            {"secondLevelName": "初步认识Zookeeper"},
+            {"secondLevelName": "深入分析Zookeeper的实现原理"},
+            {"secondLevelName": "Zookeeper实践指南"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式服务治理",
+          "secondLevel": [
+            {"secondLevelName": "初步认识分布式服务治理Dubbo"},
+            {"secondLevelName": "Dubbo常用配置文件分析"},
+            {"secondLevelName": "Dubbo源码分析"},
+            {"secondLevelName": "Dubbo+SpringBoot项目实战"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式消息中间件",
+          "secondLevel": [
+            {"secondLevelName": "ActiveMQ初步使用"},
+            {"secondLevelName": "ActiveMQ原理分析"},
+            {"secondLevelName": "Kafka的初步认识及使用实践"},
+            {"secondLevelName": "Kafka的原理分析"},
+            {"secondLevelName": "初始RocketMQ整体认知"},
+            {"secondLevelName": "RocketMQ高级用法"},
+            {"secondLevelName": "RabbitMQ工作模型及与Java 编程"},
+            {"secondLevelName": "RabbitMQ可靠性投递与高可用集群方案"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式缓存技术",
+          "secondLevel": [
+            {"secondLevelName": "分布式缓存Redis的基本使用"},
+            {"secondLevelName": "Redis的内部原理解密"},
+            {"secondLevelName": "揭秘分布式Redis"},
+            {"secondLevelName": "Redis应用实战"},
+            {"secondLevelName": "MongoDB的应用场景及实现原理"},
+            {"secondLevelName": "MongoDB的常用命令及配置"},
+            {"secondLevelName": "基于MongoDB手写ORM框架"},
+            {"secondLevelName": "基于MongoDB实现网络云盘实战"},
+            {"secondLevelName": "MongoDB高可用实战及V4.0新特性"}
+          ]
+        },
+        {
+          "fisrtLevelName": "高性能Web容器",
+          "secondLevel": [
+            {"secondLevelName": "初步认识及使用高性能Web容器Nginx"},
+            {"secondLevelName": "Nginx的核心功能及应用实战"},
+            {"secondLevelName": "Nginx的扩展之OpenResty"}
+
+          ]
+        },
+        {
+          "fisrtLevelName": "数据库分库分表",
+          "secondLevel": [
+            {"secondLevelName": "理解MyCat中各大概念完成案例"},
+            {"secondLevelName": "配置讲解、各大数据分片规则详解"},
+            {"secondLevelName": "MyCat深入进阶"},
+            {"secondLevelName": "ShardingSphere核心概念对比介绍完成案例"},
+            {"secondLevelName": "ShardingSphere深入进阶"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式搜索引擎",
+          "secondLevel": [
+            {"secondLevelName": "ElasticSearch基本原理及分布式环境搭建"},
+            {"secondLevelName": "ElasticSearch分布式高级特性"},
+            {"secondLevelName": "ElasticSearch与SpringBoot集成实现搜索附近的人"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式日志监控",
+          "secondLevel": [
+            {"secondLevelName": "Logstash和Kibana原理介绍及应用"},
+            {"secondLevelName": "基于ELK搭建网站实时监控平台"}
+          ]
+        },
+        {
+          "fisrtLevelName": "分布式实战解决方案",
+          "secondLevel": [
+            {"secondLevelName": "分布式定时任务实现订单关单"},
+            {"secondLevelName": "分布式全局唯一ID生成方法"},
+            {"secondLevelName": "高并发场景下的限流策略"},
+            {"secondLevelName": "如何解决分布式事务问题"},
+            {"secondLevelName": "无状态token实现单点登录"}
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "次世代架构师技术",
+      "titleDesc": "",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "微服务架构",
+          "secondLevel": [
+            {"secondLevelName": "SpringBoot框架基础"},
+            {"secondLevelName": "SpringBoot集成Mybatis和JPA数据层开发"},
+            {"secondLevelName": "SpringBoot整合插件开发"},
+            {"secondLevelName": "SpringBoot Web应用开发"},
+            {"secondLevelName": "SpringBoot 数据集成与企业级开发"},
+            {"secondLevelName": "SpringBoot测试与Docker部署"},
+            {"secondLevelName": "服务治理 (SpringCloud Eureka）"},
+            {"secondLevelName": "客户端负载均衡：SpringCloud Ribbon"},
+            {"secondLevelName": "服务容错保护（SpringCloud Hystrix）"},
+            {"secondLevelName": "声明式服务调用（SpringCloud Feign）"},
+            {"secondLevelName": "API服务网关（SpringCloud Zuul）  "},
+            {"secondLevelName": "分布式配置管理(SpringCloud Config)"},
+            {"secondLevelName": "消息总线（SpringCloud Bus） "},
+            {"secondLevelName": "消息驱动微服务（SpringCloud Stream）  "},
+            {"secondLevelName": "分布式服务跟踪（SpringCloud Sleuth）"}
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "架构师工具箱",
+      "titleDesc": "",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "DevOps",
+          "secondLevel": [
+            {"secondLevelName": "Git简介"},
+            {"secondLevelName": "Git官网"},
+            {"secondLevelName": "下载与安装"},
+            {"secondLevelName": "Git初体验"},
+            {"secondLevelName": "Git学前知识"},
+            {"secondLevelName": "Git基础操作"},
+            {"secondLevelName": "Git log和版本切换"},
+            {"secondLevelName": "工作区暂存区和提交区"},
+            {"secondLevelName": "初识分支"},
+            {"secondLevelName": "详解分支"},
+            {"secondLevelName": "合并分支和冲突解决"},
+            {"secondLevelName": "Git config和配置别名"},
+            {"secondLevelName": "打标签和忽略标签"},
+            {"secondLevelName": "本地仓库和远程仓库"},
+            {"secondLevelName": "Github和码云"},
+            {"secondLevelName": "操作远程和本地仓库"},
+            {"secondLevelName": "倘若没有Maven"},
+            {"secondLevelName": "Maven介绍"},
+            {"secondLevelName": "Maven初体验"},
+            {"secondLevelName": "Maven官网"},
+            {"secondLevelName": "Maven下载和安装"},
+            {"secondLevelName": "Maven配置"},
+            {"secondLevelName": "Maven目录结构"},
+            {"secondLevelName": "Maven项目目录结构"},
+            {"secondLevelName": "手动创建Maven项目"},
+            {"secondLevelName": "开发工具创建Maven项目"},
+            {"secondLevelName": "Maven配置文件之settings.xml"},
+            {"secondLevelName": "Maven仓库"},
+            {"secondLevelName": "Maven配置文件之pom.xml"},
+            {"secondLevelName": "Maven依赖"},
+            {"secondLevelName": "Maven插件"},
+            {"secondLevelName": "Maven之archetype"},
+            {"secondLevelName": "搭建Maven私服"},
+            {"secondLevelName": "Maven项目实战"},
+            {"secondLevelName": "Jenkins简介"},
+            {"secondLevelName": "Jenkins官网"},
+            {"secondLevelName": "Jenkins下载与安装"},
+            {"secondLevelName": "登录和界面功能介绍"},
+            {"secondLevelName": "Jenkins工作流程"},
+            {"secondLevelName": "创建任务和功能介绍"},
+            {"secondLevelName": "拉取代码"},
+            {"secondLevelName": "莫慌之思路再梳理"},
+            {"secondLevelName": "项目构建和发布"},
+            {"secondLevelName": "webhook的配置"}
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "架构诊断处方笺",
+      "titleDesc": "",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "性能调优",
+          "secondLevel": [
+            {"secondLevelName": "JVM内存模型详解"},
+            {"secondLevelName": "JVM监控与优化实战"},
+            {"secondLevelName": "深度剖析MySQL的B+Tree索引机制"},
+            {"secondLevelName": "了解存储引擎，从SQL执行学习执行计划"},
+            {"secondLevelName": "深入学习Innodb引擎特性之锁、MVCC机制"},
+            {"secondLevelName": "MySQL集群搭建、高可用方案"},
+            {"secondLevelName": "数据拯救、数据库表设计、参数配置"},
+            {"secondLevelName": "Tomcat性能优化前篇"},
+            {"secondLevelName": "Tomcat性能优化案例篇"},
+            {"secondLevelName": "Tomcat性能优化技巧总结"}
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "架构师修养",
+      "titleDesc": "",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "技术文档编写",
+          "secondLevel": [
+            {"secondLevelName": "Java开发文档编写技巧"},
+            {"secondLevelName": "数据库设计文档编写技巧"}
+          ]
+        },
+        {
+          "fisrtLevelName": "中英文档阅读能力"
+        },
+        {
+          "fisrtLevelName": "数据结构与算法"
+        },{
+          "fisrtLevelName": "面试技巧"
+        },{
+          "fisrtLevelName": "UML建模"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "创业扶持计划",
+      "titleDesc": "",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "咕泡商城",
+          "secondLevel": [
+            {"secondLevelName": "咕泡商城架构介绍"}
+          ]
+        },{
+          "fisrtLevelName": "到家APP",
+          "secondLevel": [
+            {"secondLevelName": "到家APP业务介绍"}
+          ]
+        },{
+          "fisrtLevelName": "视频处理平台",
+          "secondLevel": [
+            {"secondLevelName": "视频处理平台架构"}
+          ]
+        },{
+          "fisrtLevelName": "微信点餐系统",
+          "secondLevel": [
+            {"secondLevelName": "微信点餐系统UI架构设计介绍"}
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -2,20 +2,24 @@
   <div class="course-test">
     <main class="content">
       <nav class="banner">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-banner-bg.png" alt="课程详情介绍">
+        <div class="title">
+          <h1>测试高级提升课程</h1>
+          <span>助你通向高级软件测试工程师</span>
+        </div>
       </nav>
 
       <section class="course-title">
         <h1 class="title">学院课程</h1>
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-fm.jpg" alt="课程详情介绍">
       </section>
 
       <section class="course-summary">
         <h2>测试高级提升课程</h2>
-        <h3>加入咕泡，开启web全栈之路</h3>
-        <p class="price">￥6000.00</p>
+        <h3>助你通向高级软件测试工程师</h3>
+        <p class="price">￥6180.00</p>
         <p class="cycle">
-          <strong>周期</strong>8个月
+          <strong>周期</strong>4个月
         </p>
         <p class="way">
           <strong>方式</strong>直播为主，录播、学习资料为辅
@@ -24,7 +28,7 @@
           <strong>地点</strong>腾讯课堂
         </p>
         <p class="time">
-          <strong>时间</strong>每周三、周六、周日晚20:00~22:00
+          <strong>时间</strong>每周三、五晚20:00~22:00
         </p>
       </section>
 
@@ -43,13 +47,9 @@
 
       <section class="course-detail">
         <h2>图文介绍</h2>
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-        <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-bg-js1.png" alt="课程详情介绍">
         <template v-if="isLoadAll">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
-          <img src="../../assets/img/course/java.png" alt="课程详情介绍">
+          <img src="../../assets/img/course/test/test-bg-js2.png" alt="课程详情介绍">
         </template>
         <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
       </section>
@@ -57,31 +57,24 @@
       <section class="course-compendium">
         <h2>课程大纲</h2>
 
-        <div class="course-compendium-item">
+        <div
+          v-for="(compendiumItem,index) in compendium"
+          :key="index"
+          class="course-compendium-item"
+        >
           <div class="item-title">
-            <strong>01</strong>需要更多往期视频加曼妮老师qq1213512135
+            <strong>{{index+1}}</strong>
+            {{compendiumItem.outlineTitle}}
           </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
-        </div>
-        <div class="course-compendium-item">
-          <div class="item-title">
-            <strong>02</strong>需要更多往期视频加曼妮老师qq1213512135
+          <div v-for="(firstLevelItem,index1) in compendiumItem.firstLevel" :key="index1">
+            <div class="video-name">{{firstLevelItem.fisrtLevelName}}</div>
+            <div class="time">{{videoTime()}}分钟</div>
           </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
-        </div>
-        <div class="course-compendium-item">
-          <div class="item-title">
-            <strong>03</strong>需要更多往期视频加曼妮老师qq1213512135
-          </div>
-          <div class="video-name">Java架构专题课程介绍</div>
-          <div class="time">6分钟</div>
         </div>
       </section>
     </main>
 
-    <course-footer class="footer"></course-footer>
+    <course-footer v-bind="footerProps" class="footer"></course-footer>
   </div>
 </template>
 
@@ -109,7 +102,18 @@ export default {
       },
       isLoadAll: false,
 
-      teachers: []
+      // 课程老师
+      teachers: [],
+      // 纲要
+      compendium: {},
+
+      footerProps: {
+        QQGroupTitle: '添加qq群加入测试交流群', //QQ群提示
+        QQGroupNumber: '96106784', // QQ群号
+        qrcodeTitle: '扫一扫加入测试交流群', // 微信二维码提示
+        qrcodeSrc: require('@/assets/img/course/test/test-gzh.jpg'), //关注二维码
+        toTencentUrl: 'https://ke.qq.com/course/252303' //跳转至腾讯课堂地址
+      }
     }
   },
 
@@ -122,6 +126,20 @@ export default {
       }
     },
 
+    async getCompendium() {
+      const response = await this.$axios.get(
+        `${window.location.origin}/datas/course/test-compendium.json`
+      )
+
+      if (response && response.status === 200) {
+        this.compendium = response.data.data
+      }
+    },
+
+    videoTime(end = 100, start = 10) {
+      return parseInt(Math.random() * (end - start + 1) + start, 10)
+    },
+
     /**
      * 加载全部图文
      */
@@ -132,6 +150,7 @@ export default {
 
   mounted() {
     this.getTeachers()
+    this.getCompendium()
   }
 }
 </script>
@@ -195,10 +214,35 @@ export default {
 
 /* banner */
 .course-test main.content nav.banner {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .title {
+    position: absolute;
+    text-align: center;
+
+    h1 {
+      font-size: 56px;
+      font-weight: 600;
+      color: rgba(247, 216, 28, 1);
+      text-align: center;
+    }
+
+    span {
+      height: 25px;
+      font-size: 26px;
+      font-weight: 500;
+      color: rgba(235, 233, 247, 1);
+      line-height: 90px;
+      text-align: center;
+    }
+  }
+
   img {
     height: 100%;
     width: 100%;
-    object-fit: cover;
   }
 }
 

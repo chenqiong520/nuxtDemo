@@ -2,30 +2,37 @@
   <div class="hot-course">
     <div v-if="hotCourse.titleName" class="course-title-box clear">
       <div class="left">
-        <div><img :src="hotCourse.titleIcon"><span class="course-title">{{ hotCourse.titleName }}</span></div>
-        <div class="title-desc">
-          {{ hotCourse.titleDesc }}
+        <div>
+          <img :src="hotCourse.titleIcon">
+          <span class="course-title">{{ hotCourse.titleName }}</span>
         </div>
+        <div class="title-desc">{{ hotCourse.titleDesc }}</div>
       </div>
       <div class="right">
-        <i class="iconfont iconarrow-right-copy-copy-copy" style="font-size:32px; color:#444" />
+        <i
+          @click="jump"
+          class="iconfont iconarrow-right-copy-copy-copy"
+          style="font-size:32px; color:#444"
+        />
       </div>
     </div>
-    <div class="course-cont-wrapper ">
+    <div class="course-cont-wrapper">
       <div v-for="(item, index) in hotCourse.courseList" :key="index" class="item">
         <div class="course-img">
           <img :src="item.coverImg">
           <div class="num status-desc">
-            <span class="span1"><i class="iconfont iconread" />{{ item.readNum }}</span>
-            <span><i class="iconfont iconcomment" />{{ item.CommentNum }}</span>
+            <span class="span1">
+              <i class="iconfont iconread"/>
+              {{ item.readNum }}
+            </span>
+            <span>
+              <i class="iconfont iconcomment"/>
+              {{ item.CommentNum }}
+            </span>
           </div>
         </div>
-        <div class="course-name">
-          {{ item.courseName | addEllipsis(9) }}
-        </div>
-        <div class="price">
-          {{ item.price }}
-        </div>
+        <div class="course-name">{{ item.courseName | addEllipsis(9) }}</div>
+        <div class="price">{{ item.price }}</div>
       </div>
     </div>
   </div>
@@ -37,6 +44,12 @@ export default {
   props: {
     hotCourse: {
       type: Object
+    }
+  },
+
+  methods: {
+    jump() {
+      this.$emit('jump', this.hotCourse)
     }
   }
 }
