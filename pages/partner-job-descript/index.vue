@@ -32,7 +32,7 @@ export default {
   methods: {
     async getList() {
       // 获取本地的json文件数据
-      const response = await this.$axios.get(`/datas/partner/job.json`)
+      const response = await this.$axios.get(`${window.location.origin}/datas/partner/job.json`)
       this.positionList = response.data.data
     },
     toggleStatus(index) {
