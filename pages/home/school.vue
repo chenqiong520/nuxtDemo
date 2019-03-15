@@ -41,7 +41,7 @@ export default {
               img: require('@/assets/img/home/school/fengcai_icon_05.jpg')
             },
             {
-              img: require('@/assets/img/home/school/fengcai_icon_06.png')
+              img: require('@/assets/img/home/school/fengcai_icon_06.jpg')
             }
           ]
         },
