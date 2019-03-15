@@ -64,8 +64,8 @@ export default {
       tabs: [
         { id: 1, name: '咕泡讲师' },
         { id: 2, name: '流量主' },
-        { id: 3, name: '城市合伙人' },
-        { id: 4, name: '咕泡员工' }
+        { id: 3, name: '地方运营商' },
+        { id: 4, name: '员工招募' }
       ],
       // 当前选中tab下标
       currentTab: 0,
@@ -99,7 +99,6 @@ export default {
       this.currentTab = index
       this.displayContent = this.context[index]
       this.imgUrl = this.imgList[index]
-      // console.log(this.content)
     },
 
     // 获取合伙人数据
@@ -109,7 +108,7 @@ export default {
       )
       const data = res.data.data
       this.context = data
-      this.displayContent = data[0]
+      this.switchTab(+this.$route.query.current)
     },
 
     // 跳转职位描述详情

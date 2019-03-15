@@ -28,22 +28,22 @@ export default {
       honorList: [
         {
           img: require('@/assets/img/home/partner/partner-01.png'),
-          id: '',
+          current: 0,
           name: '咕泡讲师'
         },
         {
           img: require('@/assets/img/home/partner/partner-02.png'),
-          id: '',
+          current: 1,
           name: '流量主'
         },
         {
           img: require('@/assets/img/home/partner/partner-03.png'),
-          id: '',
+          current: 2,
           name: '地方运营商'
         },
         {
           img: require('@/assets/img/home/partner/partner-04.png'),
-          id: '',
+          current: 3,
           name: '员工招募'
         }
       ],
@@ -56,7 +56,10 @@ export default {
   },
   methods: {
     toPartner(item) {
-      this.$router.push('/partner')
+      this.$router.push({
+        path: '/partner',
+        query: { current: item.current }
+      })
     }
   }
 }
