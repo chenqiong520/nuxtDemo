@@ -6,13 +6,13 @@
           <div class="banner-item banner1"></div>
         </div>
         <div class="swiper-slide">
-          <div class="banner-item banner1"></div>
+          <div class="banner-item banner2"></div>
         </div>
         <div class="swiper-slide">
-          <div class="banner-item banner1"></div>
+          <div class="banner-item banner3"></div>
         </div>
       </div>
-      
+
       <div class="swiper-pagination swiper-pagination-bullets"></div>
     </div>
   </div>
@@ -55,17 +55,17 @@ export default {
 .banner .banner-item {
   width: 100%;
   height: 289px;
-  border-radius: 12px;
+  border-radius: 8px;
   overflow: hidden;
 }
 
 .banner1 {
-  background: url(../../assets/img/home/banner/b3.png);
+  background: url(../../assets/img/home/banner/b1.png);
   background-size: cover;
 }
 
 .banner2 {
-  background: url(../../assets/img/home/banner/b4.png);
+  background: url(../../assets/img/home/banner/b2.png);
   background-size: cover;
 }
 

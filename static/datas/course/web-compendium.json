@@ -1,0 +1,449 @@
+{
+  "data":[
+    {
+      "outlineTitle": "Web网页基础",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "HTML5+CSS3",
+          "secondLevel": [
+            {
+              "secondLevelName": "熟悉HTML5入门基本内容（代码文件、基本结构、注释、编程问题、规范、基本标签等）"
+            },
+            {
+              "secondLevelName": "掌握CSS3的基础入门知识"
+            },
+            {
+              "secondLevelName": "继承与优先级"
+            },
+            {
+              "secondLevelName": "选择器、盒子模型、布局样式等使用方法"
+            },
+            {
+              "secondLevelName": "能够进行合理的网页布局"
+            },
+            {
+              "secondLevelName": "项目实战- 个人博客（HTML5+CSS3）个人博客是学员涉足前端领域的第一个项目，运用前端基础知识，培养项目思维，搭建属于自己的个人信息分享平台，迈入互联网开发行列。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Photoshop",
+          "secondLevel": [
+            {
+              "secondLevelName": "采用商业案例来学习Photoshop使用"
+            },
+            {
+              "secondLevelName": "掌握Photoshop基本操作"
+            },
+            {
+              "secondLevelName": "能够独立的进行网页切图"
+            },
+            {
+              "secondLevelName": "项目实战- 企业网站（HTML5+CSS3+Photoshop+PxCook）企业网站作为一家公司的互联网名片，是每家企业必备。强化学员对HTML+CSS+PS(切图)、各种布局等初期所学全部知识的综合应用，由于是第一个企业级项目，着重熟悉项目开发流程和培养使用HTML+CSS遇到问题时的分析和调试能力。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "Web编程基础",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "JavaScript基础",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握JavaScript基本语法和基本语句。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "BOM+DOM编程",
+          "secondLevel": [
+            {
+              "secondLevelName": "认识和了解BOM和DOM模型"
+            },
+            {
+              "secondLevelName": "掌握window、location、history、navigator、document、 Form、Table等对象的使用"
+            },
+            {
+              "secondLevelName": "掌握事件处理和DOM节点"
+            },
+            {
+              "secondLevelName": "案例实践-H5音乐播放器、H5小游戏（HTML+CSS+Javascript）通过游戏应用开发，培养学员开发兴趣和参与感，强化Javascript基础、DOM操作和事件机制在实际场景的应用。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "jQuery＋交互及动画＋jQuery优质插件",
+          "secondLevel": [
+            {
+              "secondLevelName": "认识jQuery"
+            },
+            {
+              "secondLevelName": "熟悉选择器"
+            },
+            {
+              "secondLevelName": "属性与样式"
+            },
+            {
+              "secondLevelName": "jQuery基本DOM操作"
+            },
+            {
+              "secondLevelName": "事件处理"
+            },
+            {
+              "secondLevelName": "文档处理"
+            },
+            {
+              "secondLevelName": "数组和对象操作"
+            },
+            {
+              "secondLevelName": "学会使用jQuery和JavaScript和DOM编程的动画效果制作"
+            },
+            {
+              "secondLevelName": "掌握jQuery生态圈的流行框架使用"
+            },
+            {
+              "secondLevelName": "培养学员利用前端工具解决开发过程中问题的能力"
+            },
+            {
+              "secondLevelName": "项目实战 -Web相册（HTML+CSS+jQuery）通过本阶段的学习，具备常见动画需求的开发能力；常用插件的使用及开发；逐步培养良好的编程习惯，强化企业项目开发流程，培养团队协作能力。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "Web编程高级及Node全栈开发",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "JavaScript高级编程",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握jJavaScript面向对象思想"
+            },
+            {
+              "secondLevelName": "原型设计原理及使用"
+            },
+            {
+              "secondLevelName": "掌握递归、惰性载入、匿名、闭包及回调等高级函数的使用"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "jQuery插件开发",
+          "secondLevel": [
+            {
+              "secondLevelName": "学习插件开发模式,并自己动手实现动态表格查询和表单验证等插件"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "模块化组件开发",
+          "secondLevel": [
+            {
+              "secondLevelName": "了解模块化编程的历史和演变"
+            },
+            {
+              "secondLevelName": "自己动手来实现模块化管理"
+            },
+            {
+              "secondLevelName": "了解当下流行的AMD和CMD规范，并掌握基于客户端的RequireJS框架"
+            },
+            {
+              "secondLevelName": "案例实践-自己动手打造MVVM框架（面向对象编程 +插件模块化）能够通过面向对象思想开发jQuery插件，学习实践JS设计模式，具备初级JS框架的编写能力。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "AJAX＋Express(Node.js)＋MongoDB",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握AJAX异步刷新技术的使用，及实际场景的规范"
+            },
+            {
+              "secondLevelName": "掌握node.js环境的搭建及基于服务端模块化编程;了解node.js基础知识、特性"
+            },
+            {
+              "secondLevelName": "掌握NPM生态圈搭建及使用"
+            },
+            {
+              "secondLevelName": "掌握node.js作用域、事件编程、异步编程及文件操作"
+            },
+            {
+              "secondLevelName": "掌握HTTP协议、客户端数据传输方式"
+            },
+            {
+              "secondLevelName": "熟练使用网页模板模板技术来简化开发"
+            },
+            {
+              "secondLevelName": "了解基于node.js的框架Express框架背景"
+            },
+            {
+              "secondLevelName": "熟练Express安装"
+            },
+            {
+              "secondLevelName": "掌握Express路由及使用请求、响应对象完成客户端及服务端的交互"
+            },
+            {
+              "secondLevelName": "了解Express中间件的使用"
+            },
+            {
+             "secondLevelName": "了解分布式文件存储的数据库MongoDB"
+            },
+            {
+              "secondLevelName": "让大家学会搭建和使用属于前端开发者自己的数据库，成为一个真正的全栈工程师"
+            },
+            {
+              "secondLevelName": "项目实战 ——仿Mtime全栈开发（AJAX+NodeJS+MongoDB） 通过最热门的Node+Express +MongoDB开发模式独立完成网站开发。通过NPM生态圈通过分享和借鉴代码进行自我提升。致力于成为一名真正的全栈工程师。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "版本控制工具GIT",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握GIT版本控制工具来维护项目的整个蓝图"
+            },
+            {
+              "secondLevelName": "熟练使用github/gitlab来管理云端代码仓库"
+            },
+            {
+              "secondLevelName": "快速项目组成员多人协作"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "ElementUI＋Koa2(Node.js)＋Mysql",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握Vue2框架的环境搭建，指令，表达式，生命周期和组件开发"
+            },
+            {
+              "secondLevelName": "熟练使用基于Vue2的饿了么前端视图框架ElementUI，高效打造大型复杂的用户界面"
+            },
+            {
+              "secondLevelName": "Koa是Express 原班人马打造 更小、更健壮、更富有表现力Node框架"
+            },
+            {
+              "secondLevelName": "使用Koa2打开更前沿的后台开发模式"
+            },
+            {
+              "secondLevelName": "使用甲骨文公司的Mysql关系数据库来管理更为大型并发的数据"
+            },
+            {
+              "secondLevelName": "项目实战 -大型外卖系统（ElementUI＋Koa2＋Mysql）通过最热门的Node+Koa2+MongoDB开发模式独立完成网站开发。通过NPM生态圈通过分享和实践编码进行自我提升。成为一名真正的全栈工程师。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "响应式网站与项目自动化开发",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "HTML5、CSS3进阶",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握HTML5时代多媒体、Web存储技术及基于浏览器的(LBS)地理定位技术"
+            },
+            {
+              "secondLevelName": "熟悉基于高德地图、百度地图等地图API的应用开发？"
+            },
+            {
+              "secondLevelName": "介绍了H5图形技术SVG和Canvas"
+            },
+            {
+              "secondLevelName": "能够动手编写图形报表和使用百度Echarts地图API的能力"
+            },
+            {
+              "secondLevelName": "掌握CSS3新选择器，响应式原理及CSS3媒体查询"
+            },
+            {
+              "secondLevelName": "移动端流行的伸缩布局，Web字体、渐变、过渡动画等技术"
+            },
+            {
+              "secondLevelName": "实现基于网页的酷炫动画效果"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Bootstrap",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握来自Twitter工程师开发的目前流行度很高的前端响应式框架，包括内置样式、组件和JavaScript插件"
+            },
+            {
+              "secondLevelName": "掌握基于Bootstrap打造的电影主题页设计"
+            },
+            {
+              "secondLevelName": "项目实战 -电影主题页设计（HTML5+CSS3+Bootstrap）快速打造能够适应多端的信息展示网站"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "前端依赖管理+CSS预处理语言（Less+Sass）",
+          "secondLevel": [
+            {
+              "secondLevelName": "熟练使用bower来管理前端库，达到一个命令搞定所有项目依赖"
+            },
+            {
+              "secondLevelName": "掌握基于CSS的预处理框架Less/Sass，以最简单的代码实现复杂样式"
+            },
+            {
+              "secondLevelName": "目前主流的前端框架都是基于css预处理语言搭建，学会后具备Bootstrap等框架的阅读和使用能力"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Grunt/Gulp自动化构建工具",
+          "secondLevel": [
+            {
+              "secondLevelName": "了解前端自动化构建工具的原理"
+            },
+            {
+              "secondLevelName": "掌握基于Node平台的Grunt和Gulp两大自动化构建工具"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "PHP",
+          "secondLevel": [
+            {
+              "secondLevelName": "了解PHP历史"
+            },
+            {
+              "secondLevelName": "快速搭建PHP运行环境"
+            },
+            {
+              "secondLevelName": "熟悉PHP语法，文件加载"
+            },
+            {
+              "secondLevelName": "使用PHP操作mysql数据库"
+            },
+            {
+              "secondLevelName": "项目实战 -响应式金融借贷平台（Bootstrap4+Sass+PHP+Mysql）通过本阶段学习，通过Bootstrap等框架具备响应式开发能力；并使用多种版本控制工具，进行企业项目的迭代；同时使用预处理框架完成样式重用和扩展。具备高效快速开发企业项目的能力。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "框架与项目管理",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "Webpack模块加载器&打包工具",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握最前沿模块化打包工具"
+            },
+            {
+              "secondLevelName": "形成组件化开发思想，极大简化项目开发的成本"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "React",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握来自Facebook工程师开发的流行前端框架-React"
+            },
+            {
+              "secondLevelName": "熟练使用React基本语法、声明周期、React-Router及基于ES6的React组件开发"
+            },
+            {
+              "secondLevelName": "掌握React Flux架构在实际项目中的应用"
+            },
+            {
+              "secondLevelName": "掌握基于React衍生出来的本地化跨平台框架"
+            },
+            {
+              "secondLevelName": "项目实战 - 咕泡商城App（React+Redux+Webpack+Antd-mobile+Koa2+MongoDB）熟练掌握React全家桶项目架构。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "VUE2进阶",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握主流的VUE2组件高阶"
+            },
+            {
+              "secondLevelName": "熟悉iView、MintUI移动端框架"
+            },
+            {
+              "secondLevelName": "使用Vue-cli来搭建工程和开发Vue项目"
+            },
+            {
+              "secondLevelName": "项目实战 - 外卖APP、QQ音乐App（Vue+Vuex+iView/MintUI+axios）熟练掌握Vue全家桶项目架构"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "TypeScript",
+          "secondLevel": [
+            {
+              "secondLevelName": "TypeScript是一种由微软开发的自由和开源的编程语言。它是JavaScript的一个超集，而且本质上向这个语言添加了可选的静态类型和基于类的面向对象编程"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "Angular",
+          "secondLevel": [
+            {
+              "secondLevelName": "掌握Angular6.x环境搭建、知识预备、项目目录结构分析"
+            },
+            {
+              "secondLevelName": "Angular6x 创建组件 、声明属性"
+            },
+            {
+              "secondLevelName": "Angular6绑定数据、Angular6 绑定属性"
+            },
+            {
+              "secondLevelName": "Angular6条件判断、Angular6事件"
+            },
+            {
+              "secondLevelName": "Angular6表单处理"
+            },
+            {
+              "secondLevelName": "Angular6双向数据绑定"
+            },
+            {
+              "secondLevelName": "项目实战 -咕泡商城App（TypeScript+Angular+Webpack+Ionic)熟练使用Angular6框架完成大型项目开发，并配合自动化构建工具及打包工具简化开发成本；完全具备中、高级前端工程师的素养和要求。"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "outlineTitle": "移动混合式及微信开发",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "React Native",
+          "secondLevel": [
+            {
+              "secondLevelName": "熟练搭建ReactNative环境"
+            },
+            {
+              "secondLevelName": "掌握本地化布局和常见组件"
+            },
+            {
+              "secondLevelName": "项目实战 -咕泡社区APP（ReactNative+AntD+DVA+高德地图API）通过本阶段学习，具备与移动端开发人员的合作完成低成本、高性能、高健壮的App应用的能力。"
+            }
+          ]
+        },
+        {
+          "fisrtLevelName": "微信小程序",
+          "secondLevel": [
+            {
+              "secondLevelName": "微信小程序作为引爆H5时代的标识技术，通过学习了解视图层、逻辑层相关知识，深入框架和组件的使用"
+            },
+            {
+              "secondLevelName": "项目实战 -咕泡电影小程序（WXML + WXSS + JS + 豆瓣开放接口API）通过本阶段学习，具备微信/支付宝小程序的开发能力。"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

@@ -6,9 +6,7 @@
         v-for="(item, index) in tabs"
         :key="index"
         @click="switchTab(index)"
-      >
-        {{ item.name }}
-      </div>
+      >{{ item.name }}</div>
     </div>
     <HotCourse :hotCourse="currentCourse" class="div-padding"></HotCourse>
   </div>
@@ -32,7 +30,7 @@ export default {
         { id: 3, name: '猜你喜欢' }
       ],
       // 当前选中tab下标
-      currentTab: 0,
+      currentTab: this.$route.query.currentTab || 0,
       currentCourse: {
         courseList: [
           {

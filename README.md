@@ -23,7 +23,8 @@ $ yarn run generate
 
 ```bash
 # 部署到测试服务器
-# 1. 执行编译命令
+# 1. 在dev分支下执行命令
+$ cnpm i
 $ NODE_ENV=pre-production npm run generate
 
 # 2. 将dist下的文件拷贝到测试服务器地址

@@ -1,0 +1,258 @@
+{
+  "data":[
+    {
+      "outlineTitle": "python编程",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "常用设计模式"
+        },
+        {
+          "fisrtLevelName": "语法规则,编码规范"
+        },
+        {
+          "fisrtLevelName": "基本数据类型"
+        },
+        {
+          "fisrtLevelName": "python运算符"
+        },
+        {
+          "fisrtLevelName": "输入与输出"
+        },
+        {
+          "fisrtLevelName": "字符串常用方法"
+        },
+        {
+          "fisrtLevelName": "列表list,元组tuple"
+        },
+        {
+          "fisrtLevelName": "字典dict,集合set"
+        },
+        {
+          "fisrtLevelName": "代码流程控制（if else while for break pass continue）"
+        },
+        {
+          "fisrtLevelName": "正则表达式1"
+        },
+        {
+          "fisrtLevelName": "正则表达式2"
+        },
+        {
+          "fisrtLevelName": "函数1"
+        },
+        {
+          "fisrtLevelName": "函数2"
+        },
+        {
+          "fisrtLevelName": "模块"
+        },
+        {
+          "fisrtLevelName": "异常处理"
+        },
+        {
+          "fisrtLevelName": "文件操作"
+        },
+        {
+          "fisrtLevelName": "面向对象编程1"
+        },
+        {
+          "fisrtLevelName": "面向对象编程2"
+        },
+        {
+          "fisrtLevelName": "常用内置函数"
+        },
+        {
+          "fisrtLevelName": "复习与总结"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "数据库编程",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "数据库编程接口"
+        },
+        {
+          "fisrtLevelName": "sqlite数据库"
+        },
+        {
+          "fisrtLevelName": "mysql数据库"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "前端基础",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "html"
+        },
+        {
+          "fisrtLevelName": "css"
+        },
+        {
+          "fisrtLevelName": "javascript"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "web自动化测试",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "selenium发展史及工作原理"
+        },
+        {
+          "fisrtLevelName": "webderiver工作原理"
+        },
+        {
+          "fisrtLevelName": "元素定位（上）"
+        },
+        {
+          "fisrtLevelName": "元素定位（下）"
+        },
+        {
+          "fisrtLevelName": "HTML特殊元素处理"
+        },
+        {
+          "fisrtLevelName": "鼠标键盘操作、等待、截图、多线程"
+        },
+        {
+          "fisrtLevelName": "自动化测试模型、UnitTest框架"
+        },
+        {
+          "fisrtLevelName": "UnitTest结合DDT实现数据驱动"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "app自动化测试",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "SDK环境部署、Appnium Desktop集成环境"
+        },
+        {
+          "fisrtLevelName": "Appnium Desktop使用及Appnium Python客户端使用"
+        },
+        {
+          "fisrtLevelName": "元素定位（上）"
+        },
+        {
+          "fisrtLevelName": "元素定位（下）"
+        },
+        {
+          "fisrtLevelName": "Press、Release、Longpress手势操作"
+        },
+        {
+          "fisrtLevelName": "Appnium WebView测试原理，Android自动化用例编写"
+        },
+        {
+          "fisrtLevelName": "Toast的识别，Grid模式用法，STF兼容性测试"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "接口自动化测试",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "http通信"
+        },
+        {
+          "fisrtLevelName": "接口测试实现流程及Postman使用"
+        },
+        {
+          "fisrtLevelName": "Json基本语法，Requests库使用"
+        },
+        {
+          "fisrtLevelName": "数据管理和数据驱动"
+        },
+        {
+          "fisrtLevelName": "接口自动化实战--接口开发（上）"
+        },
+        {
+          "fisrtLevelName": "接口自动化实战--接口开发（下）"
+        },
+        {
+          "fisrtLevelName": "接口自动化实战--测试框架（上）"
+        },
+        {
+          "fisrtLevelName": "接口自动化实战--测试框架（下）"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "pytest框架",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "pytest入门"
+        },
+        {
+          "fisrtLevelName": "断言,Fixture"
+        },
+        {
+          "fisrtLevelName": "执行用例,生成测试报告"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "自动化测试平台开发",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "Django应用与开发（上）"
+        },
+        {
+          "fisrtLevelName": "Django应用与开发（中）"
+        },
+        {
+          "fisrtLevelName": "Django应用与开发（下）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（一）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（二）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（三）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（四）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（五）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（六）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（七）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（八）"
+        },
+        {
+          "fisrtLevelName": "测试平台开发项目实战（九）"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "持续集成",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "环境搭建"
+        },
+        {
+          "fisrtLevelName": "创建构建任务"
+        },
+        {
+          "fisrtLevelName": "构建定时任务,自动发送测试报告"
+        }
+      ]
+    },
+    {
+      "outlineTitle": "就业辅导",
+      "firstLevel": [
+        {
+          "fisrtLevelName": "简历指导,模拟面试"
+        }
+      ]
+    }
+  ]
+}
