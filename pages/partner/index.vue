@@ -108,7 +108,12 @@ export default {
       )
       const data = res.data.data
       this.context = data
-      this.switchTab(+this.$route.query.current)
+      if (this.$route.query.current) {
+        this.switchTab(+this.$route.query.current)
+      } else {
+        this.switchTab(0)
+      }
+      
     },
 
     // 跳转职位描述详情

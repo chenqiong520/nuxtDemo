@@ -186,7 +186,6 @@ export default {
 }
 .course-list .list-description .list-title {
   font-size: 32px;
-  font-weight: bold;
   color: #252525;
 }
 .course-list .list-description .list-text {

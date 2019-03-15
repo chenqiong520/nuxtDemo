@@ -43,8 +43,8 @@ export default {
         { id: 0, number: 6, name: 'JAVA架构', teacherType: 'java' },
         { id: 1, number: 1, name: '人工智能', teacherType: 'ai' },
         { id: 2, number: 11, name: '大数据', teacherType: 'bigdata' },
-        { id: 3, number: 7, name: '测试', teacherType: 'test' },
-        { id: 4, number: 1, name: '前端', teacherType: 'web' }
+        { id: 3, number: 7, name: '软件测试', teacherType: 'test' },
+        { id: 4, number: 1, name: 'Web前端', teacherType: 'web' }
       ],
       // 当前选中老师类型
       currentSelectedTeacher: 'java',
