@@ -23,7 +23,9 @@
       </div>
     </div>
     <teacher class="div-padding" />
-    <div class="open-all ">查看全部讲师</div>
+    <nuxt-link to="teacher-list">
+      <div class="open-all">查看全部讲师</div>
+    </nuxt-link>
     <div class="news-wrapper">
       <div class="category-title">
         <div><span class="left-line" />咕泡新闻<span class="right-line" /></div>
@@ -40,7 +42,7 @@
           </div>
         </div>
       </div>
-      <div class="open-all" style="display: none" @click="openAllNews">展开全部新闻</div>
+      <div class="open-all"  @click="openAllNews" v-show="showAll">展开全部新闻</div>
     </div>
     <div class="div-padding bg-wrapper">
       <honor />
@@ -74,38 +76,49 @@ export default {
   data() {
     return {
       currentNewList: [],
+      showAll: true,
       newList: [
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new1.png'),
           title:
             '咕泡学院作为IT线上教育领域的佼佼者应邀出席，并获得“2018年度影响力在线教育品牌”重量级大奖',
           url:
             'https://gper.gupaoedu.com/articleContent?id=484&tdsourcetag=s_pctim_aiomsg'
         },
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new2.png'),
           title: '咕泡入孵柳枝行动 未来将加速发展',
           url: 'https://gper.gupaoedu.com/articleContent?id=542'
         },
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new3.png'),
           title: '咕泡荣获“2018麓创大赛总决赛优胜奖',
           url: 'https://gper.gupaoedu.com/articleContent?id=483'
         },
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new4.png'),
           title: '咕泡学院亮相开源中国千人面基大会',
           url: 'https://gper.gupaoedu.com/articleContent?id=507'
         },
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new5.png'),
           title: '咕泡出席腾讯课堂101计划教育机构沙龙',
           url: 'https://gper.gupaoedu.com/articleContent?id=485'
         },
         {
-          cover: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg',
+          cover: require('@/assets/img/about/news/new6.png'),
           title: ' 咕泡学院全力孵化 长沙互联网IT精英圈 - GPer生态圈',
           url: 'https://gper.gupaoedu.com/articleContent?id=594'
+        },
+        {
+          cover: require('@/assets/img/about/news/new7.png'),
+          title: '再次被腾讯授予“创造101火箭机构奖',
+          url: 'https://gper.gupaoedu.com/articleContent?id=642'
+        },
+        {
+          cover: require('@/assets/img/about/news/new8.png'),
+          title: '最喜欢咕泡年会了，特别是直接发钱！',
+          url: 'https://gper.gupaoedu.com/articleContent?id=595'
         }
       ]
     }
@@ -118,6 +131,7 @@ export default {
       window.open(item.url)
     },
     openAllNews() {
+      this.showAll = false
       this.currentNewList = this.newList
     }
   }

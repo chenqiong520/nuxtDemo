@@ -10,7 +10,6 @@
           :class="item.secondList.length ===1 ? 'big-div': 'small-div'"
           v-for="(item,index) in honorList"
           :key="index"
-          @click="selectTeacher(item)"
           class="swiper-slide school-item"
         >
           <div v-if="item.secondList" v-for="(second,i) in item.secondList" :key="i">
@@ -32,34 +31,34 @@ export default {
         {
           secondList: [
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_03.jpg')
             }
           ]
         },
         {
           secondList: [
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_05.jpg')
             },
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_06.png')
             }
           ]
         },
         {
           secondList: [
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_01.jpg')
             }
           ]
         },
         {
           secondList: [
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_02.jpg')
             },
             {
-              img: '//cdn.gupaoedu.com/newIndex/images/txzyj.jpg'
+              img: require('@/assets/img/home/school/fengcai_icon_04.jpg')
             }
           ]
         }

@@ -12,7 +12,7 @@
         <div
           v-for="(item,index) in teachers"
           :key="index"
-          @click="selectTeacher(item)"
+          @click="selectTeacher(item.teacherImage, item.teacherName, item.teacherResume)"
           class="swiper-slide teacher-item"
         >
           <div class="teacher-img">
@@ -56,7 +56,12 @@ export default {
       this.teachers = response.data.data
     },
     // 选择老师
-    selectTeacher(item) {}
+    selectTeacher(img, name, resume) {
+      this.$router.push({
+        name: 'teacher-detail',
+        params: { img, name, resume }
+      })
+    }
   }
 }
 </script>

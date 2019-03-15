@@ -40,7 +40,7 @@
 
     <!-- 底部按钮 -->
     <div class="bottom-bar">
-      <div>职位详情</div>
+      <div @click="toDetail">职位详情</div>
       <div>申请加入</div>
     </div>
   </div>
@@ -85,6 +85,9 @@ export default {
       this.context = data
       this.displayContent = data[0]
       console.log(this.displayContent)
+    },
+    toDetail() {
+      this.$router.push('/partner-job-descript')
     }
   },
 

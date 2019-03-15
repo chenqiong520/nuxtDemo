@@ -3,7 +3,6 @@
     <banner class="div-padding" />
     <!--今日公开课-->
     <div class="public-course div-padding">
-      <nuxt-link to="/public-course">
       <div class="course-title-box clear" >
         <div class="left">
           <div><img src="@/assets/img/home/public-icon.png"><span class="course-title">今日公开课</span></div>
@@ -11,15 +10,15 @@
             提前了解技术大牛精心研发课程
           </div>
         </div>
-        <div class="right">
+        <div class="right" style="display: none">
           <i class="iconfont iconarrow-right-copy-copy-copy" style="font-size:32px; color:#444" />
         </div>
       </div>
-      </nuxt-link>
       <div class="course-cont-wrapper">
         <div class="item">
+          <a href="https://m.ke.qq.com/course/185189?_bid=167&_wv=1">
           <div class="course-img">
-            <img src="//cdn.gupaoedu.com/newIndex/images/stk/Java1.jpg">
+            <img src="@/assets/img/home/public/java.png">
             <div class="status-desc">
               直播中
             </div>
@@ -30,20 +29,23 @@
           <div class="course-teacher">
             咕泡学院-jack老师
           </div>
+          </a>
         </div>
         <div class="item">
+          <a href="https://m.ke.qq.com/course/280820?_bid=167&_wv=1">
           <div class="course-img">
-            <img src="//cdn.gupaoedu.com/newIndex/images/stk/ai.jpg">
+            <img src="@/assets/img/home/public/bigdata.png">
             <div class="status-desc">
               直播中
             </div>
           </div>
           <div class="course-name">
-            人工智能
+            大数据&机器学习
           </div>
           <div class="course-teacher">
-            咕泡学院-秦老师
+            咕泡学院-Vingo老师
           </div>
+          </a>
         </div>
       </div>
     </div>
@@ -193,7 +195,9 @@
 
     <!--客服链接-->
     <div class="kf-link">
-      <img src="@/assets/img/home/kefu.png"/>
+      <a href="https://q.url.cn/cdh5jl?_type=wpa&qidian=true">
+        <img src="@/assets/img/home/kefu.png"/>
+      </a>
     </div>
   </div>
 </template>

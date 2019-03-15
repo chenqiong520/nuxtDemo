@@ -1,44 +1,47 @@
 <template>
-  <div class="position-detail">
-    <div class="describe">
-      <div v-for="(job, index) in jobDesc" :key="index">
-        <h2 class="secondary-title">
-          {{ job.name }}
-        </h2>
-        <ul v-for="(item, i) in job.list" :key="i">
-          <li> {{ item.item }}</li>
-        </ul>
+  <div class="position">
+    <div v-for="(c,index) in positionList" :key="index" class="position-category">
+      <div @click="toggleStatus(index)" class="category-name">
+        {{ c.categoryName }}
+        <div :class="currentIndex === index ? 'active': ''" class="right">
+          <i class="iconfont iconarrow-right-copy-copy-copy" />
+        </div>
       </div>
-
-      <a target="#blank" class="apply-join">申请加入</a>
+      <ul v-show="currentIndex === index">
+        <li v-for="(item,i) in c.list" :key="i" @click="toJobDescript(item)" class="item">
+          {{ item.itemName }}
+        </li>
+      </ul>
     </div>
   </div>
 </template>
 
 <script>
 export default {
-  name: 'Index',
+  name: 'Position',
   layout: 'course',
   data() {
     return {
-      jobDesc: {},
-      itemNo: this.$route.query.itemNo
+      currentIndex: 0,
+      positionList: []
     }
   },
   mounted() {
-    this.getJob()
+    this.getList()
   },
   methods: {
-    async getJob() {
+    async getList() {
       // 获取本地的json文件数据
       const response = await this.$axios.get(`/datas/partner/job.json`)
-      const list = response.data.data
-      list.forEach(e => {
-        e.list.forEach(job => {
-          if (this.itemNo === job.itemNo) {
-            this.jobDesc = job.jobDesc
-          }
-        })
+      this.positionList = response.data.data
+    },
+    toggleStatus(index) {
+      this.currentIndex = index
+    },
+    toJobDescript(item) {
+      this.$router.push({
+        path: '/job-description',
+        query: { itemNo: item.itemNo }
       })
     }
   }
@@ -46,45 +49,40 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-.position-detail {
+.position {
   padding: 0 30px;
-  border-top: 1px solid #e9e9e9;
-
-  .describe .secondary-title {
-    margin: 41px 0;
-    height: 15px;
-    font-size: 36px;
-    font-weight: 500;
-    color: #252525;
-    line-height: 36px;
-  }
-
-  .describe .apply-join {
-    display: block;
-    margin-top: 65px;
-    border-top: 1px solid #e9e9e9;
-    color: rgba(253, 85, 58, 1);
-    font-size: 32px;
-    height: 98px;
-    line-height: 98px;
-    background: rgba(255, 255, 255, 1);
-    text-align: center;
-  }
-
-  .describe .apply-join:hover {
-    cursor: pointer;
-  }
-  ul {
-    margin-left: 35px;
-  }
-
-  ul > li {
-    list-style: circle !important;
-    list-style-position: outside;
-    font-size: 28px;
-    font-weight: 400;
-    color: #666;
-    line-height: 56px;
+  border-top: 1px solid #ececec;
+  .position-category {
+    .category-name {
+      line-height: 94px;
+      font-size: 30px;
+      font-weight: 600;
+      color: #252525;
+      border-bottom: 1px solid #ececec;
+      .right {
+        float: right;
+        transform: rotateZ(90deg);
+        .iconfont {
+          font-size: 32px;
+          color: #252525;
+          font-weight: bold;
+        }
+        &.active {
+          transform: rotateZ(-90deg);
+        }
+      }
+    }
+    ul {
+      margin-left: 60px;
+    }
+    .item {
+      list-style: circle !important;
+      font-size: 28px;
+      font-weight: 400;
+      color: #252525;
+      line-height: 90px;
+      border-bottom: 1px solid #ececec;
+    }
   }
 }
 </style>
