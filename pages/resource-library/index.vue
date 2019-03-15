@@ -60,8 +60,8 @@ export default {
         { id: 0, number: 12, name: 'JAVA架构', fileName: 'java' },
         { id: 1, number: 3, name: '人工智能', fileName: 'ai' },
         { id: 2, number: 12, name: '大数据', fileName: 'bigdata' },
-        { id: 3, number: 21, name: '测试', fileName: 'test' },
-        { id: 4, number: 5, name: '前端', fileName: 'web' }
+        { id: 3, number: 21, name: '软件测试', fileName: 'test' },
+        { id: 4, number: 5, name: 'Web前端', fileName: 'web' }
       ],
       // 当前选中学科
       currentSelectedSubject: 0,
