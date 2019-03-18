@@ -8,7 +8,7 @@
       <p class="text">做教育，我们是认真的</p>
     </div>
     <!-- 滚动选择 -->
-    <div v-swiper:mySwiper="swiperOption" class="swiper">
+    <div v-swiper:mySwiper="swiperOption" class="swiper" >
       <div class="swiper-wrapper">
         <div
           v-for="(item,index) in teachers"
@@ -17,7 +17,8 @@
           class="swiper-slide teacher-item"
         >
           <div class="teacher-img">
-            <img :src="item.teacherImage">
+            <img :data-src="item.teacherImage" class="swiper-lazy">
+            <div class="swiper-lazy-preloader"></div>
           </div>
           <div class="teacher-name">{{ item.teacherName }}</div>
           <div class="teacher-tag">{{ item.teacherTag }}</div>
@@ -37,14 +38,20 @@ export default {
       // 轮播图选项
       swiperOption: {
         slidesPerView: 'auto',
+        watchSlidesVisibility: true,
         freeMode: true,
-        spaceBetween: 16
+        spaceBetween: 16,
+        lazy: {
+          loadPrevNext: true,
+          loadPrevNextAmount: 3,
+          loadOnTransitionStart: true
+        }
       }
     }
   },
 
-  mounted() {
-    this.getTeachers()
+  async mounted() {
+    await this.getTeachers()
   },
 
   methods: {
@@ -52,6 +59,9 @@ export default {
       // 通过服务器接口获取数据
       const response = await this.$axios.get(`wwwapi/findTeacherTeam`)
       this.teachers = response.data.data
+      this.$nextTick(() => {
+        this.mySwiper.lazy.load()
+      })
     },
     // 选择老师
     selectTeacher(img, name, resume) {
@@ -108,6 +118,7 @@ export default {
     .teacher-img {
       width: 300px;
       height: 300px;
+      position: relative;
       img {
         width: 100%;
         height: 100%;
