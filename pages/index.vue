@@ -183,11 +183,11 @@
     <index-footer />
 
     <!--客服链接-->
-    <div class="kf-link">
+    <!--<div class="kf-link">
       <a href="https://q.url.cn/cdh5jl?_type=wpa&qidian=true">
         <img src="@/assets/img/home/kefu.png">
       </a>
-    </div>
+    </div>-->
   </div>
 </template>
 

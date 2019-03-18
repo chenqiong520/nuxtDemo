@@ -5,7 +5,12 @@
     <main class="content">
       <nuxt/>
     </main>
-
+    <!--客服链接-->
+    <div class="kf-link">
+      <a href="https://q.url.cn/cdh5jl?_type=wpa&qidian=true">
+        <img src="@/assets/img/home/kefu.png">
+      </a>
+    </div>
     <gp-footer class="footer"/>
   </div>
 </template>
@@ -45,5 +50,14 @@ export default {
 .home-layout .footer {
   height: 96px;
   overflow: hidden;
+}
+.kf-link {
+  position: fixed;
+  bottom: 120px;
+  right: 50px;
+  z-index: 100;
+}
+.kf-link img {
+  width: 118px;
 }
 </style>
