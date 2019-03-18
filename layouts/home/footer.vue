@@ -7,7 +7,7 @@
       class="tabbar"
       :class="{active:isActive(tabbar.link)}"
     >
-      <i class="iconfont" :class="tabbar.icon"></i>
+      <img class="img-icon" :src="isActive(tabbar.link) ? tabbar.active:tabbar.src" alt>
       <span class="title">{{tabbar.name}}</span>
     </div>
   </footer>
@@ -23,17 +23,20 @@ export default {
         {
           link: '/',
           name: '首页',
-          icon: 'iconhome'
+          src: require('@/assets/img/home/footer/home.png'),
+          active: require('@/assets/img/home/footer/home-active.png')
         },
         {
           link: '/course',
           name: '学院',
-          icon: 'iconcollege-'
+          src: require('@/assets/img/home/footer/course.png'),
+          active: require('@/assets/img/home/footer/course-active.png')
         },
         {
           link: '/resource-library',
           name: '资源库',
-          icon: 'iconhome1'
+          src: require('@/assets/img/home/footer/resource.png'),
+          active: require('@/assets/img/home/footer/resource-active.png')
         }
       ]
     }
@@ -84,11 +87,11 @@ footer .tabbar {
 }
 
 footer .tabbar .title {
-  font-size: 25px;
+  font-size: 20px;
 }
 
-footer .tabbar .iconfont {
-  font-size: 40px;
+footer .tabbar .img-icon {
+  width: 36px;
 }
 
 footer .tabbar.active {

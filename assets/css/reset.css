@@ -28,6 +28,12 @@ td {
   padding: 0;
 }
 
+body,
+html {
+  -webkit-tap-highlight-color: transparent;
+  -webkit-overflow-scrolling: touch;
+}
+
 body {
   background: #fff;
   color: #000;
