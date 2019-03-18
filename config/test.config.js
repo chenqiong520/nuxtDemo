@@ -1,4 +1,8 @@
 module.exports = {
+  render: {
+    resourceHints: false,
+  },
+  
   css: [
     '@/assets/css/font/iconfont.css', // 本地font字体
   ],

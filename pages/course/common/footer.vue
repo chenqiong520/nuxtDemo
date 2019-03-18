@@ -20,7 +20,7 @@
     <!-- 群交流 -->
     <div v-show="isGroupPopperShow" @click="showGroupPopper" class="popper">
       <div class="body group" @click.stop>
-        <p class="title">添加QQ群加入JAVA架构师交流群</p>
+        <p class="title">{{QQGroupTitle}}</p>
         <p class="tips">打开QQ - 加好友/群 - 粘贴QQ群号</p>
         <div
           @click.stop
@@ -186,7 +186,7 @@ footer.course-footer .tabbar {
     font-size: 25px;
   }
 
-  .chat {
+  .img-icon {
     width: 38px;
   }
 }
