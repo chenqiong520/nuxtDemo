@@ -140,6 +140,7 @@ export default {
       height: 100%;
       width: 126px;
       text-align: center;
+      font-size:30px; 
       line-height: 88px;
       color: #252525;
       font-weight: bold;

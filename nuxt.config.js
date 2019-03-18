@@ -5,7 +5,7 @@ const prodConfig = require('./config/prod.config')
 const testConfig = require('./config/test.config')
 
 const env = process.env.NODE_ENV
-
+console.log(env)
 // 默认为开发环境
 let mergedConfig = merge(baseConfig, devConfig)
 
