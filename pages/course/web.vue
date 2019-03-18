@@ -7,7 +7,7 @@
 
       <section class="course-title">
         <h1 class="title">学院课程</h1>
-        <img src="../../assets/img/course/web/web-fm.jpg" alt="课程详情介绍">
+        <img src="../../assets/img/course/web/web-fm.png" alt="课程详情介绍">
       </section>
 
       <section class="course-summary">

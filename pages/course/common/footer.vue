@@ -1,15 +1,15 @@
 <template>
   <footer class="course-footer">
     <div class="tabbar" @click="toKeFu">
-      <i class="iconfont iconkefu"></i>
+      <img class="img-icon" src="@/assets/img/course/kefu.png">
       <span class="title">客服</span>
     </div>
     <div class="tabbar" @click="showGroupPopper">
-      <i class="iconfont icongroup"></i>
+      <img class="img-icon" src="@/assets/img/course/group.png">
       <span class="title">交流群</span>
     </div>
     <div class="tabbar" @click="showWechatPopper">
-      <i class="iconfont iconchat01"></i>
+      <img class="img-icon" src="@/assets/img/course/chat.png">
       <span class="title">公众号</span>
     </div>
 
@@ -181,18 +181,14 @@ footer.course-footer .tabbar {
   align-items: center;
   font-weight: 500;
   color: rgba(0, 0, 0, 0.7);
-}
 
-footer.course-footer .tabbar .title {
-  font-size: 25px;
-}
+  .title {
+    font-size: 25px;
+  }
 
-footer.course-footer .tabbar .iconfont {
-  font-size: 40px;
-}
-
-footer.course-footer .tabbar.active {
-  color: rgba(253, 85, 58, 1);
+  .chat {
+    width: 38px;
+  }
 }
 
 /* 弹出层 */

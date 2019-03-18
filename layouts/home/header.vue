@@ -179,6 +179,6 @@ export default {
   font-family: 'iconfont';
   position: absolute;
   left: -42px;
-  top: 6px;
+  top: 5.5px;
 }
 </style>

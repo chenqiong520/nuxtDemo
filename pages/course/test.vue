@@ -7,7 +7,7 @@
 
       <section class="course-title">
         <h1 class="title">学院课程</h1>
-        <img src="../../assets/img/course/test/test-fm.jpg" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-fm.png" alt="课程详情介绍">
       </section>
 
       <section class="course-summary">
@@ -44,9 +44,9 @@
       <section class="course-detail">
         <h2>图文介绍</h2>
         <img src="../../assets/img/course/test/test-bg-js1.png" alt="课程详情介绍">
-        <template v-if="isLoadAll">
+        <!-- <template v-if="isLoadAll">
           <img src="../../assets/img/course/test/test-bg-js2.png" alt="课程详情介绍">
-        </template>
+        </template> -->
         <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
       </section>
 
