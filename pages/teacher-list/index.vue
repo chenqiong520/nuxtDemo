@@ -65,7 +65,6 @@ export default {
     selectTeacher(teacherType) {
       this.currentSelectedTeacher = teacherType
       this.currentTeacherList = this.teacherList.filter(ele => ele.teacherType == teacherType)
-      console.log(teacherType)
     },
 
     // 获取老师列表
@@ -74,7 +73,6 @@ export default {
       const data = res.data.data
       this.teacherList = data
       this.currentTeacherList = data.filter(ele => ele.teacherType == this.currentSelectedTeacher)
-      console.log(data)
     },
 
     // 跳转详情

@@ -98,7 +98,6 @@ export default {
 
     // 跳转详情
     toDetail(id) {
-      console.log(id)
       this.$router.push({
         path: '/play',
         query: { id, courseType: this.$props.courseType, videoType: this.$props.videoType }

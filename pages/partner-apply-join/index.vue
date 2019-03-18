@@ -135,7 +135,6 @@ export default {
     // 获取本地省市json
     async getAreaInfo() {
       const res = await this.$axios.get(`${window.location.origin}/datas/partner/city.json`)
-      console.log(res.data.data)
       const data = res.data.data
       this.areaList = data
       this.currentAreaList = data
