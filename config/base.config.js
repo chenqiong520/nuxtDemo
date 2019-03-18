@@ -68,6 +68,16 @@ module.exports = {
    */
   axios: {
     // See https://github.com/nuxt-community/axios-module#options
+    retry: {
+      retries: 3
+    },
+    //开发模式下开启debug
+    debug: process.env.NODE_ENV == "production" ? false : true,
+    //设置不同环境的请求地址
+    browserBaseURL: process.env.NODE_ENV === "production" ?
+      "http://m.gupaoedu.com" :
+      (process.env.NODE_ENV === "pre-production" && "http://192.168.8.122/manageapi"),
+    proxy: true
   },
 
   /**
@@ -108,9 +118,9 @@ module.exports = {
               interlaced: false,
             },
             // the webp option will enable WEBP
-            webp: {
-              quality: 75
-            }
+            // webp: {
+            //   quality: 75
+            // }
           }
         }]
       })
@@ -132,6 +142,6 @@ module.exports = {
   },
 
   generate: {
-    subFolders: false
+    subFolders: true
   }
 }

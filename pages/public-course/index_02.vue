@@ -64,7 +64,7 @@ export default {
     // 获取今日公开课
     async getTodayPublicCourse() {
       const res = await this.$axios.get(
-        'http://192.168.8.122/manageapi/arrangement/getToDayPublicCourse?token=gupao-wechat-applet'
+        'arrangement/getToDayPublicCourse?token=gupao-wechat-applet'
       )
       const data = res.data.data
       this.publicCourseList = data

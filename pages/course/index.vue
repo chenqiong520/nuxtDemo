@@ -10,31 +10,31 @@
     <div class="one-column">
       <nuxt-link class="img-container intelligence" to="course/intelligence">
         <h1 class="title">人工智能学院</h1>
-        <h3 class="count">97541人已学</h3>
+        <h3 class="count">74928人已学</h3>
       </nuxt-link>
     </div>
 
     <div class="two-column">
       <nuxt-link class="img-container block" to="course/block">
         <h1 class="title">区块链学院</h1>
-        <h3 class="count">97541人已学</h3>
+        <h3 class="count">65213人已学</h3>
       </nuxt-link>
       <div class="gutter"></div>
       <nuxt-link class="img-container web" to="course/web">
         <h1 class="title">Web前端学院</h1>
-        <h3 class="count">97541人已学</h3>
+        <h3 class="count">45312人已学</h3>
       </nuxt-link>
     </div>
 
     <div class="two-column">
       <nuxt-link class="img-container test" to="course/test">
         <h1 class="title">软件测试学院</h1>
-        <h3 class="count">97541人已学</h3>
+        <h3 class="count">12559人已学</h3>
       </nuxt-link>
       <div class="gutter"></div>
       <nuxt-link class="img-container bigdata" to="course/bigdata">
         <h1 class="title">大数据学院</h1>
-        <h3 class="count">97541人已学</h3>
+        <h3 class="count">7533人已学</h3>
       </nuxt-link>
     </div>
 

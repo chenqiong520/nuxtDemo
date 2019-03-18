@@ -79,7 +79,7 @@ export default {
   layout(context) {
     return 'course'
   },
-  
+
   data () {
     return {
       // 职位选项
@@ -185,7 +185,7 @@ export default {
       for (let key in form) {
         formData.append(key, form[key])
       }
-      const res = await this.$axios.post('http://192.168.8.122/manageapi/wwwapi/addTeacherApply', formData)
+      const res = await this.$axios.post('wwwapi/addTeacherApply', formData)
       if (res.data.success) {
         this.isShowSubmitModal = true
         setTimeout(() => {
