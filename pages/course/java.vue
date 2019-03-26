@@ -13,7 +13,7 @@
       <section class="course-summary">
         <h2>Java高级提升课程</h2>
         <h3>了解BAT技术大牛是如何轻松进阶</h3>
-        <p class="price">￥7200.00</p>
+        <p class="price">￥8280.00</p>
         <p class="cycle">
           <strong>周期</strong>9个月
         </p>
