@@ -31,6 +31,6 @@ module.exports = {
 
   build: {
     // cdn 文件设置
-    publicPath: 'https://cdn.gupaoedu.com/official-web-mobile',
+    // publicPath: 'https://cdn.gupaoedu.com/official-web-mobile',
   }
 }
