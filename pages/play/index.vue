@@ -28,17 +28,17 @@
         <div class="evaluation-item" v-for="(item, index) in showeDevaluationList" :key="index">
           <div class="user">
             <div class="user-info">
-              <img :src="item.photoURL" alt>
-              <span>{{item.nickName}}</span>
+              <img :src="item.picUrl" alt>
+              <span>{{item.nikeName}}</span>
             </div>
             <div class="stars">
-              <i class="iconfont iconstar" v-for="(item, i) in item.star" :key="i"></i>
+              <i class="iconfont iconstar" v-for="(item, i) in item.score" :key="i"></i>
             </div>
           </div>
-          <div class="evaluation-content">{{item.content}}</div>
+          <div class="evaluation-content">{{item.comment}}</div>
           <div class="evaluation-time">
-            <div>已上课{{item.duration}}时评论</div>
-            <div>{{item.evaluateTime}}</div>
+            <div>{{item.studyTime}}</div>
+            <div>{{item.time}}</div>
           </div>
         </div>
         <div class="show-more" v-if="isShowMore" @click="showMore">展开更多评价</div>
@@ -88,10 +88,10 @@ export default {
     // 获取本地的学生评价文件数据
     async getEvaluation() {
       const response = await this.$axios.get(
-        `${window.location.origin}/datas/play/evaluation.json`
+        `wwwapi/getVideoComment?pageSize=10&pageNo=1`
       )
-      this.evaluationList = response.data.datas
-      this.showeDevaluationList = response.data.datas.slice(0, 5)
+      this.evaluationList = response.data.data.list
+      this.showeDevaluationList = response.data.data.list.slice(0, 5)
     },
 
     // 查看更多

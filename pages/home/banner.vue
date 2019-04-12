@@ -2,14 +2,12 @@
   <div class="banner">
     <div v-swiper:mySwiper="swiperOption">
       <div class="swiper-wrapper">
-        <div class="swiper-slide">
-          <div class="banner-item banner1"></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="banner-item banner2"></div>
-        </div>
-        <div class="swiper-slide">
-          <div class="banner-item banner3"></div>
+        <div  v-for="(item, index) in bannerList"  :key="index" class="swiper-slide">
+          <a :href="item.bannerurl">
+          <div class="banner-item" :style="`background-color:${item.colour} `">
+            <img :src="item.picurl"/>
+          </div>
+          </a>
         </div>
       </div>
 
@@ -24,6 +22,7 @@ export default {
 
   data() {
     return {
+      bannerList: [],
       swiperOption: {
         autoplay: true,
         spaceBetween: 0,
@@ -42,12 +41,19 @@ export default {
       return this.$refs.mySwiper.swiper
     }
   },
-
-  methods: {
-    callback() {}
+  async mounted() {
+    await this.getBannerList()
   },
-
-  mounted() {}
+  methods: {
+    async getBannerList() {
+      // 通过服务器接口获取数据
+      await this.$axios.get(`wwwapi/view?bannertype=2`).then(res => {
+        if (res.data.data.list) {
+          this.bannerList = res.data.data.list
+        }
+      })
+    }
+  }
 }
 </script>
 
@@ -60,23 +66,13 @@ export default {
   width: 100%;
   height: 289px;
   overflow: hidden;
+  text-align: center;
 }
 
-.banner1 {
-  background: url(../../assets/img/home/banner/b1.png);
-  background-size: cover;
+.banner .banner-item img {
+  height: 100%;
+  width: 100%;
 }
-
-.banner2 {
-  background: url(../../assets/img/home/banner/b2.png);
-  background-size: cover;
-}
-
-.banner3 {
-  background: url(../../assets/img/home/banner/b3.png);
-  background-size: cover;
-}
-
 .swiper-pagination-bullet-custom {
   width: 12px;
   height: 12px;
