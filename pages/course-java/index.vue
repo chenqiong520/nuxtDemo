@@ -75,7 +75,7 @@
 </template>
 
 <script>
-import CourseFooter from './common/footer'
+import CourseFooter from '../course/common/footer'
 
 export default {
   name: 'CourseJava',

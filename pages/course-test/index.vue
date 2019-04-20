@@ -1,21 +1,21 @@
 <template>
-  <div class="course-intelligence">
+  <div class="course-test">
     <main class="content">
       <nav class="banner">
-        <img src="../../assets/img/course/intelligence/ai-bg.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-banner-bg.png" alt="课程详情介绍">
       </nav>
 
       <section class="course-title">
         <h1 class="title">学院课程</h1>
-        <img src="../../assets/img/course/intelligence/kc-fm.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-fm.png" alt="课程详情介绍">
       </section>
 
       <section class="course-summary">
-        <h2>人工智能高级提升课程</h2>
-        <h3>站在巨人的肩膀上铸就新未来</h3>
-        <p class="price">￥16800.00</p>
+        <h2>测试高级提升课程</h2>
+        <h3>助你通向高级软件测试工程师</h3>
+        <p class="price">￥6180.00</p>
         <p class="cycle">
-          <strong>周期</strong>6个月
+          <strong>周期</strong>4个月
         </p>
         <p class="way">
           <strong>方式</strong>直播为主，录播、学习资料为辅
@@ -24,7 +24,7 @@
           <strong>地点</strong>腾讯课堂
         </p>
         <p class="time">
-          <strong>时间</strong>每周一、周四、周五晚20:00~22:00腾讯课堂
+          <strong>时间</strong>每周三、五晚20:00~22:00
         </p>
       </section>
 
@@ -43,9 +43,9 @@
 
       <section class="course-detail">
         <h2>图文介绍</h2>
-        <img src="../../assets/img/course/intelligence/kc-bg1.png" alt="课程详情介绍">
+        <img src="../../assets/img/course/test/test-bg-js1.png" alt="课程详情介绍">
         <!-- <template v-if="isLoadAll">
-          <img src="../../assets/img/course/intelligence/kc-bg2.png" alt="课程详情介绍">
+          <img src="../../assets/img/course/test/test-bg-js2.png" alt="课程详情介绍">
         </template> -->
         <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
       </section>
@@ -75,10 +75,10 @@
 </template>
 
 <script>
-import CourseFooter from './common/footer'
+import CourseFooter from '../course/common/footer'
 
 export default {
-  name: 'CourseIntelligence',
+  name: 'CourseTest',
 
   layout(context) {
     return 'course'
@@ -104,18 +104,18 @@ export default {
       compendium: {},
 
       footerProps: {
-        QQGroupTitle: '添加qq群加入人工智能交流群', //QQ群提示
+        QQGroupTitle: '添加qq群加入测试交流群', //QQ群提示
         QQGroupNumber: '96106784', // QQ群号
-        qrcodeTitle: '扫一扫加入人工智能交流群', // 微信二维码提示
-        qrcodeSrc: require('@/assets/img/course/intelligence/intelligence-gzh.jpg'), //关注二维码
-        toTencentUrl: 'https://ke.qq.com/course/368487' //跳转至腾讯课堂地址
+        qrcodeTitle: '扫一扫加入测试交流群', // 微信二维码提示
+        qrcodeSrc: require('@/assets/img/course/test/test-gzh.jpg'), //关注二维码
+        toTencentUrl: 'https://ke.qq.com/course/252303' //跳转至腾讯课堂地址
       }
     }
   },
 
   methods: {
     async getTeachers() {
-      const response = await this.$axios.get('wwwapi/findTeacherTeamByType?teacherType=ai')
+      const response = await this.$axios.get('wwwapi/findTeacherTeamByType?teacherType=test')
 
       if (response && response.status === 200) {
         this.teachers = response.data.data
@@ -124,7 +124,7 @@ export default {
 
     async getCompendium() {
       const response = await this.$axios.get(
-        `${window.location.origin}/datas/course/intelligence-compendium.json`
+        `${window.location.origin}/datas/course/test-compendium.json`
       )
 
       if (response && response.status === 200) {
@@ -153,7 +153,7 @@ export default {
 
 <style lang="scss" scoped>
 /* 布局 */
-.course-intelligence {
+.course-test {
   height: 100%;
   display: flex;
   justify-content: space-between;
@@ -174,7 +174,7 @@ export default {
 }
 
 /* 主内容 */
-.course-intelligence main.content {
+.course-test main.content {
   nav.banner {
     height: 548px;
   }
@@ -209,7 +209,7 @@ export default {
 }
 
 /* banner */
-.course-intelligence main.content nav.banner {
+.course-test main.content nav.banner {
   position: relative;
   display: flex;
   justify-content: center;
@@ -222,7 +222,7 @@ export default {
 }
 
 /* 学院课程 */
-.course-intelligence main.content .course-title {
+.course-test main.content .course-title {
   .title {
     height: 31px;
     font-size: 32px;
@@ -241,7 +241,7 @@ export default {
 }
 
 /* 课程简介 */
-.course-intelligence main.content .course-summary {
+.course-test main.content .course-summary {
   h2 {
     height: 38px;
     font-size: 40px;
@@ -295,7 +295,7 @@ export default {
 }
 
 /* 老师介绍 */
-.course-intelligence main.content .course-teacher {
+.course-test main.content .course-teacher {
   margin-top: 90px;
 
   h2 {
@@ -339,7 +339,7 @@ export default {
 }
 
 /* 图文介绍 */
-.course-intelligence main.content .course-detail {
+.course-test main.content .course-detail {
   margin-top: 98px;
   width: 100%;
 
@@ -372,7 +372,7 @@ export default {
 }
 
 /* 课程大纲 */
-.course-intelligence main.content .course-compendium {
+.course-test main.content .course-compendium {
   margin-top: 64px;
 
   h2 {
