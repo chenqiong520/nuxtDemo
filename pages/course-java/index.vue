@@ -5,7 +5,7 @@
         <img src="../../assets/img/course/java/java-banner-bg.png" alt="课程详情介绍">
       </nav>
 
-      <section class="course-title">
+      <!--  <section class="course-title">
         <h1 class="title">学院课程</h1>
         <img src="../../assets/img/course/java/java-fm.png" alt="课程详情介绍">
       </section>
@@ -26,16 +26,182 @@
         <p class="time">
           <strong>时间</strong>每周三(20:30~22:30)、六、日晚20:00~22:00腾讯课堂
         </p>
+      </section>-->
+
+      <section class="framework">
+        <div class="fw-title">
+          <p>为你推荐以下JAVA架构课程套餐</p>
+        </div>
+        <div v-swiper:courseSwiper="courseSwiperOption">
+          <div class="framework-item-box swiper-wrapper">
+            <div class="vip-item swiper-slide framework-item">
+              <div class="price">
+                <span class="price-icon">¥</span>7280
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
+                <p>直播套餐时间/1年</p>
+                <p>录播套餐时间/2年</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
+                <p>架构师VIP课件下载</p>
+                <p>架构师VIP源码下载</p>
+                <p>架构师VIP笔记下载</p>
+                <p>架构师VIP视频下载</p>
+                <p>学员专属微信群</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
+                <p>108节Java架构师课程</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
+                <p>答疑服务，10:00-22:00在官网提问，1小时内解答</p>
+                <p>VIP专属学员QQ群</p>
+                <p>专属地区学员群</p>
+                <p>专属班主任管理</p>
+                <p>录播授权账号2个</p>
+              </div>
+
+              <div class="button-group">
+                <a target="_blank" href="https://m.ke.qq.com/course/188630?_bid=167&_wv=1">  <div class="sign">前往报名</div></a>
+                <div class="advice" @click="toKeFu">
+                  立即咨询
+                </div>
+              </div>
+            </div>
+            <div class="svip-item swiper-slide active framework-item">
+              <div class="price">
+                <span class="price-icon">¥</span>8280
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
+                <p>直播套餐时间/3年</p>
+                <p>录播套餐时间/永久</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
+                <p>VIP全部服务</p>
+                <p>与资深架构师老师一对一聊天，清晰你的职业规划，</p>
+                <p>时长30~60分钟</p>
+                <p>简历撰写实战训练</p>
+                <p>BAT企业面试指导</p>
+                <p>BAT企业就业内推</p>
+                <p>线下沙龙免费入场</p>
+                <p>技术峰会免费入场</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
+                <p>108节Java架构师课程</p>
+                <p>41节数据结构+算法+大数据算法应用</p>
+                <p>40节BAT面试课程</p>
+                <p>4节技术领导力课程</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
+                <p>VIP全部服务</p>
+                <p>VIP专属训练营</p>
+              </div>
+
+              <div class="button-group">
+                <a target="_blank" href="https://m.ke.qq.com/course/188630?_bid=167&_wv=1"> <div class="sign">前往报名</div></a>
+                <div class="advice" @click="toKeFu">
+                  立即咨询
+                </div>
+              </div>
+            </div>
+            <div class="cto-item swiper-slide framework-item">
+              <div class="price">
+                <span class="price-icon">¥</span>21800
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
+                <p>直播套餐时间/永久</p>
+                <p>录播套餐时间/永久</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
+                <p>SVIP全部服务</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
+                <p>SVIP全部服务</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
+                <p>SVIP全部服务</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />创业营服务<span class="right-line" />
+                </div>
+                <p>互联网人才培养计划</p>
+                <p>创业CTO班</p>
+                <p>50万创投基金</p>
+                <p>JAVA架构+大数据+人工智能学习权限</p>
+              </div>
+
+              <div class="button-group">
+                <a target="_blank" href="https://m.ke.qq.com/course/188630?_bid=167&_wv=1">  <div class="sign">前往报名</div></a>
+                <div class="advice" @click="toKeFu">
+                  立即咨询
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
       </section>
 
       <section class="course-teacher">
         <h2>老师介绍</h2>
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="teacher in teachers" :key="teacher.id">
+            <div v-for="teacher in teachers" :key="teacher.id" class="swiper-slide">
               <img :src="teacher.teacherImage" alt="课程详情介绍">
-              <p class="teacher-name">{{teacher.teacherName}}</p>
-              <p class="teacher-tag">{{teacher.teacherTag}}</p>
+              <p class="teacher-name">
+                {{ teacher.teacherName }}
+              </p>
+              <p class="teacher-tag">
+                {{ teacher.teacherTag }}
+              </p>
             </div>
           </div>
         </div>
@@ -47,7 +213,9 @@
         <!-- <template v-if="isLoadAll">
           <img src="../../assets/img/course/java/java-bg-js2.png" alt="课程详情介绍">
         </template> -->
-        <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
+        <div v-show="!isLoadAll" @click="loadAll" class="load-all">
+          查看全部图文
+        </div>
       </section>
 
       <section class="course-compendium">
@@ -59,18 +227,22 @@
           class="course-compendium-item"
         >
           <div class="item-title">
-            <strong>{{index+1}}</strong>
-            {{compendiumItem.outlineTitle}}
+            <strong>{{ index+1 }}</strong>
+            {{ compendiumItem.outlineTitle }}
           </div>
           <div v-for="(firstLevelItem,index1) in compendiumItem.firstLevel" :key="index1">
-            <div class="video-name">{{firstLevelItem.fisrtLevelName}}</div>
-            <div class="time">{{videoTime()}}分钟</div>
+            <div class="video-name">
+              {{ firstLevelItem.fisrtLevelName }}
+            </div>
+            <div class="time">
+              {{ videoTime() }}分钟
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <course-footer v-bind="footerProps" class="footer"></course-footer>
+    <course-footer v-bind="footerProps" class="footer" />
   </div>
 </template>
 
@@ -96,6 +268,11 @@ export default {
         freeMode: true,
         spaceBetween: 16
       },
+      courseSwiperOption: {
+        slidesPerView: 'auto',
+        freeMode: true,
+        spaceBetween: 16
+      },
       isLoadAll: false,
 
       // 课程老师
@@ -104,18 +281,31 @@ export default {
       compendium: {},
 
       footerProps: {
-        QQGroupTitle: '添加qq群加入JAVA架构师交流群', //QQ群提示
+        QQGroupTitle: '添加qq群加入JAVA架构师交流群', // QQ群提示
         QQGroupNumber: '96106784', // QQ群号
         qrcodeTitle: '扫一扫加入JAVA架构师交流群', // 微信二维码提示
-        qrcodeSrc: require('@/assets/img/course/java/java-gzh.jpg'), //关注二维码
-        toTencentUrl: 'https://ke.qq.com/course/185189?flowToken=1002161' //跳转至腾讯课堂地址
+        qrcodeSrc: require('@/assets/img/course/java/java-gzh.jpg'), // 关注二维码
+        toTencentUrl: 'https://ke.qq.com/course/185189?flowToken=1002161' // 跳转至腾讯课堂地址
       }
     }
   },
 
+  mounted() {
+    this.getTeachers()
+    this.getCompendium()
+  },
+
   methods: {
+    /**
+     * 跳转到客服
+     */
+    toKeFu() {
+      window.open('https://q.url.cn/cdh5jl?_type=wpa&qidian=true')
+    },
     async getTeachers() {
-      const response = await this.$axios.get('wwwapi/findTeacherTeamByType?teacherType=java')
+      const response = await this.$axios.get(
+        'wwwapi/findTeacherTeamByType?teacherType=java'
+      )
 
       if (response && response.status === 200) {
         this.teachers = response.data.data
@@ -142,11 +332,6 @@ export default {
     loadAll() {
       this.isLoadAll = true
     }
-  },
-
-  mounted() {
-    this.getTeachers()
-    this.getCompendium()
   }
 }
 </script>
@@ -423,5 +608,141 @@ export default {
       color: rgba(199, 199, 201, 1);
     }
   }
+}
+
+/*架构技术*/
+.framework {
+  margin: 0 auto;
+}
+.framework .fw-title {
+  margin: 50px auto;
+  font-size: 32px;
+  color: #252525;
+  text-align: center;
+  font-weight: 500;
+}
+.framework .fw-title .detail {
+  font-size: 14px;
+  color: #999;
+  margin-top: 12px;
+}
+
+.framework-item-box {
+  display: flex;
+  margin-bottom: 60px;
+}
+.framework-item-box .framework-item {
+  width: 406px;
+  height: 1463px;
+  text-align: center;
+  position: relative;
+  cursor: pointer;
+}
+.framework-item-box .framework-item.vip-item {
+  background: url('../../assets/img/course/java/VIP.png') no-repeat center
+    center;
+  background-size: 100% 100%;
+  margin-right: 26px;
+}
+.framework-item-box .framework-item.svip-item {
+  background: url('../../assets/img/course/java/SVIP.png') no-repeat center
+    center;
+  background-size: 100% 100%;
+  margin-right: 26px;
+}
+.framework-item-box .framework-item.cto-item {
+  background: url('../../assets/img/course/java/CTO.png') no-repeat center
+    center;
+  background-size: 100% 100%;
+}
+.framework-item-box .framework-item .price {
+  color: #fd553a;
+  font-size: 36px;
+  font-weight: bold;
+  margin-top: 30px;
+  text-align: right;
+  padding-right: 25px;
+  box-sizing: border-box;
+}
+.framework-item-box .framework-item.vip-item .price {
+  color: #314659;
+}
+.price-icon {
+  font-size: 20px;
+}
+.framework-item-box .framework-item .item-desc-box {
+  margin-top: 50px;
+  line-height: 50px;
+  padding: 0 30px;
+}
+.framework-item-box .framework-item .item-desc-box .item-desc-title {
+  font-size: 28px;
+  font-weight: 500;
+  color: #314659;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.framework-item-box .framework-item .item-desc-box .item-desc-title .left-line {
+  width: 16px;
+  height: 3px;
+  background-color: #ced7df;
+  margin-right: 12px;
+}
+.framework-item-box
+  .framework-item
+  .item-desc-box
+  .item-desc-title
+  .right-line {
+  width: 16px;
+  height: 3px;
+  background-color: #ced7df;
+  margin-left: 12px;
+}
+.framework-item-box .framework-item .item-desc-box p {
+  font-size: 24px;
+  line-height: 40px;
+  font-weight: 300;
+  color: #717682;
+}
+.framework-item-box .framework-item .button-group {
+  position: absolute;
+  bottom: 40px;
+  left: 50%;
+  transform: translateX(-50%);
+}
+.framework-item-box .framework-item .button-group .sign {
+  width: 244px;
+  height: 72px;
+  border: 1px solid rgba(253, 85, 58, 1);
+  border-radius: 4px;
+  text-align: center;
+  line-height: 72px;
+  color: #fd553a;
+  font-size: 26px;
+  box-sizing: border-box;
+  margin-bottom: 22px;
+  cursor: pointer;
+}
+
+.framework-item-box .framework-item .button-group .advice {
+  width: 244px;
+  height: 72px;
+  border: 1px solid #e9e9e9;
+  border-radius: 4px;
+  text-align: center;
+  line-height: 72px;
+  color: #666666;
+  font-size: 26px;
+  box-sizing: border-box;
+  cursor: pointer;
+}
+.framework-item-box .framework-item.active .button-group .sign {
+  background-color: #fd553a;
+  color: #fff;
+}
+.framework-item-box .framework-item.active .button-group .advice {
+  border: 1px solid rgba(253, 85, 58, 1);
+  color: #fd553a;
 }
 </style>
