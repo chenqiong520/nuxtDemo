@@ -75,7 +75,7 @@ module.exports = {
     debug: process.env.NODE_ENV == "production" ? false : true,
     //设置不同环境的请求地址
     browserBaseURL: process.env.NODE_ENV === "production" ?
-      "http://m.gupaoedu.com" : (process.env.NODE_ENV === "pre-production" && "http://192.168.8.122/manageapi"),
+      "http://m.gupaoedu.cn" : (process.env.NODE_ENV === "pre-production" && "http://192.168.8.122/manageapi"),
     proxy: true
   },
 
