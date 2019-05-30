@@ -83,42 +83,42 @@ export default {
           title:
             '咕泡学院作为IT线上教育领域的佼佼者应邀出席，并获得“2018年度影响力在线教育品牌”重量级大奖',
           url:
-            'https://gper.gupaoedu.com/articleContent?id=484&tdsourcetag=s_pctim_aiomsg'
+            'http://www.gper.club/articleContent?id=484&tdsourcetag=s_pctim_aiomsg'
         },
         {
           cover: require('@/assets/img/about/news/new2.png'),
           title: '咕泡入孵柳枝行动 未来将加速发展',
-          url: 'https://gper.gupaoedu.com/articleContent?id=542'
+          url: 'http://www.gper.club/articleContent?id=542'
         },
         {
           cover: require('@/assets/img/about/news/new3.png'),
           title: '咕泡荣获“2018麓创大赛总决赛优胜奖',
-          url: 'https://gper.gupaoedu.com/articleContent?id=483'
+          url: 'http://www.gper.club/articleContent?id=483'
         },
         {
           cover: require('@/assets/img/about/news/new4.png'),
           title: '咕泡学院亮相开源中国千人面基大会',
-          url: 'https://gper.gupaoedu.com/articleContent?id=507'
+          url: 'http://www.gper.club/articleContent?id=507'
         },
         {
           cover: require('@/assets/img/about/news/new5.png'),
           title: '咕泡出席腾讯课堂101计划教育机构沙龙',
-          url: 'https://gper.gupaoedu.com/articleContent?id=485'
+          url: 'http://www.gper.club/articleContent?id=485'
         },
         {
           cover: require('@/assets/img/about/news/new6.png'),
           title: ' 咕泡学院全力孵化 长沙互联网IT精英圈 - GPer生态圈',
-          url: 'https://gper.gupaoedu.com/articleContent?id=594'
+          url: 'http://www.gper.club/articleContent?id=594'
         },
         {
           cover: require('@/assets/img/about/news/new7.png'),
           title: '再次被腾讯授予“创造101火箭机构奖',
-          url: 'https://gper.gupaoedu.com/articleContent?id=642'
+          url: 'http://www.gper.club/articleContent?id=642'
         },
         {
           cover: require('@/assets/img/about/news/new8.png'),
           title: '最喜欢咕泡年会了，特别是直接发钱！',
-          url: 'https://gper.gupaoedu.com/articleContent?id=595'
+          url: 'http://www.gper.club/articleContent?id=595'
         }
       ]
     }

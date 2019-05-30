@@ -52,11 +52,11 @@ export default {
           link: '/partner',
           name: '咕泡合伙人'
         },
-        {
+        /* {
           link: 'https://m.gper.gupaoedu.com/index',
           name: 'GPer',
           target: '_blank'
-        },
+        }, */
         {
           link: '/about',
           name: '关于咕泡'
