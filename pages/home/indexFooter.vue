@@ -26,7 +26,7 @@
       </div>
     </div> -->
     <div class="footer-copy">
-      <div class="footer-copy-text1">Copyright©2017-2020 gupaoedu.com All Rights Reserved.</div>
+      <div class="footer-copy-text1">Copyright©2017-2020 gupaoedu.cn All Rights Reserved.</div>
       <div class="footer-copy-text2">版权所有 湘ICP备19007499号-1</div>
     </div>
   </div>
