@@ -15,7 +15,7 @@
     </div>
 
     <div class="two-column">
-      <nuxt-link class="img-container block" to="course-block">
+      <nuxt-link class="img-container block" to="course-chain">
         <h1 class="title">区块链学院</h1>
         <h3 class="count">65213人已学</h3>
       </nuxt-link>
@@ -32,7 +32,7 @@
         <h3 class="count">12559人已学</h3>
       </nuxt-link>
       <div class="gutter"></div>
-      <nuxt-link class="img-container bigdata" to="course-chain">
+      <nuxt-link class="img-container bigdata" to="course-bigdata">
         <h1 class="title">大数据学院</h1>
         <h3 class="count">7533人已学</h3>
       </nuxt-link>
