@@ -5,7 +5,7 @@
         <img src="../../assets/img/course/bigdata/bigdata-banner-bg.png" alt="课程详情介绍">
       </nav>
 
-     <!-- <section class="course-title">
+      <!-- <section class="course-title">
         <h2 class="title">学院课程</h2>
         <img src="../../assets/img/course/bigdata/bigdata-fm.png" alt="课程详情介绍">
       </section>-->
@@ -36,16 +36,22 @@
         <div v-swiper:courseSwiper="courseSwiperOption">
           <div class="framework-item-box swiper-wrapper">
             <div class="vip-item swiper-slide framework-item">
-              <div class="price"><span class="price-icon">¥</span>6380</div>
-
-              <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程学习期限<span class="right-line"></span></div>
-                <p>直播套餐时间/1期</p>
-                <p>录播套餐时间/1年</p>
+              <div class="price">
+                <span class="price-icon">¥</span>6380
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>专属职业服务<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
+                <p>直播套餐时间/1期</p>
+                <p>录播套餐时间/2年</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
                 <p>大数据VIP课件PPT下载</p>
                 <p>大数据VIP项目源码下载</p>
                 <p>大数据VIP课堂笔记下载</p>
@@ -55,14 +61,16 @@
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程优享<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
                 <p>五个月大数据VIP直播课程</p>
-                <p>数据结构+算法+大数据算法应用</p>
-                <p>python机器学习课程</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>学习权限<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
                 <p>名企大数据架构师一对一解答服务</p>
                 <p>学员专属交流QQ群</p>
                 <p>专属地区咕泡学员群</p>
@@ -72,37 +80,46 @@
               </div>
               <div class="button-group">
                 <a target="_blank" href="https://ke.qq.com/course/280821?tuin=7eeb913b">  <div class="sign">前往报名</div></a>
-                <div class="advice" @click="toKeFu">
+                <div @click="toKeFu" class="advice">
                   立即咨询
                 </div>
               </div>
             </div>
             <div class="svip-item swiper-slide active framework-item">
-              <div class="price"><span class="price-icon">¥</span>6880</div>
-
-              <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程学习期限<span class="right-line"></span></div>
-                <p>直播套餐时间/2期</p>
-                <p>录播套餐时间/2年</p>
+              <div class="price">
+                <span class="price-icon">¥</span>6880
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>专属职业服务<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
+                <p>直播套餐时间/2期</p>
+                <p>录播套餐时间/4年</p>
+              </div>
+
+              <div class="item-desc-box">
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
                 <p>大数据VIP套餐1全部专属职业服务</p>
                 <p>资深大数据架构师一对一聊天</p>
                 <p>帮你清晰规划学习路线与职业规划</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程优享<span class="right-line"></span></div>
-                <p>享受大数据课程重学一期特权</p>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
                 <p>数据结构+算法+大数据算法应用</p>
                 <p>python机器学习课程</p>
                 <p>职场软实力提升精选课程</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>学习权限<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
                 <p>名企大数据架构师一对一解答服务</p>
                 <p>学员专属交流QQ群</p>
                 <p>专属地区咕泡学员群</p>
@@ -113,35 +130,44 @@
 
               <div class="button-group">
                 <a target="_blank" href="https://ke.qq.com/course/280821?tuin=7eeb913b"> <div class="sign">前往报名</div></a>
-                <div class="advice" @click="toKeFu">
+                <div @click="toKeFu" class="advice">
                   立即咨询
                 </div>
               </div>
             </div>
             <div class="cto-item swiper-slide framework-item">
-              <div class="price"><span class="price-icon">¥</span>7680</div>
+              <div class="price">
+                <span class="price-icon">¥</span>7680
+              </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程学习期限<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程学习期限<span class="right-line" />
+                </div>
                 <p>直播套餐时间/4年</p>
-                <p>录播套餐时间/4年</p>
+                <p>录播套餐时间/终身</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>专属职业服务<span class="right-line"></span></div>
-                <p>大数据SVIP全部专属职业服务</p>
+                <div class="item-desc-title">
+                  <span class="left-line" />专属职业服务<span class="right-line" />
+                </div>
+                <p>大数据VIP套餐2全部专属职业服务</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>课程优享<span class="right-line"></span></div>
-                <p>享受大数据课程重学一期特权</p>
+                <div class="item-desc-title">
+                  <span class="left-line" />课程优享<span class="right-line" />
+                </div>
                 <p>数据结构+算法+大数据算法应用</p>
                 <p>python机器学习课程</p>
                 <p>职场软实力提升精选课程</p>
               </div>
 
               <div class="item-desc-box">
-                <div class="item-desc-title"><span class="left-line"></span>学习权限<span class="right-line"></span></div>
+                <div class="item-desc-title">
+                  <span class="left-line" />学习权限<span class="right-line" />
+                </div>
                 <p>名企大数据架构师一对一解答服务</p>
                 <p>学员专属交流QQ群</p>
                 <p>专属地区咕泡学员群</p>
@@ -152,7 +178,7 @@
 
               <div class="button-group">
                 <a target="_blank" href="https://ke.qq.com/course/280821?tuin=7eeb913b">  <div class="sign">前往报名</div></a>
-                <div class="advice" @click="toKeFu">
+                <div @click="toKeFu" class="advice">
                   立即咨询
                 </div>
               </div>
@@ -165,10 +191,14 @@
         <h2>老师介绍</h2>
         <div v-swiper:mySwiper="swiperOption">
           <div class="swiper-wrapper">
-            <div class="swiper-slide" v-for="teacher in teachers" :key="teacher.id">
+            <div v-for="teacher in teachers" :key="teacher.id" class="swiper-slide">
               <img :src="teacher.teacherImage" alt="课程详情介绍">
-              <p class="teacher-name">{{teacher.teacherName}}</p>
-              <p class="teacher-tag">{{teacher.teacherTag}}</p>
+              <p class="teacher-name">
+                {{ teacher.teacherName }}
+              </p>
+              <p class="teacher-tag">
+                {{ teacher.teacherTag }}
+              </p>
             </div>
           </div>
         </div>
@@ -180,7 +210,9 @@
         <!-- <template v-if="isLoadAll">
           <img src="../../assets/img/course/bigdata/bigdata-bg-js2.png" alt="课程详情介绍">
         </template> -->
-        <div class="load-all" v-show="!isLoadAll" @click="loadAll">查看全部图文</div>
+        <div v-show="!isLoadAll" @click="loadAll" class="load-all">
+          查看全部图文
+        </div>
       </section>
 
       <section class="course-compendium">
@@ -192,18 +224,22 @@
           class="course-compendium-item"
         >
           <div class="item-title">
-            <strong>{{index+1}}</strong>
-            {{compendiumItem.outlineTitle}}
+            <strong>{{ index+1 }}</strong>
+            {{ compendiumItem.outlineTitle }}
           </div>
           <div v-for="(firstLevelItem,index1) in compendiumItem.firstLevel" :key="index1">
-            <div class="video-name">{{firstLevelItem.fisrtLevelName}}</div>
-            <div class="time">{{videoTime()}}分钟</div>
+            <div class="video-name">
+              {{ firstLevelItem.fisrtLevelName }}
+            </div>
+            <div class="time">
+              {{ videoTime() }}分钟
+            </div>
           </div>
         </div>
       </section>
     </main>
 
-    <course-footer v-bind="footerProps" class="footer"></course-footer>
+    <course-footer v-bind="footerProps" class="footer" />
   </div>
 </template>
 
@@ -242,13 +278,18 @@ export default {
       compendium: {},
 
       footerProps: {
-        QQGroupTitle: '添加qq群加入大数据交流群', //QQ群提示
+        QQGroupTitle: '添加qq群加入大数据交流群', // QQ群提示
         QQGroupNumber: '96106784', // QQ群号
         qrcodeTitle: '扫一扫加入大数据交流群', // 微信二维码提示
-        qrcodeSrc: require('@/assets/img/course/bigdata/bigdata-gzh.jpg'), //关注二维码
-        toTencentUrl: 'https://ke.qq.com/course/280821' //跳转至腾讯课堂地址
+        qrcodeSrc: require('@/assets/img/course/bigdata/bigdata-gzh.jpg'), // 关注二维码
+        toTencentUrl: 'https://ke.qq.com/course/280821' // 跳转至腾讯课堂地址
       }
     }
+  },
+
+  mounted() {
+    this.getTeachers()
+    this.getCompendium()
   },
 
   methods: {
@@ -259,8 +300,9 @@ export default {
       window.open('http://q.url.cn/cdF96S?_type=wpa&qidian=true')
     },
     async getTeachers() {
-      const response = await this.$axios.get('wwwapi/findTeacherTeamByType?teacherType=bigdata')
-
+      const response = await this.$axios.get(
+        'wwwapi/findTeacherTeamByType?teacherType=bigdata'
+      )
       if (response && response.status === 200) {
         this.teachers = response.data.data
       }
@@ -286,11 +328,6 @@ export default {
     loadAll() {
       this.isLoadAll = true
     }
-  },
-
-  mounted() {
-    this.getTeachers()
-    this.getCompendium()
   }
 }
 </script>
@@ -591,27 +628,27 @@ export default {
   margin-bottom: 60px;
 }
 .framework-item-box .framework-item {
-  width: 406px;
-  height: 1463px;
+  width: 413px;
+  height: 1471px;
   text-align: center;
   position: relative;
   cursor: pointer;
 }
 .framework-item-box .framework-item.vip-item {
-  background: url('../../assets/img/course/java/VIP.png') no-repeat center
-  center;
+  background: url('../../assets/img/course/bigdata/vip1.png') no-repeat center
+    center;
   background-size: 100% 100%;
   margin-right: 26px;
 }
 .framework-item-box .framework-item.svip-item {
-  background: url('../../assets/img/course/java/SVIP.png') no-repeat center
-  center;
+  background: url('../../assets/img/course/bigdata/vip2.png') no-repeat center
+    center;
   background-size: 100% 100%;
   margin-right: 26px;
 }
 .framework-item-box .framework-item.cto-item {
-  background: url('../../assets/img/course/java/CTO.png') no-repeat center
-  center;
+  background: url('../../assets/img/course/bigdata/vip3.png') no-repeat center
+    center;
   background-size: 100% 100%;
 }
 .framework-item-box .framework-item .price {
@@ -649,10 +686,10 @@ export default {
   margin-right: 12px;
 }
 .framework-item-box
-.framework-item
-.item-desc-box
-.item-desc-title
-.right-line {
+  .framework-item
+  .item-desc-box
+  .item-desc-title
+  .right-line {
   width: 16px;
   height: 3px;
   background-color: #ced7df;
