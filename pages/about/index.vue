@@ -13,15 +13,40 @@
     </div>
     <div class="content-wrapper div-padding">
       <div class="category-title">
-        <div><span class="left-line" />咕泡学院简介<span class="right-line" /></div>
-        <p class="text">
-          做技术人的指路明灯，职场生涯的精神导师
-        </p>
+        <div><span class="left-line" />咕泡学院<span class="right-line" /></div>
+        <div class="title1">成就IT精英</div>
       </div>
       <div class="content">
-        湖南咕泡网络科技有限公司，简称“咕泡学院”，成立于2016年，是一家专业面向中高端IT技术人才以教学培养、职业规划为核心的在线教育公司，旨在帮助学员提升技术技能，加强职场核心竞争力，走出职业困境。目前在腾讯课堂开办了Java架构、人工智能、大数据、软件测试、web前端等直播课程，在线学习人数已突破27万多人次，VIP学员人数已经突破13500多名，荣获“2018腾讯回响中国年度影响力在线教育品牌”、腾讯课堂·创造101火箭机构奖、“腾讯课堂·金课堂奖”、腾讯课堂·卓越贡献奖等称号。
+        中高端IT技术教学，职业规划，名企内推</br><span class="num">32</span>万人在线学习，助力<span class="num">14500</span>位学员职场进阶
       </div>
     </div>
+
+    <div class="content-wrapper div-padding">
+      <div class="category-title">
+        <div><span class="left-line" />「咕泡」释义<span class="right-line" /></div>
+      </div>
+          <div class="explain-text">
+            咕泡由<font color="#FD553A">“口”、“古”、“水”、“包”</font>四个独立的汉字组合而成。分别取“<font color="#FD553A">口</font>传心授”、“借<font color="#FD553A">古</font>鉴今”、“上善若<font color="#FD553A">水</font>”、“<font color="#FD553A">包</font>容开放”之意。
+            咕泡秉承办学初衷，用如水般宽广深厚的胸怀、用优质的课程和服务包容和滋养每一位学员。
+          </div>
+
+          <div class="explain-mission">
+            <img src="@/assets/img/about/mission.png" alt="">
+            <div>
+              <div class="explain-title">品牌使命</div>
+              <div class="explain-content">做技术人的指路明灯，职场生涯的精神导师!</div>
+            </div>
+          </div>
+          <div class="explain-vision">
+            <img src="@/assets/img/about/vision.png" alt="">
+            <div>
+              <div class="explain-title">品牌愿景</div>
+              <div class="explain-content">打造技术人的终身职业交流圈！</div>
+            </div>
+          </div>
+
+    </div>
+
     <teacher class="div-padding" />
     <nuxt-link to="teacher-list">
       <div class="open-all">查看全部讲师</div>
@@ -147,13 +172,17 @@ export default {
     border-radius: 8px;
   }
   .content-wrapper {
-    margin-top: 39px;
+    margin-top: 60px;
     .content {
       font-size: 28px;
       font-weight: 400;
       color: rgba(102, 102, 102, 1);
       line-height: 56px;
       margin-top: 38px;
+      text-align: center;
+      .num {
+        color: #FD553A;
+      }
     }
   }
   .open-all {
@@ -166,6 +195,63 @@ export default {
     font-weight: 500;
     color: rgba(102, 102, 102, 1);
     text-align: center;
+  }
+  .explain-text {
+    text-align: left;
+  }
+  /* 解释 */
+
+  .explain-text {
+    font-size: 28px;
+    color: rgba(102, 102, 102, 1);
+    line-height: 56px;
+    margin-top: 25px;
+  }
+
+  .explain-mission {
+    margin-top: 32px;
+    display: flex;
+    background: rgba(243,243,243,1);
+    border-radius: 6px;
+    padding: 23px;
+  }
+
+  .explain-title {
+    font-weight: bold;
+    color: #252525;
+    font-size: 28px;
+    margin-bottom: 14px;
+  }
+
+  .explain-content {
+    font-size: 12px;
+    font-weight: 400;
+    color: rgba(49, 70, 89, 1);
+  }
+  .explain-mission > img {
+    margin-right: 25px;
+    width: 71px;
+    height: 71px;
+  }
+
+  .explain-vision {
+    margin-top: 32px;
+    margin-bottom: 96px;
+    display: flex;
+    background: rgba(243,243,243,1);
+    border-radius: 6px;
+    padding: 23px;
+  }
+
+  .explain-vision > img {
+    margin-right: 25px;
+    width: 71px;
+    height: 71px;
+  }
+
+  .explain-body-right {
+    margin-left: 55px;
+    flex: 0 0 auto;
   }
 }
 .about .div-padding {
@@ -185,6 +271,12 @@ export default {
   font-weight: bold;
   color: rgba(37, 37, 37, 1);
   text-align: center;
+}
+.category-title .title1 {
+  color: #999;
+  font-size: 24px;
+  margin-top: 16px;
+  font-weight: normal;
 }
 .category-title .left-line {
   width: 35px;
