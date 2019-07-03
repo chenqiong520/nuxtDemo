@@ -1,7 +1,7 @@
 <template>
   <div class="team">
     <div class="category-title">
-      <div><span class="left-line" /> 团队分采<span class="right-line" /></div>
+      <div><span class="left-line" /> 团队风采<span class="right-line" /></div>
     </div>
     <!-- 滚动选择 -->
     <div v-swiper:mySwiper="swiperOption" class="swiper">
